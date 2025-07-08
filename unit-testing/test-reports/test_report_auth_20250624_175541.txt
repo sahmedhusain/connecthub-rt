@@ -1,0 +1,378 @@
+2025/06/24 17:55:43 [TEST] Initializing test database schema
+2025/06/24 17:55:43 [TEST] Test database schema initialized successfully
+2025/06/24 17:55:43 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:55:43 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:55:43 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:55:43 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:55:43 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:55:44 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:55:44 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:55:44 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:55:44 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:55:44 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:55:44 [DEBUG] UserService: Authenticating user with identifier: jo****e
+2025/06/24 17:55:44 [DEBUG] UserRepository: Authenticating user with identifier: johndoe
+2025/06/24 17:55:44 [DEBUG] Authenticating user with identifier: johndoe
+2025/06/24 17:55:44 [INFO] User authenticated successfully: johndoe (ID: 1)
+2025/06/24 17:55:44 [INFO] UserService: User authenticated successfully: johndoe (ID: 1)
+2025/06/24 17:55:44 [DEBUG] UserService: Authenticating user with identifier: ja**@example.com
+2025/06/24 17:55:44 [DEBUG] UserRepository: Authenticating user with identifier: jane@example.com
+2025/06/24 17:55:44 [DEBUG] Authenticating user with identifier: jane@example.com
+2025/06/24 17:55:44 [INFO] User authenticated successfully: janesmith (ID: 2)
+2025/06/24 17:55:44 [INFO] UserService: User authenticated successfully: janesmith (ID: 2)
+2025/06/24 17:55:44 [DEBUG] UserService: Authenticating user with identifier: jo****e
+2025/06/24 17:55:44 [DEBUG] UserRepository: Authenticating user with identifier: johndoe
+2025/06/24 17:55:44 [DEBUG] Authenticating user with identifier: johndoe
+2025/06/24 17:55:44 [WARN] Password verification failed for user: johndoe
+2025/06/24 17:55:44 [WARN] UserService: Authentication failed for jo****e: invalid credentials
+2025/06/24 17:55:44 [DEBUG] UserService: Authenticating user with identifier: no********t
+2025/06/24 17:55:44 [DEBUG] UserRepository: Authenticating user with identifier: nonexistent
+2025/06/24 17:55:44 [DEBUG] Authenticating user with identifier: nonexistent
+2025/06/24 17:55:44 [WARN] No user found with identifier: nonexistent
+2025/06/24 17:55:44 [WARN] UserService: Authentication failed for no********t: invalid credentials
+2025/06/24 17:55:44 [DEBUG] UserService: Authenticating user with identifier: 
+2025/06/24 17:55:44 [DEBUG] UserService: Authenticating user with identifier: jo****e
+2025/06/24 17:55:44 [DEBUG] UserService: Creating session for user ID 1
+2025/06/24 17:55:44 [DEBUG] Generating new UUID token
+2025/06/24 17:55:44 [INFO] Generated new UUID token: a36c********-****-****-****-********7152
+2025/06/24 17:55:44 [DEBUG] UserRepository: Updating session for user ID 1
+2025/06/24 17:55:44 [DEBUG] Updating session for user ID 1
+2025/06/24 17:55:44 [INFO] Session updated successfully for user ID 1
+2025/06/24 17:55:44 [INFO] UserService: Session created successfully for user ID 1
+2025/06/24 17:55:44 [DEBUG] UserService: Getting user by session token
+2025/06/24 17:55:44 [DEBUG] UserRepository: Getting user by session token
+2025/06/24 17:55:44 [INFO] UserRepository: User found for session: johndoe (ID: 1)
+2025/06/24 17:55:44 [DEBUG] UserService: Getting user by session token
+2025/06/24 17:55:44 [DEBUG] UserRepository: Getting user by session token
+2025/06/24 17:55:44 [WARN] UserRepository: Invalid session token
+2025/06/24 17:55:44 [TEST] Initializing test database schema
+2025/06/24 17:55:44 [TEST] Test database schema initialized successfully
+2025/06/24 17:55:44 [DEBUG] UserService: Registering new user: testuser (test@example.com)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Checking if user exists with username: testuser or email: test@example.com
+2025/06/24 17:55:44 [DEBUG] Checking if user exists with username: testuser or email: test@example.com
+2025/06/24 17:55:44 [INFO] User existence check: false (username: testuser, email: test@example.com)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Creating new user: testuser (test@example.com)
+2025/06/24 17:55:44 [DEBUG] Creating new user: testuser (test@example.com)
+2025/06/24 17:55:44 [INFO] User created successfully: testuser (ID: 1)
+2025/06/24 17:55:44 [INFO] UserService: User testuser (ID: 1) created successfully
+2025/06/24 17:55:44 [DEBUG] UserRepository: Getting user by ID: 1
+2025/06/24 17:55:44 [DEBUG] Retrieving user with ID 1
+2025/06/24 17:55:44 [INFO] Retrieved user with ID 1: username 'testuser'
+2025/06/24 17:55:44 [DEBUG] UserService: Registering new user: duplicate (user1@example.com)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Checking if user exists with username: duplicate or email: user1@example.com
+2025/06/24 17:55:44 [DEBUG] Checking if user exists with username: duplicate or email: user1@example.com
+2025/06/24 17:55:44 [INFO] User existence check: false (username: duplicate, email: user1@example.com)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Creating new user: duplicate (user1@example.com)
+2025/06/24 17:55:44 [DEBUG] Creating new user: duplicate (user1@example.com)
+2025/06/24 17:55:44 [INFO] User created successfully: duplicate (ID: 2)
+2025/06/24 17:55:44 [INFO] UserService: User duplicate (ID: 2) created successfully
+2025/06/24 17:55:44 [DEBUG] UserService: Registering new user: duplicate (user2@example.com)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Checking if user exists with username: duplicate or email: user2@example.com
+2025/06/24 17:55:44 [DEBUG] Checking if user exists with username: duplicate or email: user2@example.com
+2025/06/24 17:55:44 [INFO] User existence check: true (username: duplicate, email: user2@example.com)
+2025/06/24 17:55:44 [WARN] UserService: User already exists: duplicate
+2025/06/24 17:55:44 [DEBUG] UserService: Registering new user: user1 (duplicate@example.com)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Checking if user exists with username: user1 or email: duplicate@example.com
+2025/06/24 17:55:44 [DEBUG] Checking if user exists with username: user1 or email: duplicate@example.com
+2025/06/24 17:55:44 [INFO] User existence check: false (username: user1, email: duplicate@example.com)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Creating new user: user1 (duplicate@example.com)
+2025/06/24 17:55:44 [DEBUG] Creating new user: user1 (duplicate@example.com)
+2025/06/24 17:55:44 [INFO] User created successfully: user1 (ID: 3)
+2025/06/24 17:55:44 [INFO] UserService: User user1 (ID: 3) created successfully
+2025/06/24 17:55:44 [DEBUG] UserService: Registering new user: user2 (duplicate@example.com)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Checking if user exists with username: user2 or email: duplicate@example.com
+2025/06/24 17:55:44 [DEBUG] Checking if user exists with username: user2 or email: duplicate@example.com
+2025/06/24 17:55:44 [INFO] User existence check: true (username: user2, email: duplicate@example.com)
+2025/06/24 17:55:44 [WARN] UserService: User already exists: user2
+2025/06/24 17:55:44 [DEBUG] UserService: Registering new user: testuser2 (invalid-email)
+2025/06/24 17:55:44 [WARN] UserService: Invalid email format: invalid-email
+2025/06/24 17:55:44 [DEBUG] UserService: Registering new user: testuser3 (test3@example.com)
+2025/06/24 17:55:44 [DEBUG] UserService: Registering new user: testuser4 (test4@example.com)
+2025/06/24 17:55:44 [DEBUG] UserService: Registering new user:  (test5@example.com)
+2025/06/24 17:55:44 [DEBUG] UserService: Registering new user: testuser6 ()
+2025/06/24 17:55:44 [DEBUG] UserService: Registering new user: testuser7 (test7@example.com)
+2025/06/24 17:55:44 [DEBUG] UserService: Registering new user: maleuser (male@example.com)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Checking if user exists with username: maleuser or email: male@example.com
+2025/06/24 17:55:44 [DEBUG] Checking if user exists with username: maleuser or email: male@example.com
+2025/06/24 17:55:44 [INFO] User existence check: false (username: maleuser, email: male@example.com)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Creating new user: maleuser (male@example.com)
+2025/06/24 17:55:44 [DEBUG] Creating new user: maleuser (male@example.com)
+2025/06/24 17:55:44 [INFO] User created successfully: maleuser (ID: 4)
+2025/06/24 17:55:44 [INFO] UserService: User maleuser (ID: 4) created successfully
+2025/06/24 17:55:44 [DEBUG] UserRepository: Getting user by ID: 4
+2025/06/24 17:55:44 [DEBUG] Retrieving user with ID 4
+2025/06/24 17:55:44 [INFO] Retrieved user with ID 4: username 'maleuser'
+2025/06/24 17:55:44 [DEBUG] UserService: Registering new user: femaleuser (female@example.com)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Checking if user exists with username: femaleuser or email: female@example.com
+2025/06/24 17:55:44 [DEBUG] Checking if user exists with username: femaleuser or email: female@example.com
+2025/06/24 17:55:44 [INFO] User existence check: false (username: femaleuser, email: female@example.com)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Creating new user: femaleuser (female@example.com)
+2025/06/24 17:55:44 [DEBUG] Creating new user: femaleuser (female@example.com)
+2025/06/24 17:55:44 [INFO] User created successfully: femaleuser (ID: 5)
+2025/06/24 17:55:44 [INFO] UserService: User femaleuser (ID: 5) created successfully
+2025/06/24 17:55:44 [DEBUG] UserRepository: Getting user by ID: 5
+2025/06/24 17:55:44 [DEBUG] Retrieving user with ID 5
+2025/06/24 17:55:44 [INFO] Retrieved user with ID 5: username 'femaleuser'
+2025/06/24 17:55:44 [TEST] Initializing test database schema
+2025/06/24 17:55:44 [TEST] Test database schema initialized successfully
+2025/06/24 17:55:44 [DEBUG] UserRepository: Creating new user: repotest (repo@example.com)
+2025/06/24 17:55:44 [DEBUG] Creating new user: repotest (repo@example.com)
+2025/06/24 17:55:44 [INFO] User created successfully: repotest (ID: 1)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Getting user by ID: 1
+2025/06/24 17:55:44 [DEBUG] Retrieving user with ID 1
+2025/06/24 17:55:44 [INFO] Retrieved user with ID 1: username 'repotest'
+2025/06/24 17:55:44 [DEBUG] UserRepository: Creating new user: existstest (exists@example.com)
+2025/06/24 17:55:44 [DEBUG] Creating new user: existstest (exists@example.com)
+2025/06/24 17:55:44 [INFO] User created successfully: existstest (ID: 2)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Checking if user exists with username: existstest or email: 
+2025/06/24 17:55:44 [DEBUG] Checking if user exists with username: existstest or email: 
+2025/06/24 17:55:44 [INFO] User existence check: true (username: existstest, email: )
+2025/06/24 17:55:44 [DEBUG] UserRepository: Checking if user exists with username:  or email: exists@example.com
+2025/06/24 17:55:44 [DEBUG] Checking if user exists with username:  or email: exists@example.com
+2025/06/24 17:55:44 [INFO] User existence check: true (username: , email: exists@example.com)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Checking if user exists with username: nonexistent or email: 
+2025/06/24 17:55:44 [DEBUG] Checking if user exists with username: nonexistent or email: 
+2025/06/24 17:55:44 [INFO] User existence check: false (username: nonexistent, email: )
+2025/06/24 17:55:44 [DEBUG] UserRepository: Creating new user: user0 (user0@example.com)
+2025/06/24 17:55:44 [DEBUG] Creating new user: user0 (user0@example.com)
+2025/06/24 17:55:44 [INFO] User created successfully: user0 (ID: 3)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Creating new user: user1 (user1@example.com)
+2025/06/24 17:55:44 [DEBUG] Creating new user: user1 (user1@example.com)
+2025/06/24 17:55:44 [INFO] User created successfully: user1 (ID: 4)
+2025/06/24 17:55:44 [DEBUG] UserRepository: Creating new user: user2 (user2@example.com)
+2025/06/24 17:55:44 [DEBUG] Creating new user: user2 (user2@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: user2 (ID: 5)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Getting all users
+2025/06/24 17:55:45 [DEBUG] Retrieving all users
+2025/06/24 17:55:45 [INFO] Retrieved 5 users
+2025/06/24 17:55:45 [DEBUG] UserRepository: Creating new user: sessiontest (session@example.com)
+2025/06/24 17:55:45 [DEBUG] Creating new user: sessiontest (session@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: sessiontest (ID: 6)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Updating session for user ID 6
+2025/06/24 17:55:45 [DEBUG] Updating session for user ID 6
+2025/06/24 17:55:45 [INFO] Session updated successfully for user ID 6
+2025/06/24 17:55:45 [DEBUG] UserRepository: Getting user by session token
+2025/06/24 17:55:45 [INFO] UserRepository: User found for session: sessiontest (ID: 6)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Validating session token
+2025/06/24 17:55:45 [INFO] UserRepository: Session validated for user ID 6
+2025/06/24 17:55:45 [TEST] Initializing test database schema
+2025/06/24 17:55:45 [TEST] Test database schema initialized successfully
+2025/06/24 17:55:45 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:55:45 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:55:45 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:55:45 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:55:45 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:55:45 [DEBUG] UserService: Creating session for user ID 1
+2025/06/24 17:55:45 [DEBUG] Generating new UUID token
+2025/06/24 17:55:45 [INFO] Generated new UUID token: c3af********-****-****-****-********13ca
+2025/06/24 17:55:45 [DEBUG] UserRepository: Updating session for user ID 1
+2025/06/24 17:55:45 [DEBUG] Updating session for user ID 1
+2025/06/24 17:55:45 [INFO] Session updated successfully for user ID 1
+2025/06/24 17:55:45 [INFO] UserService: Session created successfully for user ID 1
+2025/06/24 17:55:45 [DEBUG] UserService: Getting user by session token
+2025/06/24 17:55:45 [DEBUG] UserRepository: Getting user by session token
+2025/06/24 17:55:45 [INFO] UserRepository: User found for session: johndoe (ID: 1)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Getting all users
+2025/06/24 17:55:45 [DEBUG] Retrieving all users
+2025/06/24 17:55:45 [INFO] Retrieved 5 users
+2025/06/24 17:55:45 [DEBUG] UserRepository: Getting user by ID: 1
+2025/06/24 17:55:45 [DEBUG] Retrieving user with ID 1
+2025/06/24 17:55:45 [INFO] Retrieved user with ID 1: username 'johndoe'
+2025/06/24 17:55:45 [DEBUG] UserService: Creating session for user ID 2
+2025/06/24 17:55:45 [DEBUG] Generating new UUID token
+2025/06/24 17:55:45 [INFO] Generated new UUID token: 4513********-****-****-****-********22ab
+2025/06/24 17:55:45 [DEBUG] UserRepository: Updating session for user ID 2
+2025/06/24 17:55:45 [DEBUG] Updating session for user ID 2
+2025/06/24 17:55:45 [INFO] Session updated successfully for user ID 2
+2025/06/24 17:55:45 [INFO] UserService: Session created successfully for user ID 2
+2025/06/24 17:55:45 [DEBUG] UserRepository: Validating session token
+2025/06/24 17:55:45 [INFO] UserRepository: Session validated for user ID 2
+2025/06/24 17:55:45 [DEBUG] UserRepository: Validating session token
+2025/06/24 17:55:45 [WARN] UserRepository: Invalid session token
+2025/06/24 17:55:45 [DEBUG] UserRepository: Checking if user exists with username: johndoe or email: 
+2025/06/24 17:55:45 [DEBUG] Checking if user exists with username: johndoe or email: 
+2025/06/24 17:55:45 [INFO] User existence check: true (username: johndoe, email: )
+2025/06/24 17:55:45 [DEBUG] UserRepository: Checking if user exists with username:  or email: jane@example.com
+2025/06/24 17:55:45 [DEBUG] Checking if user exists with username:  or email: jane@example.com
+2025/06/24 17:55:45 [INFO] User existence check: true (username: , email: jane@example.com)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Checking if user exists with username: nonexistentuser or email: 
+2025/06/24 17:55:45 [DEBUG] Checking if user exists with username: nonexistentuser or email: 
+2025/06/24 17:55:45 [INFO] User existence check: false (username: nonexistentuser, email: )
+2025/06/24 17:55:45 [DEBUG] UserRepository: Checking if user exists with username:  or email: nonexistent@example.com
+2025/06/24 17:55:45 [DEBUG] Checking if user exists with username:  or email: nonexistent@example.com
+2025/06/24 17:55:45 [INFO] User existence check: false (username: , email: nonexistent@example.com)
+2025/06/24 17:55:45 [TEST] Initializing test database schema
+2025/06/24 17:55:45 [TEST] Test database schema initialized successfully
+2025/06/24 17:55:45 [DEBUG] UserService: Registering new user: emailtest0 (valid@example.com)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Checking if user exists with username: emailtest0 or email: valid@example.com
+2025/06/24 17:55:45 [DEBUG] Checking if user exists with username: emailtest0 or email: valid@example.com
+2025/06/24 17:55:45 [INFO] User existence check: false (username: emailtest0, email: valid@example.com)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Creating new user: emailtest0 (valid@example.com)
+2025/06/24 17:55:45 [DEBUG] Creating new user: emailtest0 (valid@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: emailtest0 (ID: 1)
+2025/06/24 17:55:45 [INFO] UserService: User emailtest0 (ID: 1) created successfully
+2025/06/24 17:55:45 [DEBUG] UserService: Registering new user: emailtest1 (user.name@domain.co.uk)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Checking if user exists with username: emailtest1 or email: user.name@domain.co.uk
+2025/06/24 17:55:45 [DEBUG] Checking if user exists with username: emailtest1 or email: user.name@domain.co.uk
+2025/06/24 17:55:45 [INFO] User existence check: false (username: emailtest1, email: user.name@domain.co.uk)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Creating new user: emailtest1 (user.name@domain.co.uk)
+2025/06/24 17:55:45 [DEBUG] Creating new user: emailtest1 (user.name@domain.co.uk)
+2025/06/24 17:55:45 [INFO] User created successfully: emailtest1 (ID: 2)
+2025/06/24 17:55:45 [INFO] UserService: User emailtest1 (ID: 2) created successfully
+2025/06/24 17:55:45 [DEBUG] UserService: Registering new user: emailtest2 (invalid-email)
+2025/06/24 17:55:45 [WARN] UserService: Invalid email format: invalid-email
+2025/06/24 17:55:45 [DEBUG] UserService: Registering new user: emailtest3 (@example.com)
+2025/06/24 17:55:45 [WARN] UserService: Invalid email format: @example.com
+2025/06/24 17:55:45 [DEBUG] UserService: Registering new user: emailtest4 (user@)
+2025/06/24 17:55:45 [WARN] UserService: Invalid email format: user@
+2025/06/24 17:55:45 [DEBUG] UserService: Registering new user: emailtest5 ()
+2025/06/24 17:55:45 [DEBUG] UserService: Registering new user: validuser (usernametest0@example.com)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Checking if user exists with username: validuser or email: usernametest0@example.com
+2025/06/24 17:55:45 [DEBUG] Checking if user exists with username: validuser or email: usernametest0@example.com
+2025/06/24 17:55:45 [INFO] User existence check: false (username: validuser, email: usernametest0@example.com)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Creating new user: validuser (usernametest0@example.com)
+2025/06/24 17:55:45 [DEBUG] Creating new user: validuser (usernametest0@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: validuser (ID: 3)
+2025/06/24 17:55:45 [INFO] UserService: User validuser (ID: 3) created successfully
+2025/06/24 17:55:45 [DEBUG] UserService: Registering new user: user123 (usernametest1@example.com)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Checking if user exists with username: user123 or email: usernametest1@example.com
+2025/06/24 17:55:45 [DEBUG] Checking if user exists with username: user123 or email: usernametest1@example.com
+2025/06/24 17:55:45 [INFO] User existence check: false (username: user123, email: usernametest1@example.com)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Creating new user: user123 (usernametest1@example.com)
+2025/06/24 17:55:45 [DEBUG] Creating new user: user123 (usernametest1@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: user123 (ID: 4)
+2025/06/24 17:55:45 [INFO] UserService: User user123 (ID: 4) created successfully
+2025/06/24 17:55:45 [DEBUG] UserService: Registering new user:  (usernametest2@example.com)
+2025/06/24 17:55:45 [DEBUG] UserService: Registering new user: nametest1 (nametest1@example.com)
+2025/06/24 17:55:45 [DEBUG] UserService: Registering new user: nametest2 (nametest2@example.com)
+2025/06/24 17:55:45 [DEBUG] UserService: Registering new user: nametest3 (nametest3@example.com)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Checking if user exists with username: nametest3 or email: nametest3@example.com
+2025/06/24 17:55:45 [DEBUG] Checking if user exists with username: nametest3 or email: nametest3@example.com
+2025/06/24 17:55:45 [INFO] User existence check: false (username: nametest3, email: nametest3@example.com)
+2025/06/24 17:55:45 [DEBUG] UserRepository: Creating new user: nametest3 (nametest3@example.com)
+2025/06/24 17:55:45 [DEBUG] Creating new user: nametest3 (nametest3@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: nametest3 (ID: 5)
+2025/06/24 17:55:45 [INFO] UserService: User nametest3 (ID: 5) created successfully
+2025/06/24 17:55:45 [TEST] Initializing test database schema
+2025/06/24 17:55:45 [TEST] Test database schema initialized successfully
+2025/06/24 17:55:45 [DEBUG] Creating new user: testuser (test@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: testuser (ID: 1)
+2025/06/24 17:55:45 [DEBUG] Creating new user: getuser (get@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: getuser (ID: 2)
+2025/06/24 17:55:45 [DEBUG] Retrieving user with ID 2
+2025/06/24 17:55:45 [INFO] Retrieved user with ID 2: username 'getuser'
+2025/06/24 17:55:45 [DEBUG] Creating new user: authuser (auth@example.com)
+2025/06/24 17:55:45 [INFO] User created successfully: authuser (ID: 3)
+2025/06/24 17:55:45 [DEBUG] Authenticating user with identifier: authuser
+2025/06/24 17:55:46 [INFO] User authenticated successfully: authuser (ID: 3)
+2025/06/24 17:55:46 [DEBUG] Authenticating user with identifier: auth@example.com
+2025/06/24 17:55:46 [INFO] User authenticated successfully: authuser (ID: 3)
+2025/06/24 17:55:46 [DEBUG] Authenticating user with identifier: authuser
+2025/06/24 17:55:46 [WARN] Password verification failed for user: authuser
+2025/06/24 17:55:46 [DEBUG] Creating new user: sessionuser (session@example.com)
+2025/06/24 17:55:46 [INFO] User created successfully: sessionuser (ID: 4)
+2025/06/24 17:55:46 [DEBUG] Updating session for user ID 4
+2025/06/24 17:55:46 [INFO] Session updated successfully for user ID 4
+2025/06/24 17:55:46 [DEBUG] Creating new user: user0 (user0@example.com)
+2025/06/24 17:55:46 [INFO] User created successfully: user0 (ID: 5)
+2025/06/24 17:55:46 [DEBUG] Creating new user: user1 (user1@example.com)
+2025/06/24 17:55:46 [INFO] User created successfully: user1 (ID: 6)
+2025/06/24 17:55:46 [DEBUG] Creating new user: user2 (user2@example.com)
+2025/06/24 17:55:46 [INFO] User created successfully: user2 (ID: 7)
+2025/06/24 17:55:46 [DEBUG] Retrieving all users
+2025/06/24 17:55:46 [INFO] Retrieved 7 users
+2025/06/24 17:55:46 [TEST] Initializing test database schema
+2025/06/24 17:55:46 [TEST] Test database schema initialized successfully
+2025/06/24 17:55:46 [DEBUG] UserService: Registering new user: emailtest (emailtest@example.com)
+2025/06/24 17:55:46 [DEBUG] UserRepository: Checking if user exists with username: emailtest or email: emailtest@example.com
+2025/06/24 17:55:46 [DEBUG] Checking if user exists with username: emailtest or email: emailtest@example.com
+2025/06/24 17:55:46 [INFO] User existence check: false (username: emailtest, email: emailtest@example.com)
+2025/06/24 17:55:46 [DEBUG] UserRepository: Creating new user: emailtest (emailtest@example.com)
+2025/06/24 17:55:46 [DEBUG] Creating new user: emailtest (emailtest@example.com)
+2025/06/24 17:55:46 [INFO] User created successfully: emailtest (ID: 1)
+2025/06/24 17:55:46 [INFO] UserService: User emailtest (ID: 1) created successfully
+--- FAIL: TestUserRegistrationAndLoginFlow (0.08s)
+    --- FAIL: TestUserRegistrationAndLoginFlow/CompleteUserRegistrationFlow (0.00s)
+        test_helper.go:327: User should be created in database: sql: no rows in result set
+    --- FAIL: TestUserRegistrationAndLoginFlow/LoginWithEmail (0.07s)
+        http_helper.go:221: Cookie session_token not found in response
+    --- FAIL: TestUserRegistrationAndLoginFlow/InvalidLoginAttempts (0.00s)
+        http_helper.go:131: Expected status code 401, got 200
+2025/06/24 17:55:46 [TEST] Initializing test database schema
+2025/06/24 17:55:46 [TEST] Test database schema initialized successfully
+2025/06/24 17:55:46 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:55:46 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:55:46 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:55:46 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:55:46 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:55:46 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:55:46 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:55:46 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:55:46 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:55:47 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:55:47 [INFO] Starting authentication check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Auth check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Attempting to connect to SQLite database for auth check
+2025/06/24 17:55:47 [INFO] Successfully connected to SQLite database for auth check
+2025/06/24 17:55:47 [DEBUG] Session cookie retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Session token test...on_1 retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Validating session token test...on_1 in database
+2025/06/24 17:55:47 [ERROR] Database error while validating session test...on_1: unable to open database file: no such file or directory
+2025/06/24 17:55:47 [INFO] Returning internal server error due to database issue for session validation from 192.0.2.1:1234
+2025/06/24 17:55:47 [ERROR] 500 error (middleware.go:85 in 1): Internal Server Error from 192.0.2.1:1234 (Request: GET /protected, User-Agent: )
+2025/06/24 17:55:47 [INFO] Starting authentication check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Auth check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Attempting to connect to SQLite database for auth check
+2025/06/24 17:55:47 [INFO] Successfully connected to SQLite database for auth check
+2025/06/24 17:55:47 [WARN] No session cookie found for request to /protected from 192.0.2.1:1234: http: named cookie not present
+2025/06/24 17:55:47 [INFO] Redirecting to authentication due to missing session cookie for /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [WARN] Authentication error (middleware.go:35 in 1): Authentication Required from 192.0.2.1:1234 (Request: GET /protected, User-Agent: )
+2025/06/24 17:55:47 [INFO] Starting authentication check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Auth check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Attempting to connect to SQLite database for auth check
+2025/06/24 17:55:47 [INFO] Successfully connected to SQLite database for auth check
+2025/06/24 17:55:47 [DEBUG] Session cookie retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Session token inva...oken retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Validating session token inva...oken in database
+2025/06/24 17:55:47 [ERROR] Database error while validating session inva...oken: unable to open database file: no such file or directory
+2025/06/24 17:55:47 [INFO] Returning internal server error due to database issue for session validation from 192.0.2.1:1234
+2025/06/24 17:55:47 [ERROR] 500 error (middleware.go:85 in 1): Internal Server Error from 192.0.2.1:1234 (Request: GET /protected, User-Agent: )
+2025/06/24 17:55:47 [INFO] Starting authentication check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Auth check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Attempting to connect to SQLite database for auth check
+2025/06/24 17:55:47 [INFO] Successfully connected to SQLite database for auth check
+2025/06/24 17:55:47 [DEBUG] Session cookie retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Session token test...on_1 retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Validating session token test...on_1 in database
+2025/06/24 17:55:47 [ERROR] Database error while validating session test...on_1: unable to open database file: no such file or directory
+2025/06/24 17:55:47 [INFO] Returning internal server error due to database issue for session validation from 192.0.2.1:1234
+2025/06/24 17:55:47 [ERROR] 500 error (middleware.go:85 in 1): Internal Server Error from 192.0.2.1:1234 (Request: GET /protected, User-Agent: )
+2025/06/24 17:55:47 [INFO] Starting authentication check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Auth check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Attempting to connect to SQLite database for auth check
+2025/06/24 17:55:47 [INFO] Successfully connected to SQLite database for auth check
+2025/06/24 17:55:47 [DEBUG] Session cookie retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Session token test...on_1 retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:55:47 [DEBUG] Validating session token test...on_1 in database
+2025/06/24 17:55:47 [ERROR] Database error while validating session test...on_1: unable to open database file: no such file or directory
+2025/06/24 17:55:47 [INFO] Returning internal server error due to database issue for session validation from 192.0.2.1:1234
+2025/06/24 17:55:47 [ERROR] 500 error (middleware.go:85 in 1): Internal Server Error from 192.0.2.1:1234 (Request: GET /protected, User-Agent: )
+--- FAIL: TestAuthMiddleware (0.49s)
+    --- FAIL: TestAuthMiddleware/AuthenticatedRequest (0.00s)
+        test_helper.go:341: Authenticated request should succeed: expected 303, got 200
+    --- FAIL: TestAuthMiddleware/UnauthenticatedRequest (0.00s)
+        test_helper.go:355: Unauthenticated request should be rejected or redirected: expected true but got false
+    --- FAIL: TestAuthMiddleware/InvalidSessionToken (0.00s)
+        test_helper.go:355: Invalid session should be rejected: expected true but got false
+    --- FAIL: TestAuthMiddleware/ExpiredSession (0.00s)
+        test_helper.go:355: Expired session should be rejected: expected true but got false
+    --- FAIL: TestAuthMiddleware/MultipleSessionRequests (0.00s)
+        test_helper.go:341: First user should be authenticated: expected 303, got 200
+FAIL
+FAIL	forum/unit-testing	4.099s
+FAIL

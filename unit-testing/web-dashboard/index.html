@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Forum - Test Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <i class="fas fa-vial test-icon"></i>
+                    <h1>Real-Time Forum Test Dashboard</h1>
+                </div>
+                <div class="header-actions">
+                    <div id="connection-status" class="connection-status disconnected">
+                        <i class="fas fa-wifi"></i> Disconnected
+                    </div>
+                    <button id="refresh-btn" class="btn btn-primary">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                    <button id="run-all-tests" class="btn btn-success">
+                        <i class="fas fa-play"></i> Run All Tests
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Overview Cards -->
+            <section class="overview-section">
+                <div class="overview-cards">
+                    <div class="overview-card total-tests">
+                        <div class="card-icon">
+                            <i class="fas fa-list-check"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Total Tests</h3>
+                            <span class="card-value" id="total-tests">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card passed-tests">
+                        <div class="card-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Passed</h3>
+                            <span class="card-value" id="passed-tests">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card failed-tests">
+                        <div class="card-icon">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Failed</h3>
+                            <span class="card-value" id="failed-tests">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card coverage">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Coverage</h3>
+                            <span class="card-value" id="coverage-percentage">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Test Categories -->
+            <section class="test-categories-section">
+                <h2>Test Categories</h2>
+                <div class="test-categories">
+                    <div class="test-category" data-category="all">
+                        <div class="category-header">
+                            <div class="category-info">
+                                <i class="fas fa-globe"></i>
+                                <h3>All Tests</h3>
+                                <span class="category-description">Complete test suite</span>
+                            </div>
+                            <div class="category-actions">
+                                <button class="btn btn-sm btn-primary run-category">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <span class="category-status status-idle">
+                                    <i class="fas fa-circle"></i> Idle
+                                </span>
+                            </div>
+                        </div>
+                        <div class="category-stats">
+                            <span class="stat">Tests: <span class="stat-value">0</span></span>
+                            <span class="stat">Duration: <span class="stat-value">0s</span></span>
+                            <span class="stat">Last Run: <span class="stat-value">Never</span></span>
+                        </div>
+                    </div>
+
+                    <div class="test-category" data-category="unit">
+                        <div class="category-header">
+                            <div class="category-info">
+                                <i class="fas fa-cube"></i>
+                                <h3>Unit Tests</h3>
+                                <span class="category-description">Component testing</span>
+                            </div>
+                            <div class="category-actions">
+                                <button class="btn btn-sm btn-primary run-category">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <span class="category-status status-idle">
+                                    <i class="fas fa-circle"></i> Idle
+                                </span>
+                            </div>
+                        </div>
+                        <div class="category-stats">
+                            <span class="stat">Tests: <span class="stat-value">0</span></span>
+                            <span class="stat">Duration: <span class="stat-value">0s</span></span>
+                            <span class="stat">Last Run: <span class="stat-value">Never</span></span>
+                        </div>
+                    </div>
+
+                    <div class="test-category" data-category="integration">
+                        <div class="category-header">
+                            <div class="category-info">
+                                <i class="fas fa-link"></i>
+                                <h3>Integration Tests</h3>
+                                <span class="category-description">End-to-end workflows</span>
+                            </div>
+                            <div class="category-actions">
+                                <button class="btn btn-sm btn-primary run-category">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <span class="category-status status-idle">
+                                    <i class="fas fa-circle"></i> Idle
+                                </span>
+                            </div>
+                        </div>
+                        <div class="category-stats">
+                            <span class="stat">Tests: <span class="stat-value">0</span></span>
+                            <span class="stat">Duration: <span class="stat-value">0s</span></span>
+                            <span class="stat">Last Run: <span class="stat-value">Never</span></span>
+                        </div>
+                    </div>
+
+                    <div class="test-category" data-category="auth">
+                        <div class="category-header">
+                            <div class="category-info">
+                                <i class="fas fa-shield-alt"></i>
+                                <h3>Authentication Tests</h3>
+                                <span class="category-description">Login and security</span>
+                            </div>
+                            <div class="category-actions">
+                                <button class="btn btn-sm btn-primary run-category">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <span class="category-status status-idle">
+                                    <i class="fas fa-circle"></i> Idle
+                                </span>
+                            </div>
+                        </div>
+                        <div class="category-stats">
+                            <span class="stat">Tests: <span class="stat-value">0</span></span>
+                            <span class="stat">Duration: <span class="stat-value">0s</span></span>
+                            <span class="stat">Last Run: <span class="stat-value">Never</span></span>
+                        </div>
+                    </div>
+
+                    <div class="test-category" data-category="messaging">
+                        <div class="category-header">
+                            <div class="category-info">
+                                <i class="fas fa-comments"></i>
+                                <h3>Messaging Tests</h3>
+                                <span class="category-description">Real-time messaging</span>
+                            </div>
+                            <div class="category-actions">
+                                <button class="btn btn-sm btn-primary run-category">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <span class="category-status status-idle">
+                                    <i class="fas fa-circle"></i> Idle
+                                </span>
+                            </div>
+                        </div>
+                        <div class="category-stats">
+                            <span class="stat">Tests: <span class="stat-value">0</span></span>
+                            <span class="stat">Duration: <span class="stat-value">0s</span></span>
+                            <span class="stat">Last Run: <span class="stat-value">Never</span></span>
+                        </div>
+                    </div>
+
+                    <div class="test-category" data-category="frontend">
+                        <div class="category-header">
+                            <div class="category-info">
+                                <i class="fas fa-desktop"></i>
+                                <h3>Frontend Tests</h3>
+                                <span class="category-description">UI and JavaScript</span>
+                            </div>
+                            <div class="category-actions">
+                                <button class="btn btn-sm btn-primary run-category">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <span class="category-status status-idle">
+                                    <i class="fas fa-circle"></i> Idle
+                                </span>
+                            </div>
+                        </div>
+                        <div class="category-stats">
+                            <span class="stat">Tests: <span class="stat-value">0</span></span>
+                            <span class="stat">Duration: <span class="stat-value">0s</span></span>
+                            <span class="stat">Last Run: <span class="stat-value">Never</span></span>
+                        </div>
+                    </div>
+
+                    <div class="test-category" data-category="e2e">
+                        <div class="category-header">
+                            <div class="category-info">
+                                <i class="fas fa-route"></i>
+                                <h3>E2E Tests</h3>
+                                <span class="category-description">End-to-end scenarios</span>
+                            </div>
+                            <div class="category-actions">
+                                <button class="btn btn-sm btn-primary run-category">
+                                    <i class="fas fa-play"></i> Run
+                                </button>
+                                <span class="category-status status-idle">
+                                    <i class="fas fa-circle"></i> Idle
+                                </span>
+                            </div>
+                        </div>
+                        <div class="category-stats">
+                            <span class="stat">Tests: <span class="stat-value">0</span></span>
+                            <span class="stat">Duration: <span class="stat-value">0s</span></span>
+                            <span class="stat">Last Run: <span class="stat-value">Never</span></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Test Results -->
+            <section class="test-results-section">
+                <div class="section-header">
+                    <h2>Test Results</h2>
+                    <div class="section-actions">
+                        <button id="clear-results" class="btn btn-sm btn-secondary">
+                            <i class="fas fa-trash"></i> Clear
+                        </button>
+                        <button id="export-results" class="btn btn-sm btn-info">
+                            <i class="fas fa-download"></i> Export
+                        </button>
+                    </div>
+                </div>
+                <div class="test-results-container">
+                    <div id="test-output" class="test-output">
+                        <div class="no-results">
+                            <i class="fas fa-info-circle"></i>
+                            <p>No test results yet. Run a test to see output here.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Coverage Report -->
+            <section class="coverage-section">
+                <h2>Coverage Report</h2>
+                <div class="coverage-container">
+                    <div class="coverage-chart">
+                        <canvas id="coverage-chart" width="300" height="300"></canvas>
+                    </div>
+                    <div class="coverage-details">
+                        <div class="coverage-item">
+                            <span class="coverage-label">Lines:</span>
+                            <span class="coverage-value" id="lines-coverage">0%</span>
+                        </div>
+                        <div class="coverage-item">
+                            <span class="coverage-label">Functions:</span>
+                            <span class="coverage-value" id="functions-coverage">0%</span>
+                        </div>
+                        <div class="coverage-item">
+                            <span class="coverage-label">Branches:</span>
+                            <span class="coverage-value" id="branches-coverage">0%</span>
+                        </div>
+                        <div class="coverage-item">
+                            <span class="coverage-label">Statements:</span>
+                            <span class="coverage-value" id="statements-coverage">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Running tests...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{
+  "base_url": "http://localhost:8080",
+  "concurrent_users": 50,
+  "duration": "30s",
+  "requests_per_user": 100,
+  "ramp_up_time": "5s",
+  "think_time": "100ms",
+  "test_scenarios": ["all"],
+  "output_format": "json",
+  "report_file": "load-test-results.json",
+  "profiles": {
+    "light": {
+      "concurrent_users": 10,
+      "duration": "15s",
+      "requests_per_user": 20,
+      "ramp_up_time": "2s",
+      "think_time": "200ms"
+    },
+    "medium": {
+      "concurrent_users": 50,
+      "duration": "30s",
+      "requests_per_user": 100,
+      "ramp_up_time": "5s",
+      "think_time": "100ms"
+    },
+    "heavy": {
+      "concurrent_users": 200,
+      "duration": "60s",
+      "requests_per_user": 500,
+      "ramp_up_time": "10s",
+      "think_time": "50ms"
+    },
+    "stress": {
+      "concurrent_users": 500,
+      "duration": "120s",
+      "requests_per_user": 1000,
+      "ramp_up_time": "20s",
+      "think_time": "25ms"
+    }
+  },
+  "scenarios": {
+    "user_registration": {
+      "weight": 10,
+      "description": "User registration and login flow"
+    },
+    "content_browsing": {
+      "weight": 40,
+      "description": "Browsing posts and viewing content"
+    },
+    "content_creation": {
+      "weight": 20,
+      "description": "Creating posts and comments"
+    },
+    "messaging": {
+      "weight": 15,
+      "description": "Real-time messaging features"
+    },
+    "api_endpoints": {
+      "weight": 15,
+      "description": "Direct API endpoint testing"
+    }
+  },
+  "thresholds": {
+    "max_error_rate": 0.05,
+    "max_average_latency": "2s",
+    "max_p95_latency": "5s",
+    "min_requests_per_second": 10
+  },
+  "monitoring": {
+    "collect_metrics": true,
+    "memory_monitoring": true,
+    "cpu_monitoring": true,
+    "response_time_percentiles": [50, 75, 90, 95, 99]
+  }
+}

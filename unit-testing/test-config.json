@@ -1,0 +1,224 @@
+{
+  "test_runner": {
+    "version": "1.0.0",
+    "name": "Real-Time Forum Test Runner",
+    "description": "Comprehensive testing suite for the Real-Time Forum application"
+  },
+  "directories": {
+    "tests": ".",
+    "reports": "test-reports",
+    "coverage": "coverage",
+    "logs": "../logs",
+    "temp": "temp"
+  },
+  "test_categories": {
+    "all": {
+      "name": "All Tests",
+      "description": "Run the complete test suite",
+      "pattern": "./",
+      "timeout": "15m",
+      "parallel": true
+    },
+    "unit": {
+      "name": "Unit Tests",
+      "description": "Individual component testing",
+      "pattern": "./ -run 'Test(User|Post|Comment|Database)Repository|Test.*Creation|Test.*Validation'",
+      "timeout": "5m",
+      "parallel": true
+    },
+    "integration": {
+      "name": "Integration Tests",
+      "description": "End-to-end workflow testing",
+      "pattern": "./ -run 'TestIntegration|TestEndToEnd|Test.*Flow|Test.*Journey'",
+      "timeout": "10m",
+      "parallel": false
+    },
+    "auth": {
+      "name": "Authentication Tests",
+      "description": "User authentication and session management",
+      "pattern": "./ -run 'TestAuth|TestUser|TestLogin|TestSignup|TestSession'",
+      "timeout": "3m",
+      "parallel": true
+    },
+    "posts": {
+      "name": "Post & Comment Tests",
+      "description": "Content creation and management",
+      "pattern": "./ -run 'TestPost|TestComment|TestContent'",
+      "timeout": "5m",
+      "parallel": true
+    },
+    "messaging": {
+      "name": "Messaging Tests",
+      "description": "Real-time messaging and conversations",
+      "pattern": "./ -run 'TestMessaging|TestConversation|TestMessage'",
+      "timeout": "7m",
+      "parallel": false
+    },
+    "websocket": {
+      "name": "WebSocket Tests",
+      "description": "Real-time communication features",
+      "pattern": "./ -run 'TestWebSocket|TestTyping|TestOnline|TestRealTime'",
+      "timeout": "8m",
+      "parallel": false
+    },
+    "database": {
+      "name": "Database Tests",
+      "description": "Database operations and data integrity",
+      "pattern": "./ -run 'TestDatabase|TestRepository|TestData|TestSQL'",
+      "timeout": "6m",
+      "parallel": true
+    },
+    "middleware": {
+      "name": "Middleware & Security Tests",
+      "description": "Security, validation, and middleware",
+      "pattern": "./ -run 'TestMiddleware|TestSecurity|TestValidation|TestAuth.*Middleware'",
+      "timeout": "4m",
+      "parallel": true
+    },
+    "api": {
+      "name": "API Tests",
+      "description": "HTTP API endpoint testing",
+      "pattern": "./ -run 'TestAPI|TestHTTP|TestEndpoint|TestHandler'",
+      "timeout": "6m",
+      "parallel": true
+    },
+    "frontend": {
+      "name": "Frontend Unit Tests",
+      "description": "JavaScript unit tests for frontend components",
+      "pattern": "npm test",
+      "timeout": "5m",
+      "parallel": true,
+      "type": "frontend"
+    },
+    "frontend-dom": {
+      "name": "DOM Manipulation Tests",
+      "description": "Tests for DOM operations and UI interactions",
+      "pattern": "npm run test:dom",
+      "timeout": "3m",
+      "parallel": true,
+      "type": "frontend"
+    },
+    "frontend-websocket": {
+      "name": "WebSocket Client Tests",
+      "description": "Tests for WebSocket connectivity and real-time features",
+      "pattern": "npm run test:websocket",
+      "timeout": "4m",
+      "parallel": false,
+      "type": "frontend"
+    },
+    "frontend-auth": {
+      "name": "Frontend Authentication Tests",
+      "description": "Tests for login, signup, and session management",
+      "pattern": "npm run test:auth",
+      "timeout": "3m",
+      "parallel": true,
+      "type": "frontend"
+    },
+    "frontend-spa": {
+      "name": "SPA Navigation Tests",
+      "description": "Tests for single-page application routing and navigation",
+      "pattern": "npm run test:spa",
+      "timeout": "3m",
+      "parallel": true,
+      "type": "frontend"
+    },
+    "e2e": {
+      "name": "End-to-End Tests",
+      "description": "Complete user workflow testing with Playwright",
+      "pattern": "npx playwright test",
+      "timeout": "15m",
+      "parallel": false,
+      "type": "e2e"
+    },
+    "e2e-auth": {
+      "name": "E2E Authentication Flow",
+      "description": "End-to-end authentication workflow testing",
+      "pattern": "npx playwright test auth-flow.spec.js",
+      "timeout": "8m",
+      "parallel": false,
+      "type": "e2e"
+    },
+    "e2e-messaging": {
+      "name": "E2E Real-time Messaging",
+      "description": "End-to-end real-time messaging and WebSocket testing",
+      "pattern": "npx playwright test messaging.spec.js",
+      "timeout": "10m",
+      "parallel": false,
+      "type": "e2e"
+    },
+    "cross-browser": {
+      "name": "Cross-browser Testing",
+      "description": "Test across multiple browsers (Chrome, Firefox, Safari)",
+      "pattern": "npm run test:cross-browser",
+      "timeout": "20m",
+      "parallel": false,
+      "type": "e2e"
+    },
+    "responsive": {
+      "name": "Responsive Design Tests",
+      "description": "Test responsive design across different viewport sizes",
+      "pattern": "npm run test:responsive",
+      "timeout": "8m",
+      "parallel": false,
+      "type": "e2e"
+    }
+  },
+  "coverage": {
+    "enabled": true,
+    "threshold": 80,
+    "exclude_patterns": [
+      "*/vendor/*",
+      "*/tests/*",
+      "*_test.go",
+      "*/mock*",
+      "*/testdata/*"
+    ],
+    "include_patterns": [
+      "*.go"
+    ]
+  },
+  "reporting": {
+    "formats": ["text", "json", "html"],
+    "include_coverage": true,
+    "include_benchmarks": false,
+    "save_artifacts": true,
+    "retention_days": 30
+  },
+  "ci_cd": {
+    "junit_xml": true,
+    "github_actions": true,
+    "gitlab_ci": true,
+    "jenkins": true
+  },
+  "performance": {
+    "parallel_workers": 4,
+    "memory_limit": "512MB",
+    "cpu_limit": "2",
+    "timeout_multiplier": 1.5
+  },
+  "notifications": {
+    "slack": {
+      "enabled": false,
+      "webhook_url": "",
+      "channel": "#testing"
+    },
+    "email": {
+      "enabled": false,
+      "smtp_server": "",
+      "recipients": []
+    }
+  },
+  "test_data": {
+    "reset_before_tests": true,
+    "seed_data": true,
+    "cleanup_after_tests": true,
+    "isolation_level": "test"
+  },
+  "advanced": {
+    "race_detection": true,
+    "memory_profiling": false,
+    "cpu_profiling": false,
+    "benchmark_comparison": false,
+    "mutation_testing": false
+  }
+}

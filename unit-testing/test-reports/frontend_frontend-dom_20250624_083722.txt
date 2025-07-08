@@ -1,0 +1,35 @@
+
+> real-time-forum-frontend-tests@1.0.0 test:dom
+> jest --testPathPattern=dom
+
+  console.log
+    [Test Setup] Jest environment configured for frontend testing
+
+      at Object.<anonymous> (frontend-tests/setup/jest.setup.js:197:9)
+
+PASS frontend-tests/unit/dom.test.js
+  DOM Manipulation Tests
+    Application Initialization
+      ✓ should have app container in DOM (3 ms)
+      ✓ should have main-content container (2 ms)
+      ✓ should initialize with empty main content (2 ms)
+    Dynamic Content Rendering
+      ✓ should render login form HTML (7 ms)
+      ✓ should render signup form HTML (3 ms)
+      ✓ should render home page structure (5 ms)
+    Form Interactions
+      ✓ should handle input field interactions (2 ms)
+      ✓ should handle form submission (1 ms)
+      ✓ should handle button clicks (1 ms)
+    Dynamic Content Updates
+      ✓ should update post list dynamically (3 ms)
+      ✓ should update chat messages dynamically (4 ms)
+    CSS Class Manipulation
+      ✓ should toggle CSS classes (2 ms)
+      ✓ should handle active state changes (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        0.32 s, estimated 1 s
+Ran all test suites matching /dom/i.

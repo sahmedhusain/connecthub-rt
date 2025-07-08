@@ -1,0 +1,1684 @@
+2025/06/24 17:54:27 [TEST] Initializing test database schema
+2025/06/24 17:54:27 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:27 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:27 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:27 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:27 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:27 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:27 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:27 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:27 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:27 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:27 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:27 [DEBUG] UserService: Authenticating user with identifier: jo****e
+2025/06/24 17:54:27 [DEBUG] UserRepository: Authenticating user with identifier: johndoe
+2025/06/24 17:54:27 [DEBUG] Authenticating user with identifier: johndoe
+2025/06/24 17:54:27 [INFO] User authenticated successfully: johndoe (ID: 1)
+2025/06/24 17:54:27 [INFO] UserService: User authenticated successfully: johndoe (ID: 1)
+2025/06/24 17:54:27 [DEBUG] UserService: Authenticating user with identifier: ja**@example.com
+2025/06/24 17:54:27 [DEBUG] UserRepository: Authenticating user with identifier: jane@example.com
+2025/06/24 17:54:27 [DEBUG] Authenticating user with identifier: jane@example.com
+2025/06/24 17:54:27 [INFO] User authenticated successfully: janesmith (ID: 2)
+2025/06/24 17:54:27 [INFO] UserService: User authenticated successfully: janesmith (ID: 2)
+2025/06/24 17:54:27 [DEBUG] UserService: Authenticating user with identifier: jo****e
+2025/06/24 17:54:27 [DEBUG] UserRepository: Authenticating user with identifier: johndoe
+2025/06/24 17:54:27 [DEBUG] Authenticating user with identifier: johndoe
+2025/06/24 17:54:27 [WARN] Password verification failed for user: johndoe
+2025/06/24 17:54:27 [WARN] UserService: Authentication failed for jo****e: invalid credentials
+2025/06/24 17:54:27 [DEBUG] UserService: Authenticating user with identifier: no********t
+2025/06/24 17:54:27 [DEBUG] UserRepository: Authenticating user with identifier: nonexistent
+2025/06/24 17:54:27 [DEBUG] Authenticating user with identifier: nonexistent
+2025/06/24 17:54:27 [WARN] No user found with identifier: nonexistent
+2025/06/24 17:54:27 [WARN] UserService: Authentication failed for no********t: invalid credentials
+2025/06/24 17:54:27 [DEBUG] UserService: Authenticating user with identifier: 
+2025/06/24 17:54:27 [DEBUG] UserService: Authenticating user with identifier: jo****e
+2025/06/24 17:54:27 [DEBUG] UserService: Creating session for user ID 1
+2025/06/24 17:54:27 [DEBUG] Generating new UUID token
+2025/06/24 17:54:27 [INFO] Generated new UUID token: e11f********-****-****-****-********3632
+2025/06/24 17:54:27 [DEBUG] UserRepository: Updating session for user ID 1
+2025/06/24 17:54:27 [DEBUG] Updating session for user ID 1
+2025/06/24 17:54:27 [INFO] Session updated successfully for user ID 1
+2025/06/24 17:54:27 [INFO] UserService: Session created successfully for user ID 1
+2025/06/24 17:54:27 [DEBUG] UserService: Getting user by session token
+2025/06/24 17:54:27 [DEBUG] UserRepository: Getting user by session token
+2025/06/24 17:54:27 [INFO] UserRepository: User found for session: johndoe (ID: 1)
+2025/06/24 17:54:27 [DEBUG] UserService: Getting user by session token
+2025/06/24 17:54:27 [DEBUG] UserRepository: Getting user by session token
+2025/06/24 17:54:27 [WARN] UserRepository: Invalid session token
+2025/06/24 17:54:27 [TEST] Initializing test database schema
+2025/06/24 17:54:27 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:27 [DEBUG] UserService: Registering new user: testuser (test@example.com)
+2025/06/24 17:54:27 [DEBUG] UserRepository: Checking if user exists with username: testuser or email: test@example.com
+2025/06/24 17:54:27 [DEBUG] Checking if user exists with username: testuser or email: test@example.com
+2025/06/24 17:54:27 [INFO] User existence check: false (username: testuser, email: test@example.com)
+2025/06/24 17:54:27 [DEBUG] UserRepository: Creating new user: testuser (test@example.com)
+2025/06/24 17:54:27 [DEBUG] Creating new user: testuser (test@example.com)
+2025/06/24 17:54:28 [INFO] User created successfully: testuser (ID: 1)
+2025/06/24 17:54:28 [INFO] UserService: User testuser (ID: 1) created successfully
+2025/06/24 17:54:28 [DEBUG] UserRepository: Getting user by ID: 1
+2025/06/24 17:54:28 [DEBUG] Retrieving user with ID 1
+2025/06/24 17:54:28 [INFO] Retrieved user with ID 1: username 'testuser'
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: duplicate (user1@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Checking if user exists with username: duplicate or email: user1@example.com
+2025/06/24 17:54:28 [DEBUG] Checking if user exists with username: duplicate or email: user1@example.com
+2025/06/24 17:54:28 [INFO] User existence check: false (username: duplicate, email: user1@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Creating new user: duplicate (user1@example.com)
+2025/06/24 17:54:28 [DEBUG] Creating new user: duplicate (user1@example.com)
+2025/06/24 17:54:28 [INFO] User created successfully: duplicate (ID: 2)
+2025/06/24 17:54:28 [INFO] UserService: User duplicate (ID: 2) created successfully
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: duplicate (user2@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Checking if user exists with username: duplicate or email: user2@example.com
+2025/06/24 17:54:28 [DEBUG] Checking if user exists with username: duplicate or email: user2@example.com
+2025/06/24 17:54:28 [INFO] User existence check: true (username: duplicate, email: user2@example.com)
+2025/06/24 17:54:28 [WARN] UserService: User already exists: duplicate
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: user1 (duplicate@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Checking if user exists with username: user1 or email: duplicate@example.com
+2025/06/24 17:54:28 [DEBUG] Checking if user exists with username: user1 or email: duplicate@example.com
+2025/06/24 17:54:28 [INFO] User existence check: false (username: user1, email: duplicate@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Creating new user: user1 (duplicate@example.com)
+2025/06/24 17:54:28 [DEBUG] Creating new user: user1 (duplicate@example.com)
+2025/06/24 17:54:28 [INFO] User created successfully: user1 (ID: 3)
+2025/06/24 17:54:28 [INFO] UserService: User user1 (ID: 3) created successfully
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: user2 (duplicate@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Checking if user exists with username: user2 or email: duplicate@example.com
+2025/06/24 17:54:28 [DEBUG] Checking if user exists with username: user2 or email: duplicate@example.com
+2025/06/24 17:54:28 [INFO] User existence check: true (username: user2, email: duplicate@example.com)
+2025/06/24 17:54:28 [WARN] UserService: User already exists: user2
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: testuser2 (invalid-email)
+2025/06/24 17:54:28 [WARN] UserService: Invalid email format: invalid-email
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: testuser3 (test3@example.com)
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: testuser4 (test4@example.com)
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user:  (test5@example.com)
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: testuser6 ()
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: testuser7 (test7@example.com)
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: maleuser (male@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Checking if user exists with username: maleuser or email: male@example.com
+2025/06/24 17:54:28 [DEBUG] Checking if user exists with username: maleuser or email: male@example.com
+2025/06/24 17:54:28 [INFO] User existence check: false (username: maleuser, email: male@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Creating new user: maleuser (male@example.com)
+2025/06/24 17:54:28 [DEBUG] Creating new user: maleuser (male@example.com)
+2025/06/24 17:54:28 [INFO] User created successfully: maleuser (ID: 4)
+2025/06/24 17:54:28 [INFO] UserService: User maleuser (ID: 4) created successfully
+2025/06/24 17:54:28 [DEBUG] UserRepository: Getting user by ID: 4
+2025/06/24 17:54:28 [DEBUG] Retrieving user with ID 4
+2025/06/24 17:54:28 [INFO] Retrieved user with ID 4: username 'maleuser'
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: femaleuser (female@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Checking if user exists with username: femaleuser or email: female@example.com
+2025/06/24 17:54:28 [DEBUG] Checking if user exists with username: femaleuser or email: female@example.com
+2025/06/24 17:54:28 [INFO] User existence check: false (username: femaleuser, email: female@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Creating new user: femaleuser (female@example.com)
+2025/06/24 17:54:28 [DEBUG] Creating new user: femaleuser (female@example.com)
+2025/06/24 17:54:28 [INFO] User created successfully: femaleuser (ID: 5)
+2025/06/24 17:54:28 [INFO] UserService: User femaleuser (ID: 5) created successfully
+2025/06/24 17:54:28 [DEBUG] UserRepository: Getting user by ID: 5
+2025/06/24 17:54:28 [DEBUG] Retrieving user with ID 5
+2025/06/24 17:54:28 [INFO] Retrieved user with ID 5: username 'femaleuser'
+2025/06/24 17:54:28 [TEST] Initializing test database schema
+2025/06/24 17:54:28 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:28 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:28 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:28 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:28 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:28 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:28 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:28 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:28 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:28 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:28 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:28 [DEBUG] UserService: Authenticating user with identifier: jo****e
+2025/06/24 17:54:28 [DEBUG] UserRepository: Authenticating user with identifier: johndoe
+2025/06/24 17:54:28 [DEBUG] Authenticating user with identifier: johndoe
+2025/06/24 17:54:28 [INFO] User authenticated successfully: johndoe (ID: 1)
+2025/06/24 17:54:28 [INFO] UserService: User authenticated successfully: johndoe (ID: 1)
+2025/06/24 17:54:28 [DEBUG] UserService: Creating session for user ID 1
+2025/06/24 17:54:28 [DEBUG] Generating new UUID token
+2025/06/24 17:54:28 [INFO] Generated new UUID token: 85e6********-****-****-****-********2ff0
+2025/06/24 17:54:28 [DEBUG] UserRepository: Updating session for user ID 1
+2025/06/24 17:54:28 [DEBUG] Updating session for user ID 1
+2025/06/24 17:54:28 [INFO] Session updated successfully for user ID 1
+2025/06/24 17:54:28 [INFO] UserService: Session created successfully for user ID 1
+2025/06/24 17:54:28 [DEBUG] UserService: Authenticating user with identifier: jo****e
+2025/06/24 17:54:28 [DEBUG] UserRepository: Authenticating user with identifier: johndoe
+2025/06/24 17:54:28 [DEBUG] Authenticating user with identifier: johndoe
+2025/06/24 17:54:28 [WARN] Password verification failed for user: johndoe
+2025/06/24 17:54:28 [WARN] UserService: Authentication failed for jo****e: invalid credentials
+2025/06/24 17:54:28 [TEST] Initializing test database schema
+2025/06/24 17:54:28 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: newuser (new@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Checking if user exists with username: newuser or email: new@example.com
+2025/06/24 17:54:28 [DEBUG] Checking if user exists with username: newuser or email: new@example.com
+2025/06/24 17:54:28 [INFO] User existence check: false (username: newuser, email: new@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Creating new user: newuser (new@example.com)
+2025/06/24 17:54:28 [DEBUG] Creating new user: newuser (new@example.com)
+2025/06/24 17:54:28 [INFO] User created successfully: newuser (ID: 1)
+2025/06/24 17:54:28 [INFO] UserService: User newuser (ID: 1) created successfully
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: existinguser (existing@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Checking if user exists with username: existinguser or email: existing@example.com
+2025/06/24 17:54:28 [DEBUG] Checking if user exists with username: existinguser or email: existing@example.com
+2025/06/24 17:54:28 [INFO] User existence check: false (username: existinguser, email: existing@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Creating new user: existinguser (existing@example.com)
+2025/06/24 17:54:28 [DEBUG] Creating new user: existinguser (existing@example.com)
+2025/06/24 17:54:28 [INFO] User created successfully: existinguser (ID: 2)
+2025/06/24 17:54:28 [INFO] UserService: User existinguser (ID: 2) created successfully
+2025/06/24 17:54:28 [DEBUG] UserService: Registering new user: existinguser (different@example.com)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Checking if user exists with username: existinguser or email: different@example.com
+2025/06/24 17:54:28 [DEBUG] Checking if user exists with username: existinguser or email: different@example.com
+2025/06/24 17:54:28 [INFO] User existence check: true (username: existinguser, email: different@example.com)
+2025/06/24 17:54:28 [WARN] UserService: User already exists: existinguser
+2025/06/24 17:54:28 [TEST] Initializing test database schema
+2025/06/24 17:54:28 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:28 [DEBUG] UserRepository: Creating new user: repotest (repo@example.com)
+2025/06/24 17:54:28 [DEBUG] Creating new user: repotest (repo@example.com)
+2025/06/24 17:54:28 [INFO] User created successfully: repotest (ID: 1)
+2025/06/24 17:54:28 [DEBUG] UserRepository: Getting user by ID: 1
+2025/06/24 17:54:28 [DEBUG] Retrieving user with ID 1
+2025/06/24 17:54:28 [INFO] Retrieved user with ID 1: username 'repotest'
+2025/06/24 17:54:28 [DEBUG] UserRepository: Creating new user: existstest (exists@example.com)
+2025/06/24 17:54:28 [DEBUG] Creating new user: existstest (exists@example.com)
+2025/06/24 17:54:29 [INFO] User created successfully: existstest (ID: 2)
+2025/06/24 17:54:29 [DEBUG] UserRepository: Checking if user exists with username: existstest or email: 
+2025/06/24 17:54:29 [DEBUG] Checking if user exists with username: existstest or email: 
+2025/06/24 17:54:29 [INFO] User existence check: true (username: existstest, email: )
+2025/06/24 17:54:29 [DEBUG] UserRepository: Checking if user exists with username:  or email: exists@example.com
+2025/06/24 17:54:29 [DEBUG] Checking if user exists with username:  or email: exists@example.com
+2025/06/24 17:54:29 [INFO] User existence check: true (username: , email: exists@example.com)
+2025/06/24 17:54:29 [DEBUG] UserRepository: Checking if user exists with username: nonexistent or email: 
+2025/06/24 17:54:29 [DEBUG] Checking if user exists with username: nonexistent or email: 
+2025/06/24 17:54:29 [INFO] User existence check: false (username: nonexistent, email: )
+2025/06/24 17:54:29 [DEBUG] UserRepository: Creating new user: user0 (user0@example.com)
+2025/06/24 17:54:29 [DEBUG] Creating new user: user0 (user0@example.com)
+2025/06/24 17:54:29 [INFO] User created successfully: user0 (ID: 3)
+2025/06/24 17:54:29 [DEBUG] UserRepository: Creating new user: user1 (user1@example.com)
+2025/06/24 17:54:29 [DEBUG] Creating new user: user1 (user1@example.com)
+2025/06/24 17:54:29 [INFO] User created successfully: user1 (ID: 4)
+2025/06/24 17:54:29 [DEBUG] UserRepository: Creating new user: user2 (user2@example.com)
+2025/06/24 17:54:29 [DEBUG] Creating new user: user2 (user2@example.com)
+2025/06/24 17:54:29 [INFO] User created successfully: user2 (ID: 5)
+2025/06/24 17:54:29 [DEBUG] UserRepository: Getting all users
+2025/06/24 17:54:29 [DEBUG] Retrieving all users
+2025/06/24 17:54:29 [INFO] Retrieved 5 users
+2025/06/24 17:54:29 [DEBUG] UserRepository: Creating new user: sessiontest (session@example.com)
+2025/06/24 17:54:29 [DEBUG] Creating new user: sessiontest (session@example.com)
+2025/06/24 17:54:29 [INFO] User created successfully: sessiontest (ID: 6)
+2025/06/24 17:54:29 [DEBUG] UserRepository: Updating session for user ID 6
+2025/06/24 17:54:29 [DEBUG] Updating session for user ID 6
+2025/06/24 17:54:29 [INFO] Session updated successfully for user ID 6
+2025/06/24 17:54:29 [DEBUG] UserRepository: Getting user by session token
+2025/06/24 17:54:29 [INFO] UserRepository: User found for session: sessiontest (ID: 6)
+2025/06/24 17:54:29 [DEBUG] UserRepository: Validating session token
+2025/06/24 17:54:29 [INFO] UserRepository: Session validated for user ID 6
+2025/06/24 17:54:29 [TEST] Initializing test database schema
+2025/06/24 17:54:29 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:29 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:29 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:29 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:29 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:29 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:29 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:29 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:29 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:29 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:29 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:29 [DEBUG] UserService: Creating session for user ID 1
+2025/06/24 17:54:29 [DEBUG] Generating new UUID token
+2025/06/24 17:54:29 [INFO] Generated new UUID token: 2f0b********-****-****-****-********0005
+2025/06/24 17:54:29 [DEBUG] UserRepository: Updating session for user ID 1
+2025/06/24 17:54:29 [DEBUG] Updating session for user ID 1
+2025/06/24 17:54:29 [INFO] Session updated successfully for user ID 1
+2025/06/24 17:54:29 [INFO] UserService: Session created successfully for user ID 1
+2025/06/24 17:54:29 [DEBUG] UserService: Getting user by session token
+2025/06/24 17:54:29 [DEBUG] UserRepository: Getting user by session token
+2025/06/24 17:54:29 [INFO] UserRepository: User found for session: johndoe (ID: 1)
+2025/06/24 17:54:29 [DEBUG] UserRepository: Getting all users
+2025/06/24 17:54:29 [DEBUG] Retrieving all users
+2025/06/24 17:54:29 [INFO] Retrieved 5 users
+2025/06/24 17:54:29 [DEBUG] UserRepository: Getting user by ID: 1
+2025/06/24 17:54:29 [DEBUG] Retrieving user with ID 1
+2025/06/24 17:54:29 [INFO] Retrieved user with ID 1: username 'johndoe'
+2025/06/24 17:54:29 [DEBUG] UserService: Creating session for user ID 2
+2025/06/24 17:54:29 [DEBUG] Generating new UUID token
+2025/06/24 17:54:29 [INFO] Generated new UUID token: 367a********-****-****-****-********3457
+2025/06/24 17:54:29 [DEBUG] UserRepository: Updating session for user ID 2
+2025/06/24 17:54:29 [DEBUG] Updating session for user ID 2
+2025/06/24 17:54:29 [INFO] Session updated successfully for user ID 2
+2025/06/24 17:54:29 [INFO] UserService: Session created successfully for user ID 2
+2025/06/24 17:54:29 [DEBUG] UserRepository: Validating session token
+2025/06/24 17:54:29 [INFO] UserRepository: Session validated for user ID 2
+2025/06/24 17:54:29 [DEBUG] UserRepository: Validating session token
+2025/06/24 17:54:29 [WARN] UserRepository: Invalid session token
+2025/06/24 17:54:29 [DEBUG] UserRepository: Checking if user exists with username: johndoe or email: 
+2025/06/24 17:54:29 [DEBUG] Checking if user exists with username: johndoe or email: 
+2025/06/24 17:54:29 [INFO] User existence check: true (username: johndoe, email: )
+2025/06/24 17:54:29 [DEBUG] UserRepository: Checking if user exists with username:  or email: jane@example.com
+2025/06/24 17:54:29 [DEBUG] Checking if user exists with username:  or email: jane@example.com
+2025/06/24 17:54:29 [INFO] User existence check: true (username: , email: jane@example.com)
+2025/06/24 17:54:29 [DEBUG] UserRepository: Checking if user exists with username: nonexistentuser or email: 
+2025/06/24 17:54:29 [DEBUG] Checking if user exists with username: nonexistentuser or email: 
+2025/06/24 17:54:29 [INFO] User existence check: false (username: nonexistentuser, email: )
+2025/06/24 17:54:29 [DEBUG] UserRepository: Checking if user exists with username:  or email: nonexistent@example.com
+2025/06/24 17:54:29 [DEBUG] Checking if user exists with username:  or email: nonexistent@example.com
+2025/06/24 17:54:29 [INFO] User existence check: false (username: , email: nonexistent@example.com)
+2025/06/24 17:54:29 [TEST] Initializing test database schema
+2025/06/24 17:54:29 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:29 [DEBUG] UserService: Registering new user: passwordtest (password@example.com)
+2025/06/24 17:54:29 [DEBUG] UserRepository: Checking if user exists with username: passwordtest or email: password@example.com
+2025/06/24 17:54:29 [DEBUG] Checking if user exists with username: passwordtest or email: password@example.com
+2025/06/24 17:54:29 [INFO] User existence check: false (username: passwordtest, email: password@example.com)
+2025/06/24 17:54:29 [DEBUG] UserRepository: Creating new user: passwordtest (password@example.com)
+2025/06/24 17:54:29 [DEBUG] Creating new user: passwordtest (password@example.com)
+2025/06/24 17:54:29 [INFO] User created successfully: passwordtest (ID: 1)
+2025/06/24 17:54:29 [INFO] UserService: User passwordtest (ID: 1) created successfully
+2025/06/24 17:54:29 [DEBUG] UserService: Authenticating user with identifier: pa*********t
+2025/06/24 17:54:29 [DEBUG] UserRepository: Authenticating user with identifier: passwordtest
+2025/06/24 17:54:29 [DEBUG] Authenticating user with identifier: passwordtest
+2025/06/24 17:54:29 [INFO] User authenticated successfully: passwordtest (ID: 1)
+2025/06/24 17:54:29 [INFO] UserService: User authenticated successfully: passwordtest (ID: 1)
+2025/06/24 17:54:29 [DEBUG] UserService: Registering new user: user_password123 (test_password123@example.com)
+2025/06/24 17:54:29 [DEBUG] UserRepository: Checking if user exists with username: user_password123 or email: test_password123@example.com
+2025/06/24 17:54:29 [DEBUG] Checking if user exists with username: user_password123 or email: test_password123@example.com
+2025/06/24 17:54:29 [INFO] User existence check: false (username: user_password123, email: test_password123@example.com)
+2025/06/24 17:54:29 [DEBUG] UserRepository: Creating new user: user_password123 (test_password123@example.com)
+2025/06/24 17:54:29 [DEBUG] Creating new user: user_password123 (test_password123@example.com)
+2025/06/24 17:54:30 [INFO] User created successfully: user_password123 (ID: 2)
+2025/06/24 17:54:30 [INFO] UserService: User user_password123 (ID: 2) created successfully
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user: user_ (test_@example.com)
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user: user_a (test_a@example.com)
+2025/06/24 17:54:30 [DEBUG] UserRepository: Checking if user exists with username: user_a or email: test_a@example.com
+2025/06/24 17:54:30 [DEBUG] Checking if user exists with username: user_a or email: test_a@example.com
+2025/06/24 17:54:30 [INFO] User existence check: false (username: user_a, email: test_a@example.com)
+2025/06/24 17:54:30 [DEBUG] UserRepository: Creating new user: user_a (test_a@example.com)
+2025/06/24 17:54:30 [DEBUG] Creating new user: user_a (test_a@example.com)
+2025/06/24 17:54:30 [INFO] User created successfully: user_a (ID: 3)
+2025/06/24 17:54:30 [INFO] UserService: User user_a (ID: 3) created successfully
+2025/06/24 17:54:30 [TEST] Initializing test database schema
+2025/06/24 17:54:30 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user: emailtest0 (valid@example.com)
+2025/06/24 17:54:30 [DEBUG] UserRepository: Checking if user exists with username: emailtest0 or email: valid@example.com
+2025/06/24 17:54:30 [DEBUG] Checking if user exists with username: emailtest0 or email: valid@example.com
+2025/06/24 17:54:30 [INFO] User existence check: false (username: emailtest0, email: valid@example.com)
+2025/06/24 17:54:30 [DEBUG] UserRepository: Creating new user: emailtest0 (valid@example.com)
+2025/06/24 17:54:30 [DEBUG] Creating new user: emailtest0 (valid@example.com)
+2025/06/24 17:54:30 [INFO] User created successfully: emailtest0 (ID: 1)
+2025/06/24 17:54:30 [INFO] UserService: User emailtest0 (ID: 1) created successfully
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user: emailtest1 (user.name@domain.co.uk)
+2025/06/24 17:54:30 [DEBUG] UserRepository: Checking if user exists with username: emailtest1 or email: user.name@domain.co.uk
+2025/06/24 17:54:30 [DEBUG] Checking if user exists with username: emailtest1 or email: user.name@domain.co.uk
+2025/06/24 17:54:30 [INFO] User existence check: false (username: emailtest1, email: user.name@domain.co.uk)
+2025/06/24 17:54:30 [DEBUG] UserRepository: Creating new user: emailtest1 (user.name@domain.co.uk)
+2025/06/24 17:54:30 [DEBUG] Creating new user: emailtest1 (user.name@domain.co.uk)
+2025/06/24 17:54:30 [INFO] User created successfully: emailtest1 (ID: 2)
+2025/06/24 17:54:30 [INFO] UserService: User emailtest1 (ID: 2) created successfully
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user: emailtest2 (invalid-email)
+2025/06/24 17:54:30 [WARN] UserService: Invalid email format: invalid-email
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user: emailtest3 (@example.com)
+2025/06/24 17:54:30 [WARN] UserService: Invalid email format: @example.com
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user: emailtest4 (user@)
+2025/06/24 17:54:30 [WARN] UserService: Invalid email format: user@
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user: emailtest5 ()
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user: validuser (usernametest0@example.com)
+2025/06/24 17:54:30 [DEBUG] UserRepository: Checking if user exists with username: validuser or email: usernametest0@example.com
+2025/06/24 17:54:30 [DEBUG] Checking if user exists with username: validuser or email: usernametest0@example.com
+2025/06/24 17:54:30 [INFO] User existence check: false (username: validuser, email: usernametest0@example.com)
+2025/06/24 17:54:30 [DEBUG] UserRepository: Creating new user: validuser (usernametest0@example.com)
+2025/06/24 17:54:30 [DEBUG] Creating new user: validuser (usernametest0@example.com)
+2025/06/24 17:54:30 [INFO] User created successfully: validuser (ID: 3)
+2025/06/24 17:54:30 [INFO] UserService: User validuser (ID: 3) created successfully
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user: user123 (usernametest1@example.com)
+2025/06/24 17:54:30 [DEBUG] UserRepository: Checking if user exists with username: user123 or email: usernametest1@example.com
+2025/06/24 17:54:30 [DEBUG] Checking if user exists with username: user123 or email: usernametest1@example.com
+2025/06/24 17:54:30 [INFO] User existence check: false (username: user123, email: usernametest1@example.com)
+2025/06/24 17:54:30 [DEBUG] UserRepository: Creating new user: user123 (usernametest1@example.com)
+2025/06/24 17:54:30 [DEBUG] Creating new user: user123 (usernametest1@example.com)
+2025/06/24 17:54:30 [INFO] User created successfully: user123 (ID: 4)
+2025/06/24 17:54:30 [INFO] UserService: User user123 (ID: 4) created successfully
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user:  (usernametest2@example.com)
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user: nametest1 (nametest1@example.com)
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user: nametest2 (nametest2@example.com)
+2025/06/24 17:54:30 [DEBUG] UserService: Registering new user: nametest3 (nametest3@example.com)
+2025/06/24 17:54:30 [DEBUG] UserRepository: Checking if user exists with username: nametest3 or email: nametest3@example.com
+2025/06/24 17:54:30 [DEBUG] Checking if user exists with username: nametest3 or email: nametest3@example.com
+2025/06/24 17:54:30 [INFO] User existence check: false (username: nametest3, email: nametest3@example.com)
+2025/06/24 17:54:30 [DEBUG] UserRepository: Creating new user: nametest3 (nametest3@example.com)
+2025/06/24 17:54:30 [DEBUG] Creating new user: nametest3 (nametest3@example.com)
+2025/06/24 17:54:30 [INFO] User created successfully: nametest3 (ID: 5)
+2025/06/24 17:54:30 [INFO] UserService: User nametest3 (ID: 5) created successfully
+2025/06/24 17:54:30 [TEST] Initializing test database schema
+2025/06/24 17:54:30 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:30 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:30 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:30 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:30 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:30 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:30 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:30 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:30 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:30 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:30 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:30 [DEBUG] PostService: Adding comment to post ID: 1 by user ID: 2
+2025/06/24 17:54:30 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:30 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:30 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:30 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:30 [INFO] Retrieved post with ID 1: title 'Welcome to the Forum'
+2025/06/24 17:54:30 [DEBUG] Adding comment to post ID 1 by user ID 2
+2025/06/24 17:54:30 [INFO] Comment added successfully to post ID 1 by user ID 2
+2025/06/24 17:54:30 [INFO] PostService: Comment added successfully to post ID: 1
+2025/06/24 17:54:30 [DEBUG] Retrieving comments for post ID 1
+2025/06/24 17:54:30 [INFO] Retrieved 2 comments for post ID 1
+2025/06/24 17:54:30 [DEBUG] PostService: Adding comment to post ID: 1 by user ID: 1
+2025/06/24 17:54:30 [DEBUG] PostService: Adding comment to post ID: 1 by user ID: 1
+2025/06/24 17:54:30 [DEBUG] PostService: Adding comment to post ID: 99999 by user ID: 1
+2025/06/24 17:54:30 [DEBUG] Retrieving post with ID 99999
+2025/06/24 17:54:30 [INFO] No post found with ID 99999
+2025/06/24 17:54:30 [ERROR] PostService: Post not found: sql: no rows in result set
+2025/06/24 17:54:30 [DEBUG] PostService: Adding comment to post ID: 1 by user ID: 99999
+2025/06/24 17:54:30 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:30 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:30 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:30 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:30 [INFO] Retrieved post with ID 1: title 'Welcome to the Forum'
+2025/06/24 17:54:30 [DEBUG] Adding comment to post ID 1 by user ID 99999
+2025/06/24 17:54:30 [INFO] Comment added successfully to post ID 1 by user ID 99999
+2025/06/24 17:54:30 [INFO] PostService: Comment added successfully to post ID: 1
+2025/06/24 17:54:30 [DEBUG] PostService: Adding comment to post ID: 2 by user ID: 1
+2025/06/24 17:54:30 [DEBUG] Retrieving post with ID 2
+2025/06/24 17:54:30 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:30 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:30 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:30 [INFO] Retrieved post with ID 2: title 'Technology Discussion'
+2025/06/24 17:54:30 [DEBUG] Adding comment to post ID 2 by user ID 1
+2025/06/24 17:54:30 [INFO] Comment added successfully to post ID 2 by user ID 1
+2025/06/24 17:54:30 [INFO] PostService: Comment added successfully to post ID: 2
+2025/06/24 17:54:30 [DEBUG] PostService: Adding comment to post ID: 2 by user ID: 2
+2025/06/24 17:54:30 [DEBUG] Retrieving post with ID 2
+2025/06/24 17:54:30 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:30 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:30 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:30 [INFO] Retrieved post with ID 2: title 'Technology Discussion'
+2025/06/24 17:54:30 [DEBUG] Adding comment to post ID 2 by user ID 2
+2025/06/24 17:54:30 [INFO] Comment added successfully to post ID 2 by user ID 2
+2025/06/24 17:54:30 [INFO] PostService: Comment added successfully to post ID: 2
+2025/06/24 17:54:30 [DEBUG] PostService: Adding comment to post ID: 2 by user ID: 3
+2025/06/24 17:54:30 [DEBUG] Retrieving post with ID 2
+2025/06/24 17:54:30 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:30 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:30 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:30 [INFO] Retrieved post with ID 2: title 'Technology Discussion'
+2025/06/24 17:54:30 [DEBUG] Adding comment to post ID 2 by user ID 3
+2025/06/24 17:54:30 [INFO] Comment added successfully to post ID 2 by user ID 3
+2025/06/24 17:54:30 [INFO] PostService: Comment added successfully to post ID: 2
+2025/06/24 17:54:30 [DEBUG] Retrieving comments for post ID 2
+2025/06/24 17:54:30 [INFO] Retrieved 4 comments for post ID 2
+--- FAIL: TestCommentCreation (0.39s)
+    --- FAIL: TestCommentCreation/CommentWithInvalidUserID (0.00s)
+        test_helper.go:334: Comment creation should fail with invalid user ID: expected error but got none
+2025/06/24 17:54:30 [TEST] Initializing test database schema
+2025/06/24 17:54:30 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:30 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:30 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:30 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:31 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:31 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:31 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:31 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:31 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:31 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:31 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:31 [DEBUG] Retrieving comments for post ID 1
+2025/06/24 17:54:31 [INFO] Retrieved 1 comments for post ID 1
+2025/06/24 17:54:31 [DEBUG] Retrieving comments for post ID 99999
+2025/06/24 17:54:31 [INFO] Retrieved 0 comments for post ID 99999
+2025/06/24 17:54:31 [DEBUG] PostService: Adding comment to post ID: 3 by user ID: 1
+2025/06/24 17:54:31 [DEBUG] Retrieving post with ID 3
+2025/06/24 17:54:31 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:31 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:31 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:31 [INFO] Retrieved post with ID 3: title 'Sports Update'
+2025/06/24 17:54:31 [DEBUG] Adding comment to post ID 3 by user ID 1
+2025/06/24 17:54:31 [INFO] Comment added successfully to post ID 3 by user ID 1
+2025/06/24 17:54:31 [INFO] PostService: Comment added successfully to post ID: 3
+2025/06/24 17:54:31 [DEBUG] PostService: Adding comment to post ID: 3 by user ID: 1
+2025/06/24 17:54:31 [DEBUG] Retrieving post with ID 3
+2025/06/24 17:54:31 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:31 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:31 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:31 [INFO] Retrieved post with ID 3: title 'Sports Update'
+2025/06/24 17:54:31 [DEBUG] Adding comment to post ID 3 by user ID 1
+2025/06/24 17:54:31 [INFO] Comment added successfully to post ID 3 by user ID 1
+2025/06/24 17:54:31 [INFO] PostService: Comment added successfully to post ID: 3
+2025/06/24 17:54:31 [DEBUG] PostService: Adding comment to post ID: 3 by user ID: 1
+2025/06/24 17:54:31 [DEBUG] Retrieving post with ID 3
+2025/06/24 17:54:31 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:31 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:31 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:31 [INFO] Retrieved post with ID 3: title 'Sports Update'
+2025/06/24 17:54:31 [DEBUG] Adding comment to post ID 3 by user ID 1
+2025/06/24 17:54:31 [INFO] Comment added successfully to post ID 3 by user ID 1
+2025/06/24 17:54:31 [INFO] PostService: Comment added successfully to post ID: 3
+2025/06/24 17:54:31 [DEBUG] Retrieving comments for post ID 3
+2025/06/24 17:54:31 [INFO] Retrieved 4 comments for post ID 3
+2025/06/24 17:54:31 [DEBUG] Retrieving comments for post ID 1
+2025/06/24 17:54:31 [INFO] Retrieved 1 comments for post ID 1
+2025/06/24 17:54:31 [TEST] Initializing test database schema
+2025/06/24 17:54:31 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:31 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:31 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:31 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:31 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:31 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:31 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:31 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:31 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:31 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:31 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:31 [DEBUG] PostService: Adding comment to post ID: 1 by user ID: 1
+2025/06/24 17:54:31 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:31 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:31 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:31 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:31 [INFO] Retrieved post with ID 1: title 'Welcome to the Forum'
+2025/06/24 17:54:31 [DEBUG] Adding comment to post ID 1 by user ID 1
+2025/06/24 17:54:31 [INFO] Comment added successfully to post ID 1 by user ID 1
+2025/06/24 17:54:31 [INFO] PostService: Comment added successfully to post ID: 1
+2025/06/24 17:54:31 [DEBUG] PostService: Adding comment to post ID: 1 by user ID: 1
+2025/06/24 17:54:31 [DEBUG] PostService: Adding comment to post ID: 1 by user ID: 1
+2025/06/24 17:54:31 [DEBUG] PostService: Adding comment to post ID: 1 by user ID: 1
+2025/06/24 17:54:31 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:31 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:31 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:31 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:31 [INFO] Retrieved post with ID 1: title 'Welcome to the Forum'
+2025/06/24 17:54:31 [DEBUG] Adding comment to post ID 1 by user ID 1
+2025/06/24 17:54:31 [INFO] Comment added successfully to post ID 1 by user ID 1
+2025/06/24 17:54:31 [INFO] PostService: Comment added successfully to post ID: 1
+2025/06/24 17:54:31 [DEBUG] PostService: Adding comment to post ID: 1 by user ID: 1
+2025/06/24 17:54:31 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:31 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:31 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:31 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:31 [INFO] Retrieved post with ID 1: title 'Welcome to the Forum'
+2025/06/24 17:54:31 [DEBUG] Adding comment to post ID 1 by user ID 1
+2025/06/24 17:54:31 [INFO] Comment added successfully to post ID 1 by user ID 1
+2025/06/24 17:54:31 [INFO] PostService: Comment added successfully to post ID: 1
+2025/06/24 17:54:31 [DEBUG] PostService: Adding comment to post ID: 1 by user ID: 1
+2025/06/24 17:54:31 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:31 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:31 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:31 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:31 [INFO] Retrieved post with ID 1: title 'Welcome to the Forum'
+2025/06/24 17:54:31 [DEBUG] Adding comment to post ID 1 by user ID 1
+2025/06/24 17:54:31 [INFO] Comment added successfully to post ID 1 by user ID 1
+2025/06/24 17:54:31 [INFO] PostService: Comment added successfully to post ID: 1
+2025/06/24 17:54:31 [DEBUG] PostService: Adding comment to post ID: 1 by user ID: 0
+2025/06/24 17:54:31 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:31 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:31 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:31 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:31 [INFO] Retrieved post with ID 1: title 'Welcome to the Forum'
+2025/06/24 17:54:31 [DEBUG] Adding comment to post ID 1 by user ID 0
+2025/06/24 17:54:31 [INFO] Comment added successfully to post ID 1 by user ID 0
+2025/06/24 17:54:31 [INFO] PostService: Comment added successfully to post ID: 1
+2025/06/24 17:54:31 [DEBUG] PostService: Adding comment to post ID: 1 by user ID: 1
+2025/06/24 17:54:31 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:31 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:31 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:31 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:31 [INFO] Retrieved post with ID 1: title 'Welcome to the Forum'
+2025/06/24 17:54:31 [DEBUG] Adding comment to post ID 1 by user ID 1
+2025/06/24 17:54:31 [INFO] Comment added successfully to post ID 1 by user ID 1
+2025/06/24 17:54:31 [INFO] PostService: Comment added successfully to post ID: 1
+2025/06/24 17:54:31 [DEBUG] PostService: Adding comment to post ID: 0 by user ID: 1
+2025/06/24 17:54:31 [DEBUG] Retrieving post with ID 0
+2025/06/24 17:54:31 [INFO] No post found with ID 0
+2025/06/24 17:54:31 [ERROR] PostService: Post not found: sql: no rows in result set
+2025/06/24 17:54:31 [DEBUG] PostService: Adding comment to post ID: -1 by user ID: 1
+2025/06/24 17:54:31 [DEBUG] Retrieving post with ID -1
+2025/06/24 17:54:31 [INFO] No post found with ID -1
+2025/06/24 17:54:31 [ERROR] PostService: Post not found: sql: no rows in result set
+--- FAIL: TestCommentValidation (0.35s)
+    --- FAIL: TestCommentValidation/CommentUserValidation (0.00s)
+        test_helper.go:334: Comment with invalid user ID should fail: expected error but got none
+2025/06/24 17:54:31 [TEST] Initializing test database schema
+2025/06/24 17:54:31 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:31 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:31 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:31 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:31 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:31 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:31 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:31 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:31 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:31 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:32 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:32 [DEBUG] PostRepository: Getting post by ID: 1
+2025/06/24 17:54:32 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:32 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:32 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:32 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:32 [INFO] Retrieved post with ID 1: title 'Welcome to the Forum'
+2025/06/24 17:54:32 [DEBUG] PostService: Adding comment to post ID: 1 by user ID: 1
+2025/06/24 17:54:32 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:32 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:32 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:32 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:32 [INFO] Retrieved post with ID 1: title 'Welcome to the Forum'
+2025/06/24 17:54:32 [DEBUG] Adding comment to post ID 1 by user ID 1
+2025/06/24 17:54:32 [INFO] Comment added successfully to post ID 1 by user ID 1
+2025/06/24 17:54:32 [INFO] PostService: Comment added successfully to post ID: 1
+2025/06/24 17:54:32 [DEBUG] PostRepository: Getting post by ID: 1
+2025/06/24 17:54:32 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:32 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:32 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:32 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:32 [INFO] Retrieved post with ID 1: title 'Welcome to the Forum'
+2025/06/24 17:54:32 [DEBUG] PostService: Adding comment to post ID: 2 by user ID: 1
+2025/06/24 17:54:32 [DEBUG] Retrieving post with ID 2
+2025/06/24 17:54:32 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:32 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:32 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:32 [INFO] Retrieved post with ID 2: title 'Technology Discussion'
+2025/06/24 17:54:32 [DEBUG] Adding comment to post ID 2 by user ID 1
+2025/06/24 17:54:32 [INFO] Comment added successfully to post ID 2 by user ID 1
+2025/06/24 17:54:32 [INFO] PostService: Comment added successfully to post ID: 2
+2025/06/24 17:54:32 [DEBUG] PostService: Adding comment to post ID: 2 by user ID: 2
+2025/06/24 17:54:32 [DEBUG] Retrieving post with ID 2
+2025/06/24 17:54:32 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:32 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:32 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:32 [INFO] Retrieved post with ID 2: title 'Technology Discussion'
+2025/06/24 17:54:32 [DEBUG] Adding comment to post ID 2 by user ID 2
+2025/06/24 17:54:32 [INFO] Comment added successfully to post ID 2 by user ID 2
+2025/06/24 17:54:32 [INFO] PostService: Comment added successfully to post ID: 2
+2025/06/24 17:54:32 [DEBUG] PostService: Adding comment to post ID: 2 by user ID: 3
+2025/06/24 17:54:32 [DEBUG] Retrieving post with ID 2
+2025/06/24 17:54:32 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:32 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:32 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:32 [INFO] Retrieved post with ID 2: title 'Technology Discussion'
+2025/06/24 17:54:32 [DEBUG] Adding comment to post ID 2 by user ID 3
+2025/06/24 17:54:32 [INFO] Comment added successfully to post ID 2 by user ID 3
+2025/06/24 17:54:32 [INFO] PostService: Comment added successfully to post ID: 2
+2025/06/24 17:54:32 [DEBUG] PostService: Adding comment to post ID: 2 by user ID: 4
+2025/06/24 17:54:32 [DEBUG] Retrieving post with ID 2
+2025/06/24 17:54:32 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:32 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:32 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:32 [INFO] Retrieved post with ID 2: title 'Technology Discussion'
+2025/06/24 17:54:32 [DEBUG] Adding comment to post ID 2 by user ID 4
+2025/06/24 17:54:32 [INFO] Comment added successfully to post ID 2 by user ID 4
+2025/06/24 17:54:32 [INFO] PostService: Comment added successfully to post ID: 2
+2025/06/24 17:54:32 [DEBUG] PostService: Adding comment to post ID: 2 by user ID: 5
+2025/06/24 17:54:32 [DEBUG] Retrieving post with ID 2
+2025/06/24 17:54:32 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:32 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:32 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:32 [INFO] Retrieved post with ID 2: title 'Technology Discussion'
+2025/06/24 17:54:32 [DEBUG] Adding comment to post ID 2 by user ID 5
+2025/06/24 17:54:32 [INFO] Comment added successfully to post ID 2 by user ID 5
+2025/06/24 17:54:32 [INFO] PostService: Comment added successfully to post ID: 2
+2025/06/24 17:54:32 [DEBUG] Retrieving comments for post ID 2
+2025/06/24 17:54:32 [INFO] Retrieved 6 comments for post ID 2
+2025/06/24 17:54:32 [DEBUG] PostService: Adding comment to post ID: 3 by user ID: 1
+2025/06/24 17:54:32 [DEBUG] Retrieving post with ID 3
+2025/06/24 17:54:32 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:32 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:32 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:32 [INFO] Retrieved post with ID 3: title 'Sports Update'
+2025/06/24 17:54:32 [DEBUG] Adding comment to post ID 3 by user ID 1
+2025/06/24 17:54:32 [INFO] Comment added successfully to post ID 3 by user ID 1
+2025/06/24 17:54:32 [INFO] PostService: Comment added successfully to post ID: 3
+2025/06/24 17:54:32 [DEBUG] Retrieving comments for post ID 3
+2025/06/24 17:54:32 [INFO] Retrieved 2 comments for post ID 3
+2025/06/24 17:54:32 [TEST] Initializing test database schema
+2025/06/24 17:54:32 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:32 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:32 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:32 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:32 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:32 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:32 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:32 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:32 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:32 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:32 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:32 [DEBUG] PostRepository: Adding comment to post ID: 1 by user ID: 1
+2025/06/24 17:54:32 [DEBUG] Adding comment to post ID 1 by user ID 1
+2025/06/24 17:54:32 [INFO] Comment added successfully to post ID 1 by user ID 1
+2025/06/24 17:54:32 [DEBUG] PostRepository: Getting comments for post ID: 1
+2025/06/24 17:54:32 [DEBUG] Retrieving comments for post ID 1
+2025/06/24 17:54:32 [INFO] Retrieved 2 comments for post ID 1
+2025/06/24 17:54:32 [DEBUG] PostRepository: Adding comment to post ID: 2 by user ID: 1
+2025/06/24 17:54:32 [DEBUG] Adding comment to post ID 2 by user ID 1
+2025/06/24 17:54:32 [INFO] Comment added successfully to post ID 2 by user ID 1
+2025/06/24 17:54:32 [DEBUG] PostRepository: Adding comment to post ID: 2 by user ID: 2
+2025/06/24 17:54:32 [DEBUG] Adding comment to post ID 2 by user ID 2
+2025/06/24 17:54:32 [INFO] Comment added successfully to post ID 2 by user ID 2
+2025/06/24 17:54:32 [DEBUG] PostRepository: Adding comment to post ID: 2 by user ID: 3
+2025/06/24 17:54:32 [DEBUG] Adding comment to post ID 2 by user ID 3
+2025/06/24 17:54:32 [INFO] Comment added successfully to post ID 2 by user ID 3
+2025/06/24 17:54:32 [DEBUG] PostRepository: Getting comments for post ID: 2
+2025/06/24 17:54:32 [DEBUG] Retrieving comments for post ID 2
+2025/06/24 17:54:32 [INFO] Retrieved 4 comments for post ID 2
+2025/06/24 17:54:32 [TEST] Initializing test database schema
+2025/06/24 17:54:32 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:32 [TEST] Initializing test database schema
+2025/06/24 17:54:32 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:32 [DEBUG] Creating new user: testuser (test@example.com)
+2025/06/24 17:54:32 [INFO] User created successfully: testuser (ID: 1)
+2025/06/24 17:54:32 [DEBUG] Creating new user: getuser (get@example.com)
+2025/06/24 17:54:32 [INFO] User created successfully: getuser (ID: 2)
+2025/06/24 17:54:32 [DEBUG] Retrieving user with ID 2
+2025/06/24 17:54:32 [INFO] Retrieved user with ID 2: username 'getuser'
+2025/06/24 17:54:32 [DEBUG] Creating new user: authuser (auth@example.com)
+2025/06/24 17:54:32 [INFO] User created successfully: authuser (ID: 3)
+2025/06/24 17:54:32 [DEBUG] Authenticating user with identifier: authuser
+2025/06/24 17:54:32 [INFO] User authenticated successfully: authuser (ID: 3)
+2025/06/24 17:54:32 [DEBUG] Authenticating user with identifier: auth@example.com
+2025/06/24 17:54:32 [INFO] User authenticated successfully: authuser (ID: 3)
+2025/06/24 17:54:32 [DEBUG] Authenticating user with identifier: authuser
+2025/06/24 17:54:32 [WARN] Password verification failed for user: authuser
+2025/06/24 17:54:32 [DEBUG] Creating new user: sessionuser (session@example.com)
+2025/06/24 17:54:32 [INFO] User created successfully: sessionuser (ID: 4)
+2025/06/24 17:54:32 [DEBUG] Updating session for user ID 4
+2025/06/24 17:54:32 [INFO] Session updated successfully for user ID 4
+2025/06/24 17:54:32 [DEBUG] Creating new user: user0 (user0@example.com)
+2025/06/24 17:54:32 [INFO] User created successfully: user0 (ID: 5)
+2025/06/24 17:54:32 [DEBUG] Creating new user: user1 (user1@example.com)
+2025/06/24 17:54:33 [INFO] User created successfully: user1 (ID: 6)
+2025/06/24 17:54:33 [DEBUG] Creating new user: user2 (user2@example.com)
+2025/06/24 17:54:33 [INFO] User created successfully: user2 (ID: 7)
+2025/06/24 17:54:33 [DEBUG] Retrieving all users
+2025/06/24 17:54:33 [INFO] Retrieved 7 users
+2025/06/24 17:54:33 [TEST] Initializing test database schema
+2025/06/24 17:54:33 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:33 [DEBUG] Creating new user: postuser (post@example.com)
+2025/06/24 17:54:33 [INFO] User created successfully: postuser (ID: 1)
+2025/06/24 17:54:33 [DEBUG] Creating new post for user ID 1 with title 'Test Post'
+2025/06/24 17:54:33 [DEBUG] Inserting new post for user ID 1 with title 'Test Post'
+2025/06/24 17:54:33 [INFO] Inserted new post with ID 1 for user ID 1
+2025/06/24 17:54:33 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:33 [WARN] Invalid category ID 'Technology', skipping: strconv.Atoi: parsing "Technology": invalid syntax
+2025/06/24 17:54:33 [INFO] Created post with ID 1 for user 1
+2025/06/24 17:54:33 [DEBUG] Creating new post for user ID 1 with title 'Get Post'
+2025/06/24 17:54:33 [DEBUG] Inserting new post for user ID 1 with title 'Get Post'
+2025/06/24 17:54:33 [INFO] Inserted new post with ID 2 for user ID 1
+2025/06/24 17:54:33 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:33 [INFO] Created post with ID 2 for user 1
+2025/06/24 17:54:33 [DEBUG] Retrieving post with ID 2
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:33 [INFO] Retrieved post with ID 2: title 'Get Post'
+2025/06/24 17:54:33 [DEBUG] Creating new post for user ID 1 with title 'Post 0'
+2025/06/24 17:54:33 [DEBUG] Inserting new post for user ID 1 with title 'Post 0'
+2025/06/24 17:54:33 [INFO] Inserted new post with ID 3 for user ID 1
+2025/06/24 17:54:33 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:33 [INFO] Created post with ID 3 for user 1
+2025/06/24 17:54:33 [DEBUG] Creating new post for user ID 1 with title 'Post 1'
+2025/06/24 17:54:33 [DEBUG] Inserting new post for user ID 1 with title 'Post 1'
+2025/06/24 17:54:33 [INFO] Inserted new post with ID 4 for user ID 1
+2025/06/24 17:54:33 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:33 [INFO] Created post with ID 4 for user 1
+2025/06/24 17:54:33 [DEBUG] Creating new post for user ID 1 with title 'Post 2'
+2025/06/24 17:54:33 [DEBUG] Inserting new post for user ID 1 with title 'Post 2'
+2025/06/24 17:54:33 [INFO] Inserted new post with ID 5 for user ID 1
+2025/06/24 17:54:33 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:33 [INFO] Created post with ID 5 for user 1
+2025/06/24 17:54:33 [DEBUG] Retrieving all posts
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 4
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 5
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:33 [INFO] Retrieved 5 posts
+2025/06/24 17:54:33 [DEBUG] Retrieving posts with filter 'all'
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 4
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 5
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:33 [INFO] Retrieved 5 posts with filter 'all'
+2025/06/24 17:54:33 [DEBUG] Retrieving posts with filter 'top-rated'
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 4
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 5
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:33 [INFO] Retrieved 5 posts with filter 'top-rated'
+2025/06/24 17:54:33 [DEBUG] Retrieving posts with filter 'oldest'
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 4
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 5
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:33 [INFO] Retrieved 5 posts with filter 'oldest'
+2025/06/24 17:54:33 [DEBUG] Creating new post for user ID 1 with title 'Comment Post'
+2025/06/24 17:54:33 [DEBUG] Inserting new post for user ID 1 with title 'Comment Post'
+2025/06/24 17:54:33 [INFO] Inserted new post with ID 6 for user ID 1
+2025/06/24 17:54:33 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:33 [INFO] Created post with ID 6 for user 1
+2025/06/24 17:54:33 [DEBUG] Adding comment to post ID 6 by user ID 1
+2025/06/24 17:54:33 [INFO] Comment added successfully to post ID 6 by user ID 1
+2025/06/24 17:54:33 [DEBUG] Creating new post for user ID 1 with title 'Comments Post'
+2025/06/24 17:54:33 [DEBUG] Inserting new post for user ID 1 with title 'Comments Post'
+2025/06/24 17:54:33 [INFO] Inserted new post with ID 7 for user ID 1
+2025/06/24 17:54:33 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:33 [INFO] Created post with ID 7 for user 1
+2025/06/24 17:54:33 [DEBUG] Adding comment to post ID 7 by user ID 1
+2025/06/24 17:54:33 [INFO] Comment added successfully to post ID 7 by user ID 1
+2025/06/24 17:54:33 [DEBUG] Adding comment to post ID 7 by user ID 1
+2025/06/24 17:54:33 [INFO] Comment added successfully to post ID 7 by user ID 1
+2025/06/24 17:54:33 [DEBUG] Adding comment to post ID 7 by user ID 1
+2025/06/24 17:54:33 [INFO] Comment added successfully to post ID 7 by user ID 1
+2025/06/24 17:54:33 [DEBUG] Retrieving comments for post ID 7
+2025/06/24 17:54:33 [INFO] Retrieved 3 comments for post ID 7
+2025/06/24 17:54:33 [TEST] Initializing test database schema
+2025/06/24 17:54:33 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:33 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:33 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:33 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:33 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:33 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:33 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:33 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:33 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:33 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:33 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:33 [DEBUG] Attempting to connect to SQLite database for creating conversation
+2025/06/24 17:54:33 [INFO] Successfully connected to SQLite database for creating conversation
+2025/06/24 17:54:33 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 17:54:33 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:33 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 17:54:33 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:33 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 17:54:33 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:33 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+--- FAIL: TestConversationDatabaseOperations (0.33s)
+    --- FAIL: TestConversationDatabaseOperations/CreateConversation (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+    --- FAIL: TestConversationDatabaseOperations/AddMessageToConversation (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+    --- FAIL: TestConversationDatabaseOperations/GetConversationMessages (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+    --- FAIL: TestConversationDatabaseOperations/GetUserConversations (0.00s)
+        test_helper.go:327: First conversation creation should succeed: unable to open database file: no such file or directory
+2025/06/24 17:54:33 [TEST] Initializing test database schema
+2025/06/24 17:54:33 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:33 [DEBUG] UserRepository: Creating new user: repotest (repo@example.com)
+2025/06/24 17:54:33 [DEBUG] Creating new user: repotest (repo@example.com)
+2025/06/24 17:54:33 [INFO] User created successfully: repotest (ID: 1)
+2025/06/24 17:54:33 [DEBUG] UserRepository: Getting user by ID: 1
+2025/06/24 17:54:33 [DEBUG] Retrieving user with ID 1
+2025/06/24 17:54:33 [INFO] Retrieved user with ID 1: username 'repotest'
+2025/06/24 17:54:33 [DEBUG] UserRepository: Authenticating user with identifier: repotest
+2025/06/24 17:54:33 [DEBUG] Authenticating user with identifier: repotest
+2025/06/24 17:54:33 [INFO] User authenticated successfully: repotest (ID: 1)
+2025/06/24 17:54:33 [DEBUG] UserRepository: Updating session for user ID 1
+2025/06/24 17:54:33 [DEBUG] Updating session for user ID 1
+2025/06/24 17:54:33 [INFO] Session updated successfully for user ID 1
+2025/06/24 17:54:33 [DEBUG] UserRepository: Getting user by session token
+2025/06/24 17:54:33 [INFO] UserRepository: User found for session: repotest (ID: 1)
+2025/06/24 17:54:33 [DEBUG] UserRepository: Validating session token
+2025/06/24 17:54:33 [INFO] UserRepository: Session validated for user ID 1
+2025/06/24 17:54:33 [DEBUG] UserRepository: Checking if user exists with username: repotest or email: 
+2025/06/24 17:54:33 [DEBUG] Checking if user exists with username: repotest or email: 
+2025/06/24 17:54:33 [INFO] User existence check: true (username: repotest, email: )
+2025/06/24 17:54:33 [DEBUG] UserRepository: Getting all users
+2025/06/24 17:54:33 [DEBUG] Retrieving all users
+2025/06/24 17:54:33 [INFO] Retrieved 1 users
+2025/06/24 17:54:33 [DEBUG] UserRepository: Creating new user: postrepo (postrepo@example.com)
+2025/06/24 17:54:33 [DEBUG] Creating new user: postrepo (postrepo@example.com)
+2025/06/24 17:54:33 [INFO] User created successfully: postrepo (ID: 2)
+2025/06/24 17:54:33 [DEBUG] PostRepository: Creating post for user ID: 2, title: Repo Post
+2025/06/24 17:54:33 [DEBUG] Creating new post for user ID 2 with title 'Repo Post'
+2025/06/24 17:54:33 [DEBUG] Inserting new post for user ID 2 with title 'Repo Post'
+2025/06/24 17:54:33 [INFO] Inserted new post with ID 1 for user ID 2
+2025/06/24 17:54:33 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:33 [INFO] Created post with ID 1 for user 2
+2025/06/24 17:54:33 [DEBUG] PostRepository: Getting post by ID: 1
+2025/06/24 17:54:33 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [INFO] Retrieved post with ID 1: title 'Repo Post'
+2025/06/24 17:54:33 [DEBUG] PostRepository: Getting all posts
+2025/06/24 17:54:33 [DEBUG] Retrieving all posts
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [INFO] Retrieved 1 posts
+2025/06/24 17:54:33 [DEBUG] PostRepository: Getting filtered posts with filter: all
+2025/06/24 17:54:33 [DEBUG] Retrieving posts with filter 'all'
+2025/06/24 17:54:33 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:33 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:33 [INFO] Retrieved 1 posts with filter 'all'
+2025/06/24 17:54:33 [DEBUG] PostRepository: Adding comment to post ID: 1 by user ID: 2
+2025/06/24 17:54:33 [DEBUG] Adding comment to post ID 1 by user ID 2
+2025/06/24 17:54:33 [INFO] Comment added successfully to post ID 1 by user ID 2
+2025/06/24 17:54:33 [DEBUG] PostRepository: Getting comments for post ID: 1
+2025/06/24 17:54:33 [DEBUG] Retrieving comments for post ID 1
+2025/06/24 17:54:33 [INFO] Retrieved 1 comments for post ID 1
+2025/06/24 17:54:33 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:34 [INFO] User created successfully: johndoe (ID: 3)
+2025/06/24 17:54:34 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:34 [INFO] User created successfully: janesmith (ID: 4)
+2025/06/24 17:54:34 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:34 [INFO] User created successfully: bobjohnson (ID: 5)
+2025/06/24 17:54:34 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:34 [INFO] User created successfully: alicebrown (ID: 6)
+2025/06/24 17:54:34 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:34 [INFO] User created successfully: charliewilson (ID: 7)
+2025/06/24 17:54:34 [DEBUG] MessageRepository: Creating conversation with 2 participants
+2025/06/24 17:54:34 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:34 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+--- FAIL: TestRepositoryPattern (0.54s)
+    --- FAIL: TestRepositoryPattern/MessageRepositoryInterface (0.33s)
+        test_helper.go:327: Repository CreateConversation should work: unable to open database file: no such file or directory
+2025/06/24 17:54:34 [TEST] Initializing test database schema
+2025/06/24 17:54:34 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:34 [DEBUG] Creating new user: fktest (fk@example.com)
+2025/06/24 17:54:34 [INFO] User created successfully: fktest (ID: 1)
+2025/06/24 17:54:34 [DEBUG] Creating new post for user ID 1 with title 'FK Post'
+2025/06/24 17:54:34 [DEBUG] Inserting new post for user ID 1 with title 'FK Post'
+2025/06/24 17:54:34 [INFO] Inserted new post with ID 1 for user ID 1
+2025/06/24 17:54:34 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:34 [INFO] Created post with ID 1 for user 1
+2025/06/24 17:54:34 [DEBUG] Adding comment to post ID 99999 by user ID 1
+2025/06/24 17:54:34 [INFO] Comment added successfully to post ID 99999 by user ID 1
+2025/06/24 17:54:34 [DEBUG] Creating new user: uniquetest (unique@example.com)
+2025/06/24 17:54:34 [INFO] User created successfully: uniquetest (ID: 2)
+2025/06/24 17:54:34 [DEBUG] Creating new user: uniquetest (unique2@example.com)
+2025/06/24 17:54:34 [ERROR] Failed to create user uniquetest: UNIQUE constraint failed: user.Username
+2025/06/24 17:54:34 [DEBUG] Creating new user: uniquetest2 (unique@example.com)
+2025/06/24 17:54:34 [ERROR] Failed to create user uniquetest2: UNIQUE constraint failed: user.Email
+2025/06/24 17:54:34 [DEBUG] Creating new user: consistencytest (consistency@example.com)
+2025/06/24 17:54:34 [INFO] User created successfully: consistencytest (ID: 3)
+2025/06/24 17:54:34 [DEBUG] Creating new post for user ID 3 with title 'Consistency Post'
+2025/06/24 17:54:34 [DEBUG] Inserting new post for user ID 3 with title 'Consistency Post'
+2025/06/24 17:54:34 [INFO] Inserted new post with ID 2 for user ID 3
+2025/06/24 17:54:34 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:34 [INFO] Created post with ID 2 for user 3
+2025/06/24 17:54:34 [DEBUG] Adding comment to post ID 2 by user ID 3
+2025/06/24 17:54:34 [INFO] Comment added successfully to post ID 2 by user ID 3
+2025/06/24 17:54:34 [DEBUG] Adding comment to post ID 2 by user ID 3
+2025/06/24 17:54:34 [INFO] Comment added successfully to post ID 2 by user ID 3
+2025/06/24 17:54:34 [DEBUG] Adding comment to post ID 2 by user ID 3
+2025/06/24 17:54:34 [INFO] Comment added successfully to post ID 2 by user ID 3
+2025/06/24 17:54:34 [DEBUG] Retrieving post with ID 2
+2025/06/24 17:54:34 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:34 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:34 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:34 [INFO] Retrieved post with ID 2: title 'Consistency Post'
+2025/06/24 17:54:34 [DEBUG] Retrieving comments for post ID 2
+2025/06/24 17:54:34 [INFO] Retrieved 3 comments for post ID 2
+2025/06/24 17:54:34 [DEBUG] Creating new user: transactiontest (transaction@example.com)
+2025/06/24 17:54:34 [INFO] User created successfully: transactiontest (ID: 4)
+2025/06/24 17:54:34 [DEBUG] Creating new post for user ID 4 with title 'Transaction Post'
+2025/06/24 17:54:34 [DEBUG] Inserting new post for user ID 4 with title 'Transaction Post'
+2025/06/24 17:54:34 [INFO] Inserted new post with ID 3 for user ID 4
+2025/06/24 17:54:34 [WARN] Invalid category ID 'Category1', skipping: strconv.Atoi: parsing "Category1": invalid syntax
+2025/06/24 17:54:34 [WARN] Invalid category ID 'Category2', skipping: strconv.Atoi: parsing "Category2": invalid syntax
+2025/06/24 17:54:34 [WARN] Invalid category ID 'Category3', skipping: strconv.Atoi: parsing "Category3": invalid syntax
+2025/06/24 17:54:34 [INFO] Created post with ID 3 for user 4
+--- FAIL: TestDataIntegrity (0.43s)
+    --- FAIL: TestDataIntegrity/ForeignKeyConstraints (0.08s)
+        test_helper.go:334: Comment creation should fail with invalid post ID: expected error but got none
+    --- FAIL: TestDataIntegrity/TransactionIntegrity (0.07s)
+        test_helper.go:341: Should have 3 category links: expected 0, got 3
+2025/06/24 17:54:34 [TEST] Initializing test database schema
+2025/06/24 17:54:34 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:34 [DEBUG] UserService: Registering new user: emailtest (emailtest@example.com)
+2025/06/24 17:54:34 [DEBUG] UserRepository: Checking if user exists with username: emailtest or email: emailtest@example.com
+2025/06/24 17:54:34 [DEBUG] Checking if user exists with username: emailtest or email: emailtest@example.com
+2025/06/24 17:54:34 [INFO] User existence check: false (username: emailtest, email: emailtest@example.com)
+2025/06/24 17:54:34 [DEBUG] UserRepository: Creating new user: emailtest (emailtest@example.com)
+2025/06/24 17:54:34 [DEBUG] Creating new user: emailtest (emailtest@example.com)
+2025/06/24 17:54:34 [INFO] User created successfully: emailtest (ID: 1)
+2025/06/24 17:54:34 [INFO] UserService: User emailtest (ID: 1) created successfully
+--- FAIL: TestUserRegistrationAndLoginFlow (0.08s)
+    --- FAIL: TestUserRegistrationAndLoginFlow/CompleteUserRegistrationFlow (0.01s)
+        test_helper.go:327: User should be created in database: sql: no rows in result set
+    --- FAIL: TestUserRegistrationAndLoginFlow/LoginWithEmail (0.07s)
+        http_helper.go:221: Cookie session_token not found in response
+    --- FAIL: TestUserRegistrationAndLoginFlow/InvalidLoginAttempts (0.00s)
+        http_helper.go:131: Expected status code 401, got 200
+2025/06/24 17:54:34 [TEST] Initializing test database schema
+2025/06/24 17:54:34 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:34 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:34 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:34 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:34 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:34 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:34 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:34 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:35 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:35 [DEBUG] PostService: Creating post for user ID: 1, title: Comment Test Post
+2025/06/24 17:54:35 [DEBUG] Retrieving all categories
+2025/06/24 17:54:35 [INFO] Retrieved 0 categories
+2025/06/24 17:54:35 [WARN] PostService: Invalid category: General
+--- FAIL: TestPostCreationAndInteractionFlow (0.33s)
+    --- FAIL: TestPostCreationAndInteractionFlow/CompletePostCreationFlow (0.00s)
+        http_helper.go:131: Expected status code 200, got 404
+    --- FAIL: TestPostCreationAndInteractionFlow/PostCommentingFlow (0.00s)
+        test_helper.go:327: Post creation should succeed: invalid category: General
+2025/06/24 17:54:35 [TEST] Initializing test database schema
+2025/06/24 17:54:35 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:35 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:35 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:35 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:35 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:35 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:35 [DEBUG] MessageRepository: Creating conversation with 2 participants
+2025/06/24 17:54:35 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:35 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+--- FAIL: TestMessagingWorkflow (0.33s)
+    --- FAIL: TestMessagingWorkflow/CompleteMessagingFlow (0.00s)
+        http_helper.go:131: Expected status code 200, got 404
+    --- FAIL: TestMessagingWorkflow/MessageReadStatusFlow (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+2025/06/24 17:54:35 [TEST] Initializing test database schema
+2025/06/24 17:54:35 [TEST] Test database schema initialized successfully
+--- FAIL: TestEndToEndUserJourney (0.01s)
+    --- FAIL: TestEndToEndUserJourney/CompleteUserJourney (0.00s)
+        http_helper.go:131: Expected status code 200, got 404
+2025/06/24 17:54:35 [TEST] Initializing test database schema
+2025/06/24 17:54:35 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:35 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:35 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:35 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:35 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:35 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:35 [DEBUG] MessageRepository: Creating conversation with 2 participants
+2025/06/24 17:54:35 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:35 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 17:54:35 [DEBUG] MessageRepository: Creating conversation with 4 participants
+2025/06/24 17:54:35 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:35 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 17:54:35 [DEBUG] MessageRepository: Creating conversation with 3 participants
+2025/06/24 17:54:35 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:35 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 17:54:35 [DEBUG] MessageRepository: Creating conversation with 2 participants
+2025/06/24 17:54:35 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:35 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 17:54:35 [DEBUG] MessageRepository: Creating conversation with 0 participants
+2025/06/24 17:54:35 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:35 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+--- FAIL: TestConversationCreation (0.35s)
+    --- FAIL: TestConversationCreation/CreateValidConversation (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+    --- FAIL: TestConversationCreation/CreateGroupConversation (0.00s)
+        test_helper.go:327: Group conversation creation should succeed: unable to open database file: no such file or directory
+2025/06/24 17:54:35 [TEST] Initializing test database schema
+2025/06/24 17:54:35 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:35 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:35 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:35 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:35 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:36 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:36 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:36 [DEBUG] MessageRepository: Creating conversation with 2 participants
+2025/06/24 17:54:36 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:36 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+--- FAIL: TestMessageSending (0.34s)
+    test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+2025/06/24 17:54:36 [TEST] Initializing test database schema
+2025/06/24 17:54:36 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:36 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:36 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:36 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:36 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:36 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:36 [DEBUG] MessageRepository: Creating conversation with 2 participants
+2025/06/24 17:54:36 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:36 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+--- FAIL: TestMessageRetrieval (0.33s)
+    test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+2025/06/24 17:54:36 [TEST] Initializing test database schema
+2025/06/24 17:54:36 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:36 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:36 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:36 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:36 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:36 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:36 [DEBUG] MessageRepository: Creating conversation with 2 participants
+2025/06/24 17:54:36 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:36 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 17:54:36 [DEBUG] MessageRepository: Creating conversation with 2 participants
+2025/06/24 17:54:36 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:36 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 17:54:36 [DEBUG] MessageRepository: Creating conversation with 3 participants
+2025/06/24 17:54:36 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 17:54:36 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+--- FAIL: TestConversationManagement (0.33s)
+    --- FAIL: TestConversationManagement/GetUserConversations (0.00s)
+        test_helper.go:327: First conversation creation should succeed: unable to open database file: no such file or directory
+    --- FAIL: TestConversationManagement/IsUserParticipant (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+    --- FAIL: TestConversationManagement/GetConversationParticipants (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+2025/06/24 17:54:36 [TEST] Initializing test database schema
+2025/06/24 17:54:36 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:36 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:36 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:36 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:36 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:36 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:37 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:37 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:37 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:37 [INFO] Starting authentication check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Auth check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Attempting to connect to SQLite database for auth check
+2025/06/24 17:54:37 [INFO] Successfully connected to SQLite database for auth check
+2025/06/24 17:54:37 [DEBUG] Session cookie retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Session token test...on_1 retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Validating session token test...on_1 in database
+2025/06/24 17:54:37 [ERROR] Database error while validating session test...on_1: unable to open database file: no such file or directory
+2025/06/24 17:54:37 [INFO] Returning internal server error due to database issue for session validation from 192.0.2.1:1234
+2025/06/24 17:54:37 [ERROR] 500 error (middleware.go:85 in 1): Internal Server Error from 192.0.2.1:1234 (Request: GET /protected, User-Agent: )
+2025/06/24 17:54:37 [INFO] Starting authentication check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Auth check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Attempting to connect to SQLite database for auth check
+2025/06/24 17:54:37 [INFO] Successfully connected to SQLite database for auth check
+2025/06/24 17:54:37 [WARN] No session cookie found for request to /protected from 192.0.2.1:1234: http: named cookie not present
+2025/06/24 17:54:37 [INFO] Redirecting to authentication due to missing session cookie for /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [WARN] Authentication error (middleware.go:35 in 1): Authentication Required from 192.0.2.1:1234 (Request: GET /protected, User-Agent: )
+2025/06/24 17:54:37 [INFO] Starting authentication check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Auth check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Attempting to connect to SQLite database for auth check
+2025/06/24 17:54:37 [INFO] Successfully connected to SQLite database for auth check
+2025/06/24 17:54:37 [DEBUG] Session cookie retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Session token inva...oken retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Validating session token inva...oken in database
+2025/06/24 17:54:37 [ERROR] Database error while validating session inva...oken: unable to open database file: no such file or directory
+2025/06/24 17:54:37 [INFO] Returning internal server error due to database issue for session validation from 192.0.2.1:1234
+2025/06/24 17:54:37 [ERROR] 500 error (middleware.go:85 in 1): Internal Server Error from 192.0.2.1:1234 (Request: GET /protected, User-Agent: )
+2025/06/24 17:54:37 [INFO] Starting authentication check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Auth check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Attempting to connect to SQLite database for auth check
+2025/06/24 17:54:37 [INFO] Successfully connected to SQLite database for auth check
+2025/06/24 17:54:37 [DEBUG] Session cookie retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Session token test...on_1 retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Validating session token test...on_1 in database
+2025/06/24 17:54:37 [ERROR] Database error while validating session test...on_1: unable to open database file: no such file or directory
+2025/06/24 17:54:37 [INFO] Returning internal server error due to database issue for session validation from 192.0.2.1:1234
+2025/06/24 17:54:37 [ERROR] 500 error (middleware.go:85 in 1): Internal Server Error from 192.0.2.1:1234 (Request: GET /protected, User-Agent: )
+2025/06/24 17:54:37 [INFO] Starting authentication check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Auth check for request: GET /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Attempting to connect to SQLite database for auth check
+2025/06/24 17:54:37 [INFO] Successfully connected to SQLite database for auth check
+2025/06/24 17:54:37 [DEBUG] Session cookie retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Session token test...on_1 retrieved for request to /protected from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] Validating session token test...on_1 in database
+2025/06/24 17:54:37 [ERROR] Database error while validating session test...on_1: unable to open database file: no such file or directory
+2025/06/24 17:54:37 [INFO] Returning internal server error due to database issue for session validation from 192.0.2.1:1234
+2025/06/24 17:54:37 [ERROR] 500 error (middleware.go:85 in 1): Internal Server Error from 192.0.2.1:1234 (Request: GET /protected, User-Agent: )
+--- FAIL: TestAuthMiddleware (0.34s)
+    --- FAIL: TestAuthMiddleware/AuthenticatedRequest (0.00s)
+        test_helper.go:341: Authenticated request should succeed: expected 303, got 200
+    --- FAIL: TestAuthMiddleware/UnauthenticatedRequest (0.00s)
+        test_helper.go:355: Unauthenticated request should be rejected or redirected: expected true but got false
+    --- FAIL: TestAuthMiddleware/InvalidSessionToken (0.00s)
+        test_helper.go:355: Invalid session should be rejected: expected true but got false
+    --- FAIL: TestAuthMiddleware/ExpiredSession (0.00s)
+        test_helper.go:355: Expired session should be rejected: expected true but got false
+    --- FAIL: TestAuthMiddleware/MultipleSessionRequests (0.00s)
+        test_helper.go:341: First user should be authenticated: expected 303, got 200
+2025/06/24 17:54:37 [TEST] Initializing test database schema
+2025/06/24 17:54:37 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:37 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:37 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:37 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:37 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:37 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:37 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:37 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:37 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:37 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:37 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:37 [DEBUG] ReverseMiddleware checking authenticated state for GET /login from 192.0.2.1:1234
+2025/06/24 17:54:37 [DEBUG] ReverseMiddleware: No session cookie found for request to /login from 192.0.2.1:1234, proceeding to login page
+2025/06/24 17:54:37 [DEBUG] ReverseMiddleware checking authenticated state for GET /login from 192.0.2.1:1234
+2025/06/24 17:54:37 [ERROR] ReverseMiddleware: Error checking session existence: unable to open database file: no such file or directory
+2025/06/24 17:54:37 [TEST] Initializing test database schema
+2025/06/24 17:54:37 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:37 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:37 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:37 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:37 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:37 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:37 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:37 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:37 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:37 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:37 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:37 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:37 [ERROR] Failed to create user johndoe: UNIQUE constraint failed: user.Email
+2025/06/24 17:54:37 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:37 [ERROR] Failed to create user johndoe: UNIQUE constraint failed: user.Email
+--- FAIL: TestInputValidation (0.50s)
+    --- FAIL: TestInputValidation/InputLengthValidation (0.07s)
+        test_helper.go:327: Failed to setup test users: failed to create test user johndoe: failed to create test user: UNIQUE constraint failed: user.Email
+    --- FAIL: TestInputValidation/SpecialCharacterHandling (0.07s)
+        test_helper.go:327: Failed to setup test users: failed to create test user johndoe: failed to create test user: UNIQUE constraint failed: user.Email
+2025/06/24 17:54:37 [TEST] Initializing test database schema
+2025/06/24 17:54:37 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:37 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:38 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:38 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:38 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:38 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:38 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:38 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:38 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:38 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:38 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:38 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:38 [ERROR] Failed to create user johndoe: UNIQUE constraint failed: user.Email
+--- FAIL: TestErrorHandling (0.40s)
+    --- FAIL: TestErrorHandling/InvalidDataHandling (0.33s)
+        test_helper.go:334: Should error with invalid date format: expected error but got none
+    --- FAIL: TestErrorHandling/ConcurrentAccessHandling (0.07s)
+        test_helper.go:327: Failed to setup test users: failed to create test user johndoe: failed to create test user: UNIQUE constraint failed: user.Email
+2025/06/24 17:54:38 [TEST] Initializing test database schema
+2025/06/24 17:54:38 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:38 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:38 [INFO] User created successfully: johndoe (ID: 2)
+2025/06/24 17:54:38 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:38 [INFO] User created successfully: janesmith (ID: 3)
+2025/06/24 17:54:38 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:38 [INFO] User created successfully: bobjohnson (ID: 4)
+2025/06/24 17:54:38 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:38 [INFO] User created successfully: alicebrown (ID: 5)
+2025/06/24 17:54:38 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:38 [INFO] User created successfully: charliewilson (ID: 6)
+2025/06/24 17:54:38 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:38 [ERROR] Failed to create user johndoe: UNIQUE constraint failed: user.Email
+2025/06/24 17:54:38 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:38 [ERROR] Failed to create user johndoe: UNIQUE constraint failed: user.Email
+--- FAIL: TestSecurityFeatures (0.46s)
+    --- FAIL: TestSecurityFeatures/PasswordHashing (0.00s)
+        test_helper.go:348: Password should be hashed, not stored in plain text: expected test_password_123 to not equal test_password_123
+    --- FAIL: TestSecurityFeatures/SessionTokenSecurity (0.33s)
+        test_helper.go:355: Session token should be sufficiently long: expected true but got false
+    --- FAIL: TestSecurityFeatures/AuthorizationChecks (0.06s)
+        test_helper.go:327: Failed to setup test users: failed to create test user johndoe: failed to create test user: UNIQUE constraint failed: user.Email
+    --- FAIL: TestSecurityFeatures/DataSanitization (0.07s)
+        test_helper.go:327: Failed to setup test users: failed to create test user johndoe: failed to create test user: UNIQUE constraint failed: user.Email
+2025/06/24 17:54:38 [TEST] Initializing test database schema
+2025/06/24 17:54:38 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:38 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:38 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:38 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:38 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:38 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:39 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:39 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:39 [DEBUG] PostService: Creating post for user ID: 1, title: Test Post Title
+2025/06/24 17:54:39 [DEBUG] Retrieving all categories
+2025/06/24 17:54:39 [INFO] Retrieved 0 categories
+2025/06/24 17:54:39 [WARN] PostService: Invalid category: General
+2025/06/24 17:54:39 [DEBUG] PostService: Creating post for user ID: 1, title: 
+2025/06/24 17:54:39 [DEBUG] PostService: Creating post for user ID: 1, title: Title without content
+2025/06/24 17:54:39 [DEBUG] PostService: Creating post for user ID: 1, title:    
+2025/06/24 17:54:39 [DEBUG] PostService: Creating post for user ID: 1, title: Valid title
+2025/06/24 17:54:39 [DEBUG] PostService: Creating post for user ID: 2, title: Multi-Category Post
+2025/06/24 17:54:39 [DEBUG] Retrieving all categories
+2025/06/24 17:54:39 [INFO] Retrieved 0 categories
+2025/06/24 17:54:39 [WARN] PostService: Invalid category: Technology
+2025/06/24 17:54:39 [DEBUG] PostService: Creating post for user ID: 99999, title: Invalid User Post
+2025/06/24 17:54:39 [DEBUG] Retrieving all categories
+2025/06/24 17:54:39 [INFO] Retrieved 0 categories
+2025/06/24 17:54:39 [WARN] PostService: Invalid category: General
+--- FAIL: TestPostCreation (0.34s)
+    --- FAIL: TestPostCreation/ValidPostCreation (0.00s)
+        test_helper.go:327: Post creation should succeed: invalid category: General
+    --- FAIL: TestPostCreation/PostWithMultipleCategories (0.00s)
+        test_helper.go:327: Post creation with multiple categories should succeed: invalid category: Technology
+2025/06/24 17:54:39 [TEST] Initializing test database schema
+2025/06/24 17:54:39 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:39 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:39 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:39 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:39 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:39 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:39 [DEBUG] PostService: Getting all posts
+2025/06/24 17:54:39 [DEBUG] Retrieving all posts
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 5
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 4
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [INFO] Retrieved 5 posts
+2025/06/24 17:54:39 [INFO] PostService: Retrieved 5 posts
+2025/06/24 17:54:39 [DEBUG] PostRepository: Getting post by ID: 1
+2025/06/24 17:54:39 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [INFO] Retrieved post with ID 1: title 'Welcome to the Forum'
+2025/06/24 17:54:39 [DEBUG] PostRepository: Getting post by ID: 99999
+2025/06/24 17:54:39 [DEBUG] Retrieving post with ID 99999
+2025/06/24 17:54:39 [INFO] No post found with ID 99999
+2025/06/24 17:54:39 [DEBUG] PostService: Getting all posts
+2025/06/24 17:54:39 [DEBUG] Retrieving all posts
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 5
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 4
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [INFO] Retrieved 5 posts
+2025/06/24 17:54:39 [INFO] PostService: Retrieved 5 posts
+2025/06/24 17:54:39 [DEBUG] PostRepository: Getting post by ID: 1
+2025/06/24 17:54:39 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [INFO] Retrieved post with ID 1: title 'Welcome to the Forum'
+2025/06/24 17:54:39 [TEST] Initializing test database schema
+2025/06/24 17:54:39 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:39 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:39 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:39 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:39 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:39 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:39 [DEBUG] PostService: Getting filtered posts with filter: all
+2025/06/24 17:54:39 [DEBUG] Retrieving all posts
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 5
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 4
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [INFO] Retrieved 5 posts
+2025/06/24 17:54:39 [INFO] PostService: Retrieved 5 posts with filter: all
+2025/06/24 17:54:39 [DEBUG] PostService: Getting filtered posts with filter: top-rated
+2025/06/24 17:54:39 [DEBUG] Retrieving posts with filter 'top-rated'
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 5
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 4
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [INFO] Retrieved 5 posts with filter 'top-rated'
+2025/06/24 17:54:39 [INFO] PostService: Retrieved 5 posts with filter: top-rated
+2025/06/24 17:54:39 [DEBUG] PostService: Getting filtered posts with filter: oldest
+2025/06/24 17:54:39 [DEBUG] Retrieving posts with filter 'oldest'
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 4
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 5
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 5: no such table: post_has_categories
+2025/06/24 17:54:39 [INFO] Retrieved 5 posts with filter 'oldest'
+2025/06/24 17:54:39 [INFO] PostService: Retrieved 5 posts with filter: oldest
+2025/06/24 17:54:39 [DEBUG] PostService: Getting filtered posts with filter: invalid-filter
+2025/06/24 17:54:39 [ERROR] PostService: Invalid filter: invalid-filter
+2025/06/24 17:54:39 [DEBUG] PostService: Getting posts by user ID: 1
+2025/06/24 17:54:39 [DEBUG] Retrieving posts by user ID 1
+2025/06/24 17:54:39 [DEBUG] Retrieving posts for user ID 1 with filter 'newest'
+2025/06/24 17:54:39 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:39 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:39 [INFO] Retrieved 1 posts for user ID 1
+2025/06/24 17:54:39 [INFO] PostService: Retrieved 1 posts for user ID: 1
+2025/06/24 17:54:39 [DEBUG] PostService: Getting posts by user ID: 99999
+2025/06/24 17:54:39 [DEBUG] Retrieving posts by user ID 99999
+2025/06/24 17:54:39 [DEBUG] Retrieving posts for user ID 99999 with filter 'newest'
+2025/06/24 17:54:39 [INFO] Retrieved 0 posts for user ID 99999
+2025/06/24 17:54:39 [INFO] PostService: Retrieved 0 posts for user ID: 99999
+2025/06/24 17:54:39 [TEST] Initializing test database schema
+2025/06/24 17:54:39 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:39 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:39 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:39 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:40 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:40 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:40 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:40 [DEBUG] PostService: Creating post for user ID: 1, title: New Category Post
+2025/06/24 17:54:40 [DEBUG] Retrieving all categories
+2025/06/24 17:54:40 [INFO] Retrieved 0 categories
+2025/06/24 17:54:40 [WARN] PostService: Invalid category: NewCategory
+2025/06/24 17:54:40 [DEBUG] PostService: Creating post for user ID: 1, title: Existing Category Post
+2025/06/24 17:54:40 [DEBUG] Retrieving all categories
+2025/06/24 17:54:40 [INFO] Retrieved 1 categories
+2025/06/24 17:54:40 [DEBUG] Creating new post for user ID 1 with title 'Existing Category Post'
+2025/06/24 17:54:40 [DEBUG] Inserting new post for user ID 1 with title 'Existing Category Post'
+2025/06/24 17:54:40 [INFO] Inserted new post with ID 1 for user ID 1
+2025/06/24 17:54:40 [WARN] Invalid category ID 'ExistingCategory', skipping: strconv.Atoi: parsing "ExistingCategory": invalid syntax
+2025/06/24 17:54:40 [INFO] Created post with ID 1 for user 1
+2025/06/24 17:54:40 [INFO] PostService: Post created successfully with ID: 1
+2025/06/24 17:54:40 [DEBUG] PostService: Creating post for user ID: 1, title: Category Post 1
+2025/06/24 17:54:40 [DEBUG] Retrieving all categories
+2025/06/24 17:54:40 [INFO] Retrieved 1 categories
+2025/06/24 17:54:40 [WARN] PostService: Invalid category: TestCategory
+2025/06/24 17:54:40 [DEBUG] PostService: Getting posts by category: NonexistentCategory
+2025/06/24 17:54:40 [DEBUG] Retrieving all categories
+2025/06/24 17:54:40 [INFO] Retrieved 1 categories
+2025/06/24 17:54:40 [WARN] PostService: Invalid category: NonexistentCategory
+--- FAIL: TestPostCategories (0.37s)
+    --- FAIL: TestPostCategories/CreatePostWithNewCategory (0.00s)
+        test_helper.go:327: Should be able to create post with new category: invalid category: NewCategory
+    --- FAIL: TestPostCategories/GetPostsByCategory (0.00s)
+        test_helper.go:327: Should be able to create first post: invalid category: TestCategory
+    --- FAIL: TestPostCategories/GetPostsByNonexistentCategory (0.00s)
+        test_helper.go:327: Should not error for non-existent category: invalid category
+2025/06/24 17:54:40 [TEST] Initializing test database schema
+2025/06/24 17:54:40 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:40 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:40 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:40 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:40 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:40 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 17:54:40 [DEBUG] PostRepository: Creating post for user ID: 1, title: Repository Test Post
+2025/06/24 17:54:40 [DEBUG] Creating new post for user ID 1 with title 'Repository Test Post'
+2025/06/24 17:54:40 [DEBUG] Inserting new post for user ID 1 with title 'Repository Test Post'
+2025/06/24 17:54:40 [INFO] Inserted new post with ID 1 for user ID 1
+2025/06/24 17:54:40 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:40 [INFO] Created post with ID 1 for user 1
+2025/06/24 17:54:40 [DEBUG] PostRepository: Getting post by ID: 1
+2025/06/24 17:54:40 [DEBUG] Retrieving post with ID 1
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:40 [INFO] Retrieved post with ID 1: title 'Repository Test Post'
+2025/06/24 17:54:40 [DEBUG] PostRepository: Creating post for user ID: 1, title: Repo Post 0
+2025/06/24 17:54:40 [DEBUG] Creating new post for user ID 1 with title 'Repo Post 0'
+2025/06/24 17:54:40 [DEBUG] Inserting new post for user ID 1 with title 'Repo Post 0'
+2025/06/24 17:54:40 [INFO] Inserted new post with ID 2 for user ID 1
+2025/06/24 17:54:40 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:40 [INFO] Created post with ID 2 for user 1
+2025/06/24 17:54:40 [DEBUG] PostRepository: Creating post for user ID: 2, title: Repo Post 1
+2025/06/24 17:54:40 [DEBUG] Creating new post for user ID 2 with title 'Repo Post 1'
+2025/06/24 17:54:40 [DEBUG] Inserting new post for user ID 2 with title 'Repo Post 1'
+2025/06/24 17:54:40 [INFO] Inserted new post with ID 3 for user ID 2
+2025/06/24 17:54:40 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:40 [INFO] Created post with ID 3 for user 2
+2025/06/24 17:54:40 [DEBUG] PostRepository: Creating post for user ID: 3, title: Repo Post 2
+2025/06/24 17:54:40 [DEBUG] Creating new post for user ID 3 with title 'Repo Post 2'
+2025/06/24 17:54:40 [DEBUG] Inserting new post for user ID 3 with title 'Repo Post 2'
+2025/06/24 17:54:40 [INFO] Inserted new post with ID 4 for user ID 3
+2025/06/24 17:54:40 [WARN] Invalid category ID 'General', skipping: strconv.Atoi: parsing "General": invalid syntax
+2025/06/24 17:54:40 [INFO] Created post with ID 4 for user 3
+2025/06/24 17:54:40 [DEBUG] PostRepository: Getting all posts
+2025/06/24 17:54:40 [DEBUG] Retrieving all posts
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 4
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:40 [INFO] Retrieved 4 posts
+2025/06/24 17:54:40 [DEBUG] PostRepository: Getting filtered posts with filter: all
+2025/06/24 17:54:40 [DEBUG] Retrieving posts with filter 'all'
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 4
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:40 [INFO] Retrieved 4 posts with filter 'all'
+2025/06/24 17:54:40 [DEBUG] PostRepository: Getting filtered posts with filter: top-rated
+2025/06/24 17:54:40 [DEBUG] Retrieving posts with filter 'top-rated'
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 4
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:40 [INFO] Retrieved 4 posts with filter 'top-rated'
+2025/06/24 17:54:40 [DEBUG] PostRepository: Getting filtered posts with filter: oldest
+2025/06/24 17:54:40 [DEBUG] Retrieving posts with filter 'oldest'
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 1
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 1: no such table: post_has_categories
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 2
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 2: no such table: post_has_categories
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 3
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 3: no such table: post_has_categories
+2025/06/24 17:54:40 [DEBUG] Retrieving categories for post ID 4
+2025/06/24 17:54:40 [ERROR] Failed to query categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:40 [WARN] Failed to fetch categories for post ID 4: no such table: post_has_categories
+2025/06/24 17:54:40 [INFO] Retrieved 4 posts with filter 'oldest'
+2025/06/24 17:54:40 [TEST] Initializing test database schema
+2025/06/24 17:54:40 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:40 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:40 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:40 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:40 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:40 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: charliewilson (ID: 5)
+--- FAIL: TestWebSocketConnections (0.33s)
+    --- FAIL: TestWebSocketConnections/ConnectUser (0.00s)
+        test_helper.go:327: User should be able to connect to WebSocket: server not started
+    --- FAIL: TestWebSocketConnections/ConnectMultipleUsers (0.00s)
+        test_helper.go:327: User should be able to connect: server not started
+    --- FAIL: TestWebSocketConnections/DisconnectUser (0.00s)
+        test_helper.go:327: User should be able to connect: server not started
+2025/06/24 17:54:40 [TEST] Initializing test database schema
+2025/06/24 17:54:40 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:40 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:40 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:40 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:41 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:41 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:41 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: charliewilson (ID: 5)
+--- FAIL: TestWebSocketMessaging (0.35s)
+    test_helper.go:327: First user should connect: server not started
+2025/06/24 17:54:41 [TEST] Initializing test database schema
+2025/06/24 17:54:41 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:41 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:41 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:41 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:41 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:41 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: charliewilson (ID: 5)
+--- FAIL: TestTypingIndicators (0.33s)
+    test_helper.go:327: First user should connect: server not started
+2025/06/24 17:54:41 [TEST] Initializing test database schema
+2025/06/24 17:54:41 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:41 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:41 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:41 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:41 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:41 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: charliewilson (ID: 5)
+--- FAIL: TestOnlineStatus (0.33s)
+    --- FAIL: TestOnlineStatus/UserGoesOnline (0.00s)
+        test_helper.go:327: First user should connect: server not started
+    --- FAIL: TestOnlineStatus/UserGoesOffline (0.00s)
+        test_helper.go:327: Second user should connect: server not started
+2025/06/24 17:54:41 [TEST] Initializing test database schema
+2025/06/24 17:54:41 [TEST] Test database schema initialized successfully
+2025/06/24 17:54:41 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 17:54:41 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 17:54:41 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 17:54:42 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 17:54:42 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 17:54:42 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 17:54:42 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 17:54:42 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 17:54:42 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 17:54:42 [INFO] User created successfully: charliewilson (ID: 5)
+--- FAIL: TestWebSocketConnectionManagement (0.34s)
+    --- FAIL: TestWebSocketConnectionManagement/ConnectionLifecycle (0.00s)
+        test_helper.go:327: User should be able to connect: server not started
+    --- FAIL: TestWebSocketConnectionManagement/MessageHistory (0.00s)
+        test_helper.go:327: User should be able to connect: server not started
+FAIL
+FAIL	forum/unit-testing	15.734s
+FAIL

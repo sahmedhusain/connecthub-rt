@@ -1,0 +1,76 @@
+{
+  "name": "real-time-forum-frontend-tests",
+  "version": "1.0.0",
+  "description": "Frontend testing suite for Real-Time Forum application",
+
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:debug": "playwright test --debug",
+    "test:unit": "jest --testPathPattern=unit",
+    "test:integration": "jest --testPathPattern=integration",
+    "test:dom": "jest --testPathPattern=dom",
+    "test:websocket": "jest --testPathPattern=websocket",
+    "test:auth": "jest --testPathPattern=auth",
+    "test:spa": "jest --testPathPattern=spa",
+    "test:responsive": "playwright test --grep responsive",
+    "test:cross-browser": "playwright test --project=chromium --project=firefox --project=webkit",
+    "install-browsers": "playwright install",
+    "serve": "http-server ../src -p 3000 -c-1",
+    "lint": "eslint frontend-tests/**/*.js",
+    "format": "prettier --write frontend-tests/**/*.js"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@playwright/test": "^1.40.0",
+    "eslint": "^8.55.0",
+    "http-server": "^14.1.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.1.0",
+    "ws": "^8.14.2"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/frontend-tests/setup/jest.setup.js"],
+    "testMatch": [
+      "<rootDir>/frontend-tests/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "../src/js/**/*.js",
+      "!../src/js/sw.js"
+    ],
+    "coverageDirectory": "coverage/frontend",
+    "coverageReporters": ["text", "html", "json"],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/../src/js/$1"
+    },
+    "transform": {}
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2022": true,
+      "jest": true,
+      "node": true
+    },
+    "extends": ["eslint:recommended"],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-console": "off",
+      "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
+  }
+}

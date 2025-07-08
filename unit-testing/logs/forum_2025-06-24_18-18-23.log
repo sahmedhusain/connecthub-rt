@@ -1,0 +1,6 @@
+2025/06/24 18:18:23 main.go:111: [INFO] Initializing application...
+2025/06/24 18:18:23 main.go:31: [INFO] Database initialization started
+2025/06/24 18:18:23 database.go:13: [DEBUG] Attempting to connect to SQLite database at ./database/main.db
+2025/06/24 18:18:23 database.go:19: [INFO] Successfully connected to SQLite database
+2025/06/24 18:18:23 database.go:126: [DEBUG] Executing table creation query #1
+2025/06/24 18:18:23 database.go:129: [FATAL] Failed to create table (query #1): unable to open database file: no such file or directory

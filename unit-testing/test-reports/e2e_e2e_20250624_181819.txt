@@ -1,0 +1,8 @@
+[2m[WebServer] [22mexit status 1
+Error: Process from config.webServer was not able to start. Exit code: 1
+
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report test-reports/playwright-html[39m
+[36m[39m

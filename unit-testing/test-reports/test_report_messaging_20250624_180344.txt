@@ -1,0 +1,163 @@
+2025/06/24 18:03:47 [TEST] Initializing test database schema
+2025/06/24 18:03:47 [TEST] Test database schema initialized successfully
+2025/06/24 18:03:47 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 18:03:47 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 18:03:47 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 18:03:47 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 18:03:47 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 18:03:47 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 18:03:47 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 18:03:47 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 18:03:47 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 18:03:47 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 18:03:47 [DEBUG] Attempting to connect to SQLite database for creating conversation
+2025/06/24 18:03:47 [INFO] Successfully connected to SQLite database for creating conversation
+2025/06/24 18:03:47 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 18:03:47 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 18:03:47 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 18:03:47 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 18:03:47 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 18:03:47 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 18:03:47 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+--- FAIL: TestConversationDatabaseOperations (0.34s)
+    --- FAIL: TestConversationDatabaseOperations/CreateConversation (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+    --- FAIL: TestConversationDatabaseOperations/AddMessageToConversation (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+    --- FAIL: TestConversationDatabaseOperations/GetConversationMessages (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+    --- FAIL: TestConversationDatabaseOperations/GetUserConversations (0.00s)
+        test_helper.go:327: First conversation creation should succeed: unable to open database file: no such file or directory
+2025/06/24 18:03:47 [TEST] Initializing test database schema
+2025/06/24 18:03:47 [TEST] Test database schema initialized successfully
+2025/06/24 18:03:47 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 18:03:47 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 18:03:47 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 18:03:47 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 18:03:47 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 18:03:47 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 18:03:47 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 18:03:47 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 18:03:47 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 18:03:47 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 18:03:47 [DEBUG] MessageRepository: Creating conversation with 2 participants
+2025/06/24 18:03:47 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 18:03:47 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+--- FAIL: TestMessagingWorkflow (0.34s)
+    --- FAIL: TestMessagingWorkflow/CompleteMessagingFlow (0.00s)
+        http_helper.go:131: Expected status code 200, got 404
+    --- FAIL: TestMessagingWorkflow/MessageReadStatusFlow (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+2025/06/24 18:03:47 [TEST] Initializing test database schema
+2025/06/24 18:03:47 [TEST] Test database schema initialized successfully
+2025/06/24 18:03:47 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 18:03:47 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 18:03:47 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 18:03:48 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 18:03:48 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 18:03:48 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 18:03:48 [DEBUG] MessageRepository: Creating conversation with 2 participants
+2025/06/24 18:03:48 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 18:03:48 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 18:03:48 [DEBUG] MessageRepository: Creating conversation with 4 participants
+2025/06/24 18:03:48 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 18:03:48 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 18:03:48 [DEBUG] MessageRepository: Creating conversation with 3 participants
+2025/06/24 18:03:48 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 18:03:48 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 18:03:48 [DEBUG] MessageRepository: Creating conversation with 2 participants
+2025/06/24 18:03:48 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 18:03:48 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 18:03:48 [DEBUG] MessageRepository: Creating conversation with 0 participants
+2025/06/24 18:03:48 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 18:03:48 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+--- FAIL: TestConversationCreation (0.33s)
+    --- FAIL: TestConversationCreation/CreateValidConversation (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+    --- FAIL: TestConversationCreation/CreateGroupConversation (0.00s)
+        test_helper.go:327: Group conversation creation should succeed: unable to open database file: no such file or directory
+2025/06/24 18:03:48 [TEST] Initializing test database schema
+2025/06/24 18:03:48 [TEST] Test database schema initialized successfully
+2025/06/24 18:03:48 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 18:03:48 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 18:03:48 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 18:03:48 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 18:03:48 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: charliewilson (ID: 5)
+2025/06/24 18:03:48 [DEBUG] MessageRepository: Creating conversation with 2 participants
+2025/06/24 18:03:48 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 18:03:48 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 18:03:48 [DEBUG] MessageRepository: Creating conversation with 2 participants
+2025/06/24 18:03:48 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 18:03:48 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+2025/06/24 18:03:48 [DEBUG] MessageRepository: Creating conversation with 3 participants
+2025/06/24 18:03:48 [DEBUG] Using existing database connection for creating conversation
+2025/06/24 18:03:48 [ERROR] Failed to begin transaction in CreateConversation: unable to open database file: no such file or directory
+--- FAIL: TestConversationManagement (0.33s)
+    --- FAIL: TestConversationManagement/GetUserConversations (0.00s)
+        test_helper.go:327: First conversation creation should succeed: unable to open database file: no such file or directory
+    --- FAIL: TestConversationManagement/IsUserParticipant (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+    --- FAIL: TestConversationManagement/GetConversationParticipants (0.00s)
+        test_helper.go:327: Conversation creation should succeed: unable to open database file: no such file or directory
+2025/06/24 18:03:48 [TEST] Initializing test database schema
+2025/06/24 18:03:48 [TEST] Test database schema initialized successfully
+2025/06/24 18:03:48 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 18:03:48 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 18:03:48 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 18:03:48 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 18:03:48 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: charliewilson (ID: 5)
+--- FAIL: TestWebSocketConnections (0.32s)
+    --- FAIL: TestWebSocketConnections/ConnectUser (0.00s)
+        test_helper.go:327: User should be able to connect to WebSocket: server not started
+    --- FAIL: TestWebSocketConnections/ConnectMultipleUsers (0.00s)
+        test_helper.go:327: User should be able to connect: server not started
+    --- FAIL: TestWebSocketConnections/DisconnectUser (0.00s)
+        test_helper.go:327: User should be able to connect: server not started
+2025/06/24 18:03:48 [TEST] Initializing test database schema
+2025/06/24 18:03:48 [TEST] Test database schema initialized successfully
+2025/06/24 18:03:48 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 18:03:48 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 18:03:48 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 18:03:49 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 18:03:49 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 18:03:49 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 18:03:49 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 18:03:49 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 18:03:49 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 18:03:49 [INFO] User created successfully: charliewilson (ID: 5)
+--- FAIL: TestWebSocketMessaging (0.33s)
+    test_helper.go:327: First user should connect: server not started
+2025/06/24 18:03:49 [TEST] Initializing test database schema
+2025/06/24 18:03:49 [TEST] Test database schema initialized successfully
+2025/06/24 18:03:49 [DEBUG] Creating new user: johndoe (john@example.com)
+2025/06/24 18:03:49 [INFO] User created successfully: johndoe (ID: 1)
+2025/06/24 18:03:49 [DEBUG] Creating new user: janesmith (jane@example.com)
+2025/06/24 18:03:49 [INFO] User created successfully: janesmith (ID: 2)
+2025/06/24 18:03:49 [DEBUG] Creating new user: bobjohnson (bob@example.com)
+2025/06/24 18:03:49 [INFO] User created successfully: bobjohnson (ID: 3)
+2025/06/24 18:03:49 [DEBUG] Creating new user: alicebrown (alice@example.com)
+2025/06/24 18:03:49 [INFO] User created successfully: alicebrown (ID: 4)
+2025/06/24 18:03:49 [DEBUG] Creating new user: charliewilson (charlie@example.com)
+2025/06/24 18:03:49 [INFO] User created successfully: charliewilson (ID: 5)
+--- FAIL: TestWebSocketConnectionManagement (0.36s)
+    --- FAIL: TestWebSocketConnectionManagement/ConnectionLifecycle (0.00s)
+        test_helper.go:327: User should be able to connect: server not started
+    --- FAIL: TestWebSocketConnectionManagement/MessageHistory (0.00s)
+        test_helper.go:327: User should be able to connect: server not started
+FAIL
+FAIL	forum/unit-testing	3.334s
+FAIL
