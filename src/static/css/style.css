@@ -5698,8 +5698,63 @@ main {
 /* Enhanced Responsive Design               */
 /* ========================================= */
 
-/* Improved mobile chat experience */
-@media (max-width: 768px) {
+/* Tablet responsive design - Chat view overlays left sidebar completely */
+@media (min-width: 577px) and (max-width: 768px) {
+  .chat-view-container {
+    position: fixed;
+    top: calc(var(--header-height) + (2 * var(--spacing-sm)));
+    left: 0; /* Start from very left edge of viewport */
+    right: calc(240px + var(--spacing-lg) + var(--spacing-sm)); /* Stop before right chat sidebar */
+    width: calc(100% - 240px - var(--spacing-lg) - var(--spacing-sm)); /* Full width minus right sidebar space */
+    height: calc(100vh - var(--header-height) - (3 * var(--spacing-sm)));
+    z-index: 1000; /* Higher z-index to completely overlay left navigation sidebar */
+    background: transparent;
+  }
+
+  .chat-view {
+    width: calc(100% - var(--spacing-sm));
+    max-width: calc(100% - var(--spacing-sm));
+    height: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    background-color: var(--foreground-color);
+    margin-left: var(--spacing-sm); /* Minimal left margin for visual spacing from viewport edge */
+    margin-right: 0; /* No right margin - extend to container edge */
+  }
+
+  .chat-view-header {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background: var(--foreground-color);
+    z-index: 10;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  .chat-view-messages {
+    padding: var(--spacing-md);
+    height: calc(100% - 140px); /* Account for header and input */
+  }
+
+  .chat-view-input {
+    padding: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    position: sticky;
+    bottom: 0;
+    background: var(--foreground-color);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  }
+
+  /* Ensure right chat sidebar remains fully visible and accessible */
+  .chat-sidebar-right {
+    z-index: 1001; /* Higher than chat view to ensure it stays on top */
+    position: fixed; /* Ensure it maintains its position */
+  }
+}
+
+/* Mobile responsive design - Full screen chat */
+@media (max-width: 576px) {
   .chat-view-container {
     position: fixed;
     top: 0;
@@ -5711,9 +5766,13 @@ main {
   }
 
   .chat-view {
+    width: 100%;
+    max-width: 100%;
     height: 100vh;
     border-radius: 0;
     box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .chat-view-header {
@@ -5829,8 +5888,16 @@ main {
   }
 
   .chat-view-container {
-    left: calc(320px + var(--spacing-lg) + var(--spacing-sm));
-    width: calc(100% - (2 * 320px) - (2 * var(--spacing-lg)) - (2 * var(--spacing-sm)));
+    left: 0;
+    right: calc(320px + var(--spacing-lg) + var(--spacing-sm));
+    width: calc(100% - 320px - var(--spacing-lg) - var(--spacing-sm));
+  }
+
+  .chat-view {
+    width: calc(100% - var(--spacing-sm));
+    max-width: calc(100% - var(--spacing-sm));
+    margin-left: var(--spacing-sm);
+    margin-right: 0;
   }
 
   .message-content {
@@ -5860,8 +5927,16 @@ main {
   }
 
   .chat-view-container {
-    left: calc(340px + var(--spacing-lg) + var(--spacing-sm));
-    width: calc(100% - (2 * 340px) - (2 * var(--spacing-lg)) - (2 * var(--spacing-sm)));
+    left: 0;
+    right: calc(340px + var(--spacing-lg) + var(--spacing-sm));
+    width: calc(100% - 340px - var(--spacing-lg) - var(--spacing-sm));
+  }
+
+  .chat-view {
+    width: calc(100% - var(--spacing-sm));
+    max-width: calc(100% - var(--spacing-sm));
+    margin-left: var(--spacing-sm);
+    margin-right: 0;
   }
 }
 
@@ -11132,15 +11207,18 @@ body:has(.auth-container) main {
   }
 }
 
-/* Chat View Container - Expanded Width for Better UX */
+/* Chat View Container - Full Width from Left Edge */
 .chat-view-container {
   position: fixed;
   top: calc(var(--header-height) + (2 * var(--spacing-sm)));
   /* Same top position as sidebars */
-  left: calc(280px + var(--spacing-lg) + var(--spacing-md));
-  /* Symmetrical left margin matching feed container */
-  width: calc(100% - (2 * 280px) - (2 * var(--spacing-lg)) - (2 * var(--spacing-md)));
-  /* Symmetrical width calculation matching feed container exactly */
+  left: 15px;
+  /* Start from very left edge of body */
+  right: calc(280px + var(--spacing-lg) + var(--spacing-sm));
+
+  width: 100%;
+  max-width: calc(100% - 390px);
+  /* Full width minus right sidebar space */
   height: calc(100vh - var(--header-height) - (3 * var(--spacing-sm)));
   /* Same height as sidebars with symmetrical top and bottom padding */
   z-index: var(--z-index-modal);
@@ -11150,6 +11228,27 @@ body:has(.auth-container) main {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .chat-view-container {
+    max-width: calc(100% - 290px);
+    top: calc(var(--header-height) + (2 * var(--spacing-sm)));
+    
+
+
+  }
+}
+
+/* Ensure right chat sidebar stays above chat view on all screen sizes */
+.chat-sidebar-right {
+  z-index: calc(var(--z-index-modal) + 1);
+}
+
+.chat-view-container.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
   transition: all var(--transition-duration) var(--transition-easing);
   /* Fixed positioning ensures it stays in place during body scroll */
   transform: none;
@@ -11157,12 +11256,19 @@ body:has(.auth-container) main {
 }
 
 .chat-view {
-  width: 100%;
+  width: calc(100% - var(--spacing-sm));
+  /* Full width minus minimal spacing from right edge */
+  max-width: calc(100% - var(--spacing-sm));
+  /* Ensure it doesn't exceed container width */
   height: 100%;
   /* Fill the entire container */
   max-height: 100%;
   /* Match container height exactly */
   background-color: var(--foreground-color);
+  margin-left: var(--spacing-sm);
+  /* Minimal left margin for visual spacing from left edge */
+  margin-right: 0;
+  /* No right margin - extend to container edge */
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xl);
   display: flex;
