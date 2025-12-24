@@ -589,7 +589,6 @@ graph TD
     A -->|sends| F[message]
     A -->|has| G[online_status]
 
-    B -->|has| C
     B -->|categorized_by| H[post_has_categories]
 
     I[categories] -->|categorizes| H
@@ -605,6 +604,8 @@ graph TD
 ````
 
 #### Post Table
+
+    ```mermaid
 
 ```sql
 CREATE TABLE post (
