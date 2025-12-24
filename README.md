@@ -740,7 +740,6 @@ The application uses WebSocket connections for real-time functionality:
     "token": "session_token"
 }
 
-// Send message
 {
     "type": "message",
     "recipientId": 123,
@@ -761,6 +760,8 @@ The application uses WebSocket connections for real-time functionality:
 ```
 
 #### Client-Side Integration
+
+````mermaid
 
 ```javascript
 class ForumWebSocket {
@@ -802,7 +803,7 @@ class ForumWebSocket {
     }
   }
 }
-```
+````
 
 ### Performance Optimizations
 
