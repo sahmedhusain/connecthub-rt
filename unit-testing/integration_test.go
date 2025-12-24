@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"forum/repository"
-	"forum/server/services"
+	"connecthub/repository"
+	"connecthub/server/services"
 )
 
 func TestUserRegistrationAndLoginFlow(t *testing.T) {

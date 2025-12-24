@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"log"
 
-	"forum/database"
+	"connecthub/database"
 )
 
 // PostRepositoryImpl implements the PostRepository interface

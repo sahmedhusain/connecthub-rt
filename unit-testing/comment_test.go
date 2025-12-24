@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"forum/database"
-	"forum/repository"
-	"forum/server/services"
+	"connecthub/database"
+	"connecthub/repository"
+	"connecthub/server/services"
 )
 
 func TestCommentCreation(t *testing.T) {

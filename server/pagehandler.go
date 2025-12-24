@@ -3,7 +3,7 @@ package server
 import (
 	"database/sql"
 	"encoding/json"
-	"forum/database"
+	"connecthub/database"
 	"log"
 	"net/http"
 	"path/filepath"

@@ -3,9 +3,9 @@ package unit_testing
 import (
 	"testing"
 
-	"forum/database"
-	"forum/repository"
-	"forum/server/services"
+	"connecthub/database"
+	"connecthub/repository"
+	"connecthub/server/services"
 )
 
 func TestUserService(t *testing.T) {

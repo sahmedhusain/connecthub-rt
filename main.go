@@ -11,8 +11,8 @@ import (
 
 	_ "github.com/mattn/go-sqlite3"
 
-	db "forum/database"
-	"forum/server"
+	db "connecthub/database"
+	"connecthub/server"
 )
 
 // Command line flags

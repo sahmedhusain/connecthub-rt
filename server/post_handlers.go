@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"forum/database"
+	"connecthub/database"
 )
 
 // Post-related request/response types

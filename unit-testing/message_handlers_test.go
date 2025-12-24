@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"testing"
 
-	"forum/database"
-	"forum/server"
-	"forum/websocket"
+	"connecthub/database"
+	"connecthub/server"
+	"connecthub/websocket"
 )
 
 func TestSendMessage(t *testing.T) {

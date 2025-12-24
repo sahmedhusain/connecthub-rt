@@ -13,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	"forum/server"
+	"connecthub/server"
 )
 
 // benchmarkTestSetup creates a test database for benchmarks

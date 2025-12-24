@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"forum/database"
+	"connecthub/database"
 )
 
 // TestUser represents a test user fixture

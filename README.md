@@ -1,48 +1,52 @@
-# Real-Time Forum
+# Connecthub RT 🌐
 
-<div align="center">
+[![Go](https://img.shields.io/badge/Go-1.23.2-00ADD8?style=flat&logo=go)](https://golang.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
+[![HTML](https://img.shields.io/badge/HTML-5-orange)](https://html.spec.whatwg.org/)
+[![CSS](https://img.shields.io/badge/CSS-3-blue)](https://www.w3.org/Style/CSS/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+[![SQLite](https://img.shields.io/badge/SQLite-3.0-green)](https://www.sqlite.org/)
+[![WebSocket](https://img.shields.io/badge/WebSocket-Real--Time-blue)](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+[![Gorilla](https://img.shields.io/badge/Gorilla-Mux-red)](https://github.com/gorilla/mux)
 
-![GitHub stars](https://img.shields.io/github/stars/your-username/real-time-forum?style=social)
-![GitHub forks](https://img.shields.io/github/forks/your-username/real-time-forum?style=social)
-![GitHub issues](https://img.shields.io/github/issues/your-username/real-time-forum)
-![GitHub license](https://img.shields.io/github/license/your-username/real-time-forum)
-![Go version](https://img.shields.io/badge/Go-1.23.2+-00ADD8?style=flat&logo=go)
+Welcome to **Connecthub RT**, a modern, high-performance real-time forum application built with **Go**, **SQLite**, and **WebSocket** technology. This single-page application (SPA) delivers seamless user interaction with live messaging, dynamic post creation, and instant real-time notifications.
 
-</div>
-
-A modern, high-performance real-time forum application built with **Go**, **SQLite**, and **WebSocket** technology. This single-page application (SPA) delivers seamless user interaction with live messaging, dynamic post creation, and instant real-time notifications.
-
-## 🚀 Live Demo
+## 📸 Application Preview
 
 ![Main Interface](screenshots/Screenshot%202025-07-07%20at%2021.14.03.png)
-*Modern forum interface with real-time chat and post feed*
+_Modern forum interface with real-time chat and post feed_
 
-## 📋 Table of Contents
+## �📋 Table of Contents
 
-- [Key Features](#-key-features)
-- [Technology Stack](#️-technology-stack)
-- [Architecture Overview](#️-architecture-overview)
-- [System Requirements](#-system-requirements)
-- [Quick Start](#-quick-start)
-- [Usage Guide](#-usage-guide)
-- [API Documentation](#-api-documentation)
-- [Database Schema](#-database-schema)
-- [Real-Time Features](#-real-time-features-technical)
-- [Testing](#-testing)
-- [Development Guide](#-development-guide)
-- [Performance](#-performance-metrics)
-- [Contributing](#-contributing)
-- [License](#-license)
+- [✨ Key Features](#-key-features)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [🏗️ Architecture Overview](#️-architecture-overview)
+- [💻 System Requirements](#-system-requirements)
+- [🚀 Quick Start](#-quick-start)
+- [📖 Usage Guide](#-usage-guide)
+- [🔌 API Documentation](#-api-documentation)
+- [🗄️ Database Schema](#-database-schema)
+- [⚡ Real-Time Features](#-real-time-features)
+- [🧪 Testing](#-testing)
+- [🔧 Development Guide](#-development-guide)
+- [📊 Performance Metrics](#-performance-metrics)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [🙏 Acknowledgments](#-acknowledgments)
+- [👥 Authors](#-authors)
+- [📚 What I Learned](#-what-i-learned)
+- [🚫 Limitations](#-limitations)
+- [🔮 Future Improvements](#-future-improvements)
 
 ## ✨ Key Features
 
 ### 🔐 **Authentication & User Management**
 
 ![Registration Form](screenshots/Screenshot%202025-07-07%20at%2021.13.21.png)
-*Comprehensive user registration with validation*
+_Comprehensive user registration with validation_
 
 ![Login Interface](screenshots/Screenshot%202025-07-07%20at%2021.13.26.png)
-*Clean and secure login experience*
+_Clean and secure login experience_
 
 - **Comprehensive Registration**: Complete registration form with nickname, age, gender, first/last name, email, and password
 - **Flexible Authentication**: Login using either nickname or email with password
@@ -53,10 +57,10 @@ A modern, high-performance real-time forum application built with **Go**, **SQLi
 ### 📝 **Posts & Content Management**
 
 ![Post Creation](screenshots/Screenshot%202025-07-07%20at%2021.14.57.png)
-*Intuitive post creation with category selection*
+_Intuitive post creation with category selection_
 
 ![Category Filtering](screenshots/Screenshot%202025-07-07%20at%2021.14.11.png)
-*Smart category filtering system*
+_Smart category filtering system_
 
 - **Rich Post Creation**: Create engaging posts with comprehensive categorization system
 - **Interactive Comments**: Threaded commenting system with real-time updates
@@ -67,7 +71,7 @@ A modern, high-performance real-time forum application built with **Go**, **SQLi
 ### 💬 **Real-Time Messaging System**
 
 ![Real-time Chat](screenshots/Screenshot%202025-07-07%20at%2021.15.02.png)
-*Live messaging with online status indicators*
+_Live messaging with online status indicators_
 
 - **Private Messaging**: Secure one-on-one messaging between users
 - **Live Online Status**: Real-time online/offline user indicators
@@ -79,10 +83,10 @@ A modern, high-performance real-time forum application built with **Go**, **SQLi
 ### ⚡ **Advanced Real-Time Features**
 
 ![Post Details](screenshots/Screenshot%202025-07-07%20at%2021.14.22.png)
-*Detailed post view with live comments*
+_Detailed post view with live comments_
 
 ![Comments System](screenshots/Screenshot%202025-07-07%20at%2021.14.33.png)
-*Interactive commenting with real-time updates*
+_Interactive commenting with real-time updates_
 
 - **WebSocket Integration**: Full-duplex communication for instant updates
 - **Typing Indicators**: Visual feedback when users are composing messages
@@ -92,17 +96,17 @@ A modern, high-performance real-time forum application built with **Go**, **SQLi
 
 ### 🏆 **Feature Comparison**
 
-| Feature | Traditional Forums | Our Real-Time Forum | Advantage |
-|---------|-------------------|---------------------|-----------|
-| **Message Delivery** | Page refresh required | Instant WebSocket delivery | ⚡ **Real-time** |
-| **User Presence** | Static status | Live online/offline indicators | 👥 **Live Status** |
-| **Content Updates** | Manual refresh | Auto-updating feed | 🔄 **Dynamic** |
-| **Technology Stack** | PHP/MySQL typical | Go + SQLite + WebSocket | 🚀 **High Performance** |
-| **Mobile Experience** | Basic responsive | PWA-ready with offline support | 📱 **App-like** |
-| **Scalability** | Limited concurrency | 1000+ concurrent users | 📈 **Scalable** |
-| **Development** | Complex setup | Single binary deployment | 🛠️ **Simple** |
+| Feature               | Traditional Forums    | Connecthub RT                  | Advantage               |
+| --------------------- | --------------------- | ------------------------------ | ----------------------- |
+| **Message Delivery**  | Page refresh required | Instant WebSocket delivery     | ⚡ **Real-time**        |
+| **User Presence**     | Static status         | Live online/offline indicators | 👥 **Live Status**      |
+| **Content Updates**   | Manual refresh        | Auto-updating feed             | 🔄 **Dynamic**          |
+| **Technology Stack**  | PHP/MySQL typical     | Go + SQLite + WebSocket        | 🚀 **High Performance** |
+| **Mobile Experience** | Basic responsive      | PWA-ready with offline support | 📱 **App-like**         |
+| **Scalability**       | Limited concurrency   | 1000+ concurrent users         | 📈 **Scalable**         |
+| **Development**       | Complex setup         | Single binary deployment       | 🛠️ **Simple**           |
 
-### 💡 **Why Choose Our Forum?**
+### 💡 **Why Choose Connecthub RT?**
 
 - **Performance First**: Built with Go for maximum efficiency and concurrent handling
 - **Real-Time Native**: WebSocket integration from the ground up, not bolted on
@@ -155,8 +159,8 @@ The application follows a **clean architecture pattern** with clear separation o
 
 ### **Project Structure**
 
-```text
-real-time-forum/
+```
+connecthub-rt/
 ├── main.go                     # 🚀 Application entry point
 ├── database/                   # 🗄️  Database layer
 │   ├── database.go            # Database initialization & connection
@@ -185,25 +189,6 @@ real-time-forum/
 │   ├── static/css/            # Stylesheets and assets
 │   └── template/              # HTML templates
 └── unit-testing/               # 🧪 Comprehensive test suite
-│   ├── message_handlers.go    # Message-related endpoints
-│   └── services/              # Business logic services
-├── websocket/                  # WebSocket functionality
-│   ├── websocket.go           # WebSocket server
-│   ├── client.go              # Client management
-│   ├── connection.go          # Connection handling
-│   └── types.go               # WebSocket message types
-├── src/                        # Frontend assets
-│   ├── js/                    # JavaScript files
-│   ├── static/                # CSS and static assets
-│   └── template/              # HTML templates
-├── unit-testing/               # Comprehensive testing suite
-│   ├── backend-tests/         # Backend unit and integration tests
-│   ├── frontend-tests/        # Frontend unit and E2E tests
-│   ├── performance-tests/     # Performance and load tests
-│   └── stress-tests/          # Stress and soak tests
-└── documentations/             # 📖 Project documentation
-    ├── api-documentation.md   # API endpoint documentation
-    └── testing-guide.md       # Comprehensive testing guide
 ```
 
 ## 💻 System Requirements
@@ -223,19 +208,12 @@ real-time-forum/
 - **Storage**: 500MB+ free disk space
 - **Browser**: Modern browser with WebSocket support (Chrome 80+, Firefox 75+, Safari 13+, Edge 80+)
 
-### **Production Requirements**
-
-- **CPU**: 2+ cores for concurrent handling
-- **Memory**: 2GB+ RAM for production workloads
-- **Storage**: SSD recommended for database performance
-- **Network**: Stable internet connection with low latency
-
 ### **Dependencies**
 
 All dependencies are automatically managed through Go modules:
 
 ```go
-module real-time-forum
+module connecthub
 
 go 1.23.2
 
@@ -254,8 +232,8 @@ Get up and running in under 2 minutes:
 
 ```bash
 # 📥 Clone the repository
-git clone https://github.com/your-username/real-time-forum.git
-cd real-time-forum
+git clone https://github.com/sahmedhusain/connecthub-rt.git
+cd connecthub
 
 # 📦 Install dependencies automatically
 go mod download
@@ -272,8 +250,8 @@ go mod download
 
 ```bash
 # 1️⃣ Clone and navigate
-git clone https://github.com/your-username/real-time-forum.git
-cd real-time-forum
+git clone https://github.com/sahmedhusain/connecthub-rt.git
+cd connecthub
 
 # 2️⃣ Download dependencies
 go mod tidy
@@ -292,16 +270,16 @@ go run main.go --port=8080
 ./run.sh docker
 
 # Or build manually
-docker build -t real-time-forum .
-docker run -p 8080:8080 real-time-forum
+docker build -t connecthub .
+docker run -p 8080:8080 connecthub
 ```
 
 #### **Development Setup**
 
 ```bash
 # Clone for development
-git clone https://github.com/your-username/real-time-forum.git
-cd real-time-forum
+git clone https://github.com/sahmedhusain/connecthub-rt.git
+cd connecthub
 
 # Install development dependencies
 go mod download
@@ -338,21 +316,24 @@ The enhanced `run.sh` script provides multiple options:
 #### **2. Access the Application**
 
 Open your browser and navigate to:
+
 - **Local Development**: `http://localhost:8080`
 - **Custom Port**: `http://localhost:[your-port]`
 
 #### **3. User Journey**
 
 ![User Comments](screenshots/Screenshot%202025-07-07%20at%2021.14.33.png)
-*Navigate through user activity and comments*
+_Navigate through user activity and comments_
 
 **First-Time Users:**
+
 1. **Sign Up**: Create your account with the registration form
 2. **Verify**: Complete your profile information
 3. **Explore**: Browse existing posts and categories
 4. **Engage**: Start commenting and messaging other users
 
 **Returning Users:**
+
 1. **Sign In**: Login with your username/email and password
 2. **Dashboard**: Access your personalized feed
 3. **Continue**: Pick up where you left off with recent conversations
@@ -423,7 +404,45 @@ When using `--test-data` flag, the following test accounts are available (all us
 
 **Note**: The test data includes 120+ diverse users from various backgrounds (tech professionals, students, freelancers, senior engineers, etc.). You can log in using either the username or email address with the password `Aa123456`.
 
-## API Documentation
+## Terminal Examples 💻
+
+### Building the Project 🏗️
+
+```bash
+$ go build -o connecthub
+$ ls -la connecthub
+-rwxr-xr-x  1 user  group  12345678 Dec 25 12:00 connecthub
+```
+
+### Running the Server 🚀
+
+```bash
+$ ./connecthub
+Server running on http://localhost:8080
+WebSocket server started
+Database initialized
+To stop the server press Ctrl+C
+```
+
+### Using Docker 🐳
+
+```bash
+$ docker-compose up --build
+Building connecthub
+...
+connecthub_1  | Server running on http://localhost:8080
+connecthub_1  | WebSocket connections ready
+```
+
+### Testing the Application 🧪
+
+```bash
+$ go test ./...
+PASS
+ok      connecthub        0.123s
+```
+
+## 🔌 API Documentation
 
 ### Authentication Endpoints
 
@@ -557,68 +576,155 @@ ws.onmessage = function (event) {
 };
 ```
 
-## Database Schema
+## 🗄️ Database Schema
 
-<!-- Diagram: Database schema showing relationships between tables -->
+### Entity Relationship Diagram (ERD)
 
-### Core Tables
+````mermaid
+graph TD
+    A[user] -->|creates| B[post]
+    A -->|writes| C[comment]
+    A -->|has| D[session]
+    A -->|participates_in| E[conversation_participants]
+    A -->|sends| F[message]
+    A -->|has| G[online_status]
 
-#### Users Table
+    B -->|has| C
+    B -->|categorized_by| H[post_has_categories]
 
-```sql
-CREATE TABLE user (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT UNIQUE NOT NULL,
-    email TEXT UNIQUE NOT NULL,
-    password TEXT NOT NULL,
-    first_name TEXT NOT NULL,
-    last_name TEXT NOT NULL,
-    age INTEGER NOT NULL,
-    gender TEXT NOT NULL,
-    avatar TEXT,
-    session_token TEXT,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    is_online BOOLEAN DEFAULT FALSE,
-    last_seen DATETIME
+    I[categories] -->|categorizes| H
+
+    J[conversation] -->|has| E
+    ```mermaid
+    current_session TEXT,
+    Avatar TEXT,
+    gender TEXT,
+    date_of_birth DATE,
+    FOREIGN KEY (current_session) REFERENCES session(sessionid)
 );
-```
+````
 
-#### Posts Table
+#### Post Table
 
 ```sql
 CREATE TABLE post (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    user_id INTEGER NOT NULL,
-    title TEXT NOT NULL,
-    content TEXT NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES user(id)
+    postid INTEGER PRIMARY KEY AUTOINCREMENT,
+    content TEXT NULL,
+    title TEXT NULL,
+    post_at DATETIME NOT NULL,
+
+    *This Mermaid ERD diagram shows the tables and their relationships. For full schema, see the SQL below.*
+    user_userid INTEGER NOT NULL,
+    FOREIGN KEY (user_userid) REFERENCES user(userid)
 );
 ```
 
-#### Messages Table
+#### Comment Table
+
+```sql
+CREATE TABLE comment (
+    commentid INTEGER PRIMARY KEY AUTOINCREMENT,
+    content TEXT NULL,
+    comment_at DATETIME NULL,
+    post_postid INTEGER NOT NULL,
+    user_userid INTEGER NOT NULL,
+    FOREIGN KEY (post_postid) REFERENCES post(postid),
+    FOREIGN KEY (user_userid) REFERENCES user(userid)
+);
+```
+
+#### Categories Table
+
+```sql
+CREATE TABLE categories (
+    idcategories INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL
+);
+```
+
+#### Post-Categories Junction Table
+
+```sql
+CREATE TABLE post_has_categories (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    post_postid INTEGER NOT NULL,
+    categories_idcategories INTEGER NOT NULL,
+    FOREIGN KEY (post_postid) REFERENCES post(postid),
+    FOREIGN KEY (categories_idcategories) REFERENCES categories(idcategories)
+);
+```
+
+#### Session Table
+
+```sql
+CREATE TABLE session (
+    sessionid TEXT PRIMARY KEY,
+    userid INTEGER NOT NULL UNIQUE,
+    endtime DATETIME NOT NULL,
+    FOREIGN KEY (userid) REFERENCES user(userid)
+);
+```
+
+#### Conversation Table
+
+```sql
+CREATE TABLE conversation (
+    conversation_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+#### Conversation Participants Table
+
+```sql
+CREATE TABLE conversation_participants (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    conversation_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    FOREIGN KEY (conversation_id) REFERENCES conversation(conversation_id),
+    FOREIGN KEY (user_id) REFERENCES user(userid),
+    UNIQUE(conversation_id, user_id)
+);
+```
+
+#### Message Table
 
 ```sql
 CREATE TABLE message (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    message_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    conversation_id INTEGER NOT NULL,
     sender_id INTEGER NOT NULL,
-    recipient_id INTEGER NOT NULL,
     content TEXT NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    is_read BOOLEAN DEFAULT FALSE,
-    FOREIGN KEY (sender_id) REFERENCES user(id),
-    FOREIGN KEY (recipient_id) REFERENCES user(id)
+    sent_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    is_read BOOLEAN NOT NULL DEFAULT 0,
+    FOREIGN KEY (conversation_id) REFERENCES conversation(conversation_id),
+    FOREIGN KEY (sender_id) REFERENCES user(userid)
+);
+```
+
+#### Online Status Table
+
+```sql
+CREATE TABLE online_status (
+    user_id INTEGER PRIMARY KEY,
+    status TEXT NOT NULL DEFAULT 'offline',
+    last_seen DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES user(userid)
 );
 ```
 
 ### Relationships
 
-- **Users** can create multiple **Posts**
-- **Users** can send/receive multiple **Messages**
-- **Posts** can have multiple **Comments**
-- **Messages** create **Conversations** between users
+- **Users** can create multiple **Posts** and **Comments**
+- **Users** can participate in multiple **Conversations** and send **Messages**
+- **Users** have **Sessions** and **Online Status**
+- **Posts** belong to **Users** and can have multiple **Comments**
+- **Posts** are categorized through the **post_has_categories** junction table
+- **Categories** can be assigned to multiple **Posts**
+- **Conversations** have multiple **Participants** and contain **Messages**
+- **Messages** belong to **Conversations** and are sent by **Users**
 
-## ⚡ Real-Time Features Technical
+## ⚡ Real-Time Features
 
 ### WebSocket Implementation
 
@@ -704,51 +810,7 @@ class ForumWebSocket {
 - **Connection Pooling**: Efficient WebSocket connection management
 - **Memory Management**: Automatic cleanup of inactive connections
 
-## 📊 Performance Metrics
-
-### **Benchmarks & Specifications**
-
-Our real-time forum is engineered for high performance and scalability:
-
-| Metric | Specification | Achievement |
-|--------|---------------|-------------|
-| **Concurrent Users** | 1,000+ simultaneous connections | ✅ Tested |
-| **Message Latency** | < 50ms WebSocket delivery | ✅ Verified |
-| **Database Queries** | < 10ms average response time | ✅ Optimized |
-| **Memory Usage** | < 100MB for 500 active users | ✅ Efficient |
-| **CPU Usage** | < 20% under normal load | ✅ Lightweight |
-
-### **Real-Time Performance**
-
-- **WebSocket Throughput**: 10,000+ messages/second
-- **Database Connections**: Pooled connections with automatic scaling
-- **Session Management**: UUID-based with O(1) lookup performance
-- **Cache Strategy**: In-memory caching for frequently accessed data
-
-### **Scalability Features**
-
-- **Horizontal Scaling**: Stateless design ready for load balancing
-- **Database Optimization**: Indexed queries and prepared statements
-- **Connection Management**: Automatic cleanup and resource optimization
-- **Memory Efficiency**: Garbage collection optimized Go runtime
-
-### **Load Testing Results**
-
-```bash
-# Run performance tests
-./run.sh performance
-
-# Stress testing with 1000 concurrent users
-./run.sh stress --users 1000 --duration 5m
-```
-
-**Results Summary:**
-- ✅ **1,000 concurrent users**: Stable performance maintained
-- ✅ **10,000 messages/minute**: Real-time delivery guaranteed
-- ✅ **99.9% uptime**: During 24-hour load tests
-- ✅ **< 100MB RAM**: Memory usage under heavy load
-
-## Testing
+## 🧪 Testing
 
 The project features a comprehensive, multi-layered testing infrastructure with advanced reporting, coverage analysis, and both terminal and web-based execution modes. Our testing follows a pyramid approach with specialized test categories for maximum coverage and reliability.
 
@@ -791,14 +853,6 @@ Our testing follows a pyramid approach with multiple specialized layers:
 - **Performance Tests**: Page load times, WebSocket performance, memory usage
 - **Accessibility Tests**: WCAG compliance, keyboard navigation, screen readers
 - **Cross-browser Tests**: Chrome, Firefox, Safari compatibility
-
-#### **Specialized Testing**
-
-- **Real-time Features**: WebSocket connections, typing indicators, message delivery
-- **Responsive Design**: Mobile, tablet, desktop viewport testing
-- **Visual Regression**: Screenshot comparison and UI consistency
-- **API Testing**: Request/response validation, error handling
-- **Database Testing**: Data integrity, migrations, repository patterns
 
 ### 🚀 **Quick Start**
 
@@ -872,22 +926,6 @@ npx playwright test           # E2E tests
 
 **Dashboard URL:** `http://localhost:8081/web-dashboard/`
 
-#### **Advanced Test Execution**
-
-```bash
-# Comprehensive test runner with options
-cd unit-testing
-./comprehensive-test-runner.sh --timeout 20m --workers 8 --coverage-threshold 80
-
-# Unified test runner modes
-./unified-test-runner.sh --terminal    # Terminal mode
-./unified-test-runner.sh --web         # Web dashboard mode
-./unified-test-runner.sh --api         # API mode for integrations
-
-# Command line options
-./run.sh --test --coverage --parallel --html --verbose
-```
-
 ### 📊 **Test Reports and Coverage**
 
 #### **Report Formats**
@@ -920,40 +958,6 @@ go tool cover -func=coverage.out
 - **Critical Paths**: ≥95%
 
 ### 🔧 **Test Configuration**
-
-#### **Backend Configuration**
-
-- **Database**: In-memory SQLite for isolation
-- **Timeout**: Configurable per test category (default: 15m)
-- **Parallelization**: Automatic worker management (default: 4 workers)
-- **Test Data**: Comprehensive seed data with 100+ users, 200+ posts, 500+ comments
-
-#### **Frontend Configuration**
-
-- **Jest**: Unit testing with jsdom environment
-- **Playwright**: Cross-browser E2E testing (Chrome, Firefox, Safari)
-- **Coverage**: Istanbul-based code coverage analysis
-- **Accessibility**: axe-core integration for WCAG compliance
-
-#### **Test Credentials**
-
-All test users use password: `Aa123456`
-
-- `johndoe` / `john@example.com`
-- `janesmith` / `jane@example.com`
-- `bobwilson` / `bob@example.com`
-- Plus 97+ additional diverse test users with realistic profiles
-
-##### **Using Main Application Runner**
-
-```bash
-# Integrated with main application runner
-./run.sh test
-```
-
-### 🔧 **Test Configuration**
-
-The testing suite is configured through multiple configuration files for different testing environments:
 
 #### **Backend Configuration** (`unit-testing/test-config.json`)
 
@@ -1003,7 +1007,7 @@ The testing suite is configured through multiple configuration files for differe
   "jest": {
     "testEnvironment": "jsdom",
     "setupFilesAfterEnv": ["<rootDir>/frontend-tests/setup/jest.setup.js"],
-    "coverageDirectory": "coverage/frontend"
+    "coverageDirectory": "unit-testing/coverage/frontend"
   }
 }
 ```
@@ -1102,7 +1106,7 @@ For detailed testing information, see:
 6. **Verify responsive design** across different viewport sizes
 7. **Include accessibility testing** in E2E workflows
 
-## Development
+## 🔧 Development Guide
 
 ### Development Workflow
 
@@ -1141,28 +1145,50 @@ go run main.go --port=8080 -v
 # Use browser developer tools Network tab
 ```
 
-## Contributing
+## 📊 Performance Metrics
 
-We welcome contributions to the Real-Time Forum project! Please follow these guidelines:
+### **Benchmarks & Specifications**
 
-### Getting Started
+Our real-time forum is engineered for high performance and scalability:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Add tests for new functionality
-5. Ensure all tests pass
-6. Commit your changes (`git commit -m 'Add amazing feature'`)
-7. Push to the branch (`git push origin feature/amazing-feature`)
-8. Open a Pull Request
+| Metric               | Specification                   | Achievement    |
+| -------------------- | ------------------------------- | -------------- |
+| **Concurrent Users** | 1,000+ simultaneous connections | ✅ Tested      |
+| **Message Latency**  | < 50ms WebSocket delivery       | ✅ Verified    |
+| **Database Queries** | < 10ms average response time    | ✅ Optimized   |
+| **Memory Usage**     | < 100MB for 500 active users    | ✅ Efficient   |
+| **CPU Usage**        | < 20% under normal load         | ✅ Lightweight |
 
-### Code Quality Standards
+### **Real-Time Performance**
 
-- All tests must pass
-- Code coverage should be maintained above 80%
-- Follow Go best practices and conventions
-- Add documentation for new features
-- Update README if necessary
+- **WebSocket Throughput**: 10,000+ messages/second
+- **Database Connections**: Pooled connections with automatic scaling
+- **Session Management**: UUID-based with O(1) lookup performance
+- **Cache Strategy**: In-memory caching for frequently accessed data
+
+### **Scalability Features**
+
+- **Horizontal Scaling**: Stateless design ready for load balancing
+- **Database Optimization**: Indexed queries and prepared statements
+- **Connection Management**: Automatic cleanup and resource optimization
+- **Memory Efficiency**: Garbage collection optimized Go runtime
+
+### **Load Testing Results**
+
+```bash
+# Run performance tests
+./run.sh performance
+
+# Stress testing with 1000 concurrent users
+./run.sh stress --users 1000 --duration 5m
+```
+
+**Results Summary:**
+
+- ✅ **1,000 concurrent users**: Stable performance maintained
+- ✅ **10,000 messages/minute**: Real-time delivery guaranteed
+- ✅ **99.9% uptime**: During 24-hour load tests
+- ✅ **< 100MB RAM**: Memory usage under heavy load
 
 ## 🤝 Contributing
 
@@ -1171,7 +1197,7 @@ We welcome contributions from developers of all skill levels! Here's how you can
 ### **Getting Started**
 
 1. **Fork** the repository on GitHub
-2. **Clone** your fork locally: `git clone https://github.com/your-username/real-time-forum.git`
+2. **Clone** your fork locally: `git clone https://github.com/your-username/connecthub.git`
 3. **Create** a feature branch: `git checkout -b feature/amazing-feature`
 4. **Make** your changes with proper testing
 5. **Commit** with descriptive messages: `git commit -m 'Add amazing feature'`
@@ -1196,9 +1222,10 @@ We welcome contributions from developers of all skill levels! Here's how you can
 
 ### **Reporting Issues**
 
-Please use the [GitHub Issue Tracker](https://github.com/your-username/real-time-forum/issues) to report bugs or request features:
+Please use the [GitHub Issue Tracker](https://github.com/sahmedhusain/connecthub-rt/issues) to report bugs or request features:
 
 **Bug Reports:**
+
 - 🐛 Clear, descriptive title
 - 📝 Detailed description of the issue
 - 🔄 Steps to reproduce the problem
@@ -1207,29 +1234,17 @@ Please use the [GitHub Issue Tracker](https://github.com/your-username/real-time
 - 📸 Screenshots if applicable
 
 **Feature Requests:**
+
 - 💡 Clear description of the proposed feature
 - 🎯 Use case and benefits
 - 🔧 Technical considerations (if applicable)
 
-## 👨‍💻 Authors & Contributors
+## 👨‍💻 Authors
 
-<div align="center">
-
-### **Core Development Team**
-
-**Sayed Ahmed Husain** • **Qasim Aljaffer**
-
-*Full-stack developers passionate about building real-time web applications*
-
----
-
-### **Special Thanks**
-
-Thanks to all contributors who helped make this project possible! 🙌
-
-[![Contributors](https://contrib.rocks/image?repo=your-username/real-time-forum)](https://github.com/your-username/real-time-forum/graphs/contributors)
-
-</div>
+- **Sayed Ahmed Husain** - [sayedahmed97.sad@gmail.com](mailto:sayedahmed97.sad@gmail.com)
+- **Qasim Aljaffer**
+- **Mohammed AlAlawi**
+- **Abdulla Alasmawi**
 
 ## 📄 License
 
@@ -1247,8 +1262,8 @@ We appreciate attribution but it's not required.
 ### **Getting Help**
 
 - 📚 **Documentation**: Comprehensive guides in `/documentations/`
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/your-username/real-time-forum/issues)
-- 💭 **Questions**: [GitHub Discussions](https://github.com/your-username/real-time-forum/discussions)
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/sahmedhusain/connecthub-rt/issues)
+- 💭 **Questions**: [GitHub Discussions](https://github.com/sahmedhusain/connecthub-rt/discussions)
 - 📧 **Direct Contact**: Create an issue for direct developer contact
 
 ### **Community Guidelines**
@@ -1263,13 +1278,67 @@ We appreciate attribution but it's not required.
 <div align="center">
 
 ![Thank You](screenshots/Screenshot%202025-07-07%20at%2021.15.02.png)
-*Real-time forum in action - Connect, Share, Engage!*
+_Real-time forum in action - Connect, Share, Engage!_
 
 ### **Built with ❤️ using Go, SQLite, and WebSocket technology**
 
 **⭐ Star this repository if you found it helpful!**
 
-[![GitHub stars](https://img.shields.io/github/stars/your-username/real-time-forum?style=social)](https://github.com/your-username/real-time-forum/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/your-username/real-time-forum?style=social)](https://github.com/your-username/real-time-forum/network)
+[![GitHub stars](https://img.shields.io/github/stars/sahmedhusain/connecthub-rt?style=social)](https://github.com/sahmedhusain/connecthub-rt/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/sahmedhusain/connecthub-rt?style=social)](https://github.com/sahmedhusain/connecthub-rt/network)
 
 </div>
+
+## 🙏 Acknowledgments
+
+This project was created during a Go web development learning journey, emphasizing full-stack implementation and community building. Inspired by modern forum platforms.
+
+## 🎯 What We Aim For
+
+Our vision with ConnectHub is to create a seamless platform for real-time community interaction. The application efficiently manages user accounts, posts, comments, and live messaging.
+
+The core components include:
+
+1. **Users** 👤: Registered members with profiles and authentication.
+2. **Posts** 📄: User-generated content organized by categories.
+3. **Comments** 💬: Interactive discussions under posts.
+4. **Messages** 💌: Private real-time conversations between users.
+
+We leverage SQLite for reliable data storage and WebSocket for instant communication.
+
+### User Flow Representation
+
+Users navigate through the platform seamlessly:
+
+```
+Registration/Login → Create Post → Add Comment → Send Message
+```
+
+- **Journey**: Start with account creation, then engage with content and messaging.
+- **Interactions**: Each action builds community engagement.
+
+This flow ensures an intuitive user experience.
+
+## What I Learned
+
+This project taught me:
+
+- Real-time web application development with Go and WebSocket.
+- Database design and efficient querying with SQLite.
+- Secure user authentication and session management.
+- Frontend integration with modern HTML, CSS, and JavaScript.
+- Containerization and deployment best practices.
+
+## Limitations 🚫
+
+- No advanced search functionality.
+- Basic moderation features.
+- Limited scalability for extremely high traffic.
+
+## Future Improvements 🔮
+
+- Implement advanced search and filtering.
+- Add comprehensive moderation tools.
+- Enhance scalability with microservices.
+- Integrate additional authentication providers.
+- Add push notifications for mobile devices.

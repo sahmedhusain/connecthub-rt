@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"forum/server"
+	"connecthub/server"
 )
 
 // StressTestMetrics holds stress test results

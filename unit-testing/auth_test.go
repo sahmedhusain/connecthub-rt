@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"forum/repository"
-	"forum/server/services"
+	"connecthub/repository"
+	"connecthub/server/services"
 )
 
 func TestUserAuthentication(t *testing.T) {

@@ -10,8 +10,8 @@ import (
 	"strings"
 	"testing"
 
-	"forum/database"
-	"forum/server"
+	"connecthub/database"
+	"connecthub/server"
 )
 
 func TestGetPosts(t *testing.T) {

@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"forum/database"
-	"forum/websocket"
+	"connecthub/database"
+	"connecthub/websocket"
 )
 
 // Global WebSocket manager for message handlers

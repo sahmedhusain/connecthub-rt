@@ -6,7 +6,7 @@ import (
 	"log"
 	"strings"
 
-	"forum/database"
+	"connecthub/database"
 )
 
 // PostService handles post-related business logic

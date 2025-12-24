@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"forum/database"
-	"forum/server"
+	"connecthub/database"
+	"connecthub/server"
 )
 
 func TestCompleteUserJourneyE2E(t *testing.T) {

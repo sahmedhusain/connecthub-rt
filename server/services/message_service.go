@@ -6,7 +6,7 @@ import (
 	"log"
 	"strings"
 
-	"forum/database"
+	"connecthub/database"
 )
 
 // MessageService handles message and conversation-related business logic

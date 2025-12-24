@@ -12,7 +12,7 @@ import (
 	"github.com/gorilla/mux"
 	_ "github.com/mattn/go-sqlite3"
 
-	"forum/websocket"
+	"connecthub/websocket"
 )
 
 // HTTPServer represents the HTTP server with its configuration

@@ -3,7 +3,7 @@ package unit_testing
 import (
 	"testing"
 
-	"forum/server/services"
+	"connecthub/server/services"
 )
 
 func TestPostService(t *testing.T) {

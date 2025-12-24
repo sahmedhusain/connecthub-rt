@@ -2,7 +2,7 @@ package server
 
 import (
 	"database/sql"
-	UUID "forum/security"
+	UUID "connecthub/security"
 	"log"
 	"net/http"
 	"strconv"

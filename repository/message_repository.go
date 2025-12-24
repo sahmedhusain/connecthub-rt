@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"log"
 
-	"forum/database"
+	"connecthub/database"
 )
 
 // MessageRepositoryImpl implements the MessageRepository interface

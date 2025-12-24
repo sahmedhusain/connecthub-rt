@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"forum/database"
+	"connecthub/database"
 )
 
 // UserRepositoryImpl implements the UserRepository interface

@@ -3,8 +3,8 @@ package unit_testing
 import (
 	"testing"
 
-	"forum/database"
-	"forum/repository"
+	"connecthub/database"
+	"connecthub/repository"
 )
 
 func TestUserRepository(t *testing.T) {

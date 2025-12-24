@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"forum/repository"
-	"forum/server/services"
+	"connecthub/repository"
+	"connecthub/server/services"
 )
 
 // User-related request/response types

@@ -5,9 +5,9 @@ import (
 	"log"
 	"regexp"
 
-	"forum/database"
-	"forum/repository"
-	"forum/security"
+	"connecthub/database"
+	"connecthub/repository"
+	"connecthub/security"
 )
 
 // UserService handles user-related business logic

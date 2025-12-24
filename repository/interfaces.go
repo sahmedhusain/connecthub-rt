@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"forum/database"
+	"connecthub/database"
 )
 
 // UserRepository defines the interface for user data operations

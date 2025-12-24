@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"forum/server"
+	"connecthub/server"
 )
 
 func TestLoginAPI(t *testing.T) {

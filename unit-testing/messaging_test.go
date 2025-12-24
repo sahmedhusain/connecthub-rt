@@ -3,8 +3,8 @@ package unit_testing
 import (
 	"testing"
 
-	"forum/repository"
-	"forum/server/services"
+	"connecthub/repository"
+	"connecthub/server/services"
 )
 
 func TestConversationCreation(t *testing.T) {

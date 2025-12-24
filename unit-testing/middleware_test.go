@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"forum/server"
+	"connecthub/server"
 )
 
 func TestAuthMiddleware(t *testing.T) {

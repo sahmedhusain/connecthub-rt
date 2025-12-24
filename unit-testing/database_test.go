@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
-	"forum/database"
-	"forum/repository"
+	"connecthub/database"
+	"connecthub/repository"
 )
 
 func TestDatabaseConnection(t *testing.T) {
