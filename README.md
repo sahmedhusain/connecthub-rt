@@ -1,6 +1,7 @@
 # Connecthub RT 🌐
 
 [![Go](https://img.shields.io/badge/Go-1.23.2-00ADD8?style=flat&logo=go)](https://golang.org/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=flat&logo=docker)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
 [![HTML](https://img.shields.io/badge/HTML-5-orange)](https://html.spec.whatwg.org/)
 [![CSS](https://img.shields.io/badge/CSS-3-blue)](https://www.w3.org/Style/CSS/)
@@ -9,1319 +10,594 @@
 [![WebSocket](https://img.shields.io/badge/WebSocket-Real--Time-blue)](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
 [![Gorilla](https://img.shields.io/badge/Gorilla-Mux-red)](https://github.com/gorilla/mux)
 
-Welcome to **Connecthub RT**, a modern, high-performance real-time forum application built with **Go**, **SQLite**, and **WebSocket** technology. This single-page application (SPA) delivers seamless user interaction with live messaging, dynamic post creation, and instant real-time notifications.
+Hey there! Welcome to **Connecthub RT** - a real-time forum that's actually fun to use. Think of it like Discord meets Reddit, but built specifically for meaningful discussions. Whether you're a developer sharing code tips, a student asking for homework help, or just someone who loves good conversations, this is your place.
 
-## 📸 Application Preview
+## 📸 What Does It Look Like?
 
 ![Main Interface](screenshots/Screenshot%202025-07-07%20at%2021.14.03.png)
-_Modern forum interface with real-time chat and post feed_
+_The main forum interface - clean, modern, and easy to navigate_
 
-## �📋 Table of Contents
+## 📋 What's Inside This Guide
 
-- [✨ Key Features](#-key-features)
-- [🛠️ Technology Stack](#️-technology-stack)
-- [🏗️ Architecture Overview](#️-architecture-overview)
-- [💻 System Requirements](#-system-requirements)
-- [🚀 Quick Start](#-quick-start)
-- [📖 Usage Guide](#-usage-guide)
-- [🔌 API Documentation](#-api-documentation)
-- [🗄️ Database Schema](#-database-schema)
-- [⚡ Real-Time Features](#-real-time-features)
-- [🧪 Testing](#-testing)
-- [🔧 Development Guide](#-development-guide)
-- [📊 Performance Metrics](#-performance-metrics)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-- [🙏 Acknowledgments](#-acknowledgments)
-- [👥 Authors](#-authors)
-- [📚 What I Learned](#-what-i-learned)
-- [🚫 Limitations](#-limitations)
-- [🔮 Future Improvements](#-future-improvements)
+- [✨ What Makes This Special](#-what-makes-this-special)
+- [🛠️ What We Built It With](#️-what-we-built-it-with)
+- [🏗️ How It All Works Together](#️-how-it-all-works-together)
+- [💻 What You Need to Run It](#-what-you-need-to-run-it)
+- [🚀 Getting Started (Super Easy)](#-getting-started-super-easy)
+- [📖 How to Use It](#-how-to-use-it)
+- [🔌 For Developers (API Stuff)](#-for-developers-api-stuff)
+- [🗄️ The Database Behind It All](#-the-database-behind-it-all)
+- [⚡ The Real-Time Magic](#-the-real-time-magic)
+- [🔧 For People Who Want to Contribute](#-for-people-who-want-to-contribute)
+- [📄 Legal Stuff](#-legal-stuff)
+- [🙏 Credits](#-credits)
+- [👥 Who Built This](#-who-built-this)
 
-## ✨ Key Features
+## ✨ What Makes This Special
 
-### 🔐 **Authentication & User Management**
+### 🔐 Easy Sign Up and Login
 
 ![Registration Form](screenshots/Screenshot%202025-07-07%20at%2021.13.21.png)
-_Comprehensive user registration with validation_
+_Simple registration - just fill in your details_
 
 ![Login Interface](screenshots/Screenshot%202025-07-07%20at%2021.13.26.png)
-_Clean and secure login experience_
+_Clean login page - use your username or email_
 
-- **Comprehensive Registration**: Complete registration form with nickname, age, gender, first/last name, email, and password
-- **Flexible Authentication**: Login using either nickname or email with password
-- **Secure Session Management**: UUID-based session tokens with automatic expiration
-- **Rich User Profiles**: Comprehensive user profiles with custom avatar assignment
-- **Seamless Logout**: Secure logout functionality accessible from any page
+- **No complicated setup** - Just pick a username, add your email, and you're in
+- **Flexible login** - Can't remember if you used your username or email? No problem, both work
+- **Secure and private** - Your password is safely encrypted, and we use smart session management
+- **Personal touch** - Choose your avatar and add your personal details
 
-### 📝 **Posts & Content Management**
+### 📝 Share Your Thoughts
 
 ![Post Creation](screenshots/Screenshot%202025-07-07%20at%2021.14.57.png)
-_Intuitive post creation with category selection_
+_Creating a post is straightforward_
 
 ![Category Filtering](screenshots/Screenshot%202025-07-07%20at%2021.14.11.png)
-_Smart category filtering system_
+_Find posts by topic easily_
 
-- **Rich Post Creation**: Create engaging posts with comprehensive categorization system
-- **Interactive Comments**: Threaded commenting system with real-time updates
-- **Modern Feed Display**: Instagram/Twitter-style post feed with infinite scroll
-- **Smart Category Filtering**: Organize and discover content by categories
-- **Real-time Content Updates**: Live post and comment updates without page refresh
+- **Write posts** - Share your ideas, ask questions, or start discussions
+- **Organize by topics** - Choose categories like "Go", "JavaScript", "Git", etc.
+- **See everything at a glance** - Posts show in a clean feed, newest first
+- **Join the conversation** - Comment on posts and keep discussions going
 
-### 💬 **Real-Time Messaging System**
+### 💬 Chat Like You're There
 
 ![Real-time Chat](screenshots/Screenshot%202025-07-07%20at%2021.15.02.png)
-_Live messaging with online status indicators_
+_Private messaging that feels instant_
 
-- **Private Messaging**: Secure one-on-one messaging between users
-- **Live Online Status**: Real-time online/offline user indicators
-- **Message History**: Complete conversation history with smart pagination
-- **Discord-Style Sorting**: Conversations sorted by last message timestamp
-- **Instant Notifications**: Real-time message notifications and alerts
-- **Optimized Loading**: Load 10 messages at a time with scroll-to-load functionality
+- **Private conversations** - Chat one-on-one with anyone
+- **See who's online** - Know when your friends are available to chat
+- **Never miss a message** - Get notified instantly when someone replies
+- **Chat history** - Scroll back through your conversations
 
-### ⚡ **Advanced Real-Time Features**
+### ⚡ It Feels Instant
 
 ![Post Details](screenshots/Screenshot%202025-07-07%20at%2021.14.22.png)
-_Detailed post view with live comments_
+_Live comments that appear as people type them_
 
 ![Comments System](screenshots/Screenshot%202025-07-07%20at%2021.14.33.png)
-_Interactive commenting with real-time updates_
+_See new comments appear in real-time_
 
-- **WebSocket Integration**: Full-duplex communication for instant updates
-- **Typing Indicators**: Visual feedback when users are composing messages
-- **Live User Presence**: Real-time online/offline status synchronization
-- **Instant Message Delivery**: Messages appear immediately across all connected clients
-- **Dynamic Content Updates**: Live updates for new posts, comments, and interactions
+- **Live updates** - New posts and comments show up without refreshing the page
+- **Typing indicators** - See when someone is typing a response
+- **Online status** - Know who's active right now
+- **Instant messaging** - Messages appear immediately, like a real chat app
 
-### 🏆 **Feature Comparison**
+### Why People Love It
 
-| Feature               | Traditional Forums    | Connecthub RT                  | Advantage               |
-| --------------------- | --------------------- | ------------------------------ | ----------------------- |
-| **Message Delivery**  | Page refresh required | Instant WebSocket delivery     | ⚡ **Real-time**        |
-| **User Presence**     | Static status         | Live online/offline indicators | 👥 **Live Status**      |
-| **Content Updates**   | Manual refresh        | Auto-updating feed             | 🔄 **Dynamic**          |
-| **Technology Stack**  | PHP/MySQL typical     | Go + SQLite + WebSocket        | 🚀 **High Performance** |
-| **Mobile Experience** | Basic responsive      | PWA-ready with offline support | 📱 **App-like**         |
-| **Scalability**       | Limited concurrency   | 1000+ concurrent users         | 📈 **Scalable**         |
-| **Development**       | Complex setup         | Single binary deployment       | 🛠️ **Simple**           |
+| What People Usually Deal With | What Connecthub RT Does | Why It's Better |
+| ----------------------------- | ----------------------- | --------------- |
+| **"I have to refresh to see new posts"** | Updates appear automatically | ⚡ **No more manual refreshing** |
+| **"I don't know who's online"** | See who's active in real-time | 👥 **Feel connected** |
+| **"Discussions feel slow"** | Instant messaging and comments | 💬 **Conversations flow naturally** |
+| **"Setup is complicated"** | One command to start | 🛠️ **Ready in minutes** |
+| **"Can't use on mobile"** | Works great on phones and tablets | 📱 **Truly responsive** |
 
-### 💡 **Why Choose Connecthub RT?**
+### The Big Picture
 
-- **Performance First**: Built with Go for maximum efficiency and concurrent handling
-- **Real-Time Native**: WebSocket integration from the ground up, not bolted on
-- **Modern Architecture**: Clean, maintainable codebase following best practices
-- **Production Ready**: Comprehensive testing, monitoring, and deployment tools
-- **Developer Friendly**: Extensive documentation and easy local development setup
-- **Lightweight**: Single binary with embedded database - no complex infrastructure needed
+This isn't just another forum. It's built for people who want real conversations. Whether you're learning to code, sharing project ideas, or just want to connect with like-minded people, Connecthub RT makes it feel natural and immediate.
 
-## 🛠️ Technology Stack
+## 🛠️ What We Built It With
 
-### **Backend Technologies**
+### The Brain (Backend)
 
-- **Go 1.23.2**: High-performance, concurrent backend server
-- **SQLite3**: Lightweight, embedded database with ACID compliance
-- **Gorilla Mux**: Powerful HTTP router and URL matcher for RESTful APIs
-- **Gorilla WebSocket**: Production-ready WebSocket implementation
-- **bcrypt**: Industry-standard password hashing and security
+- **Go 1.23.2** - A fast, reliable programming language that's great for web servers
+- **SQLite** - A lightweight database that stores everything in one file
+- **Gorilla WebSocket** - Makes real-time communication possible
+- **Gorilla Mux** - Helps organize all the different web routes
+- **bcrypt** - Keeps passwords safe and secure
 
-### **Frontend Technologies**
+### The Face (Frontend)
 
-- **Vanilla JavaScript**: Framework-free implementation for optimal performance
-- **HTML5**: Semantic markup with modern web standards
-- **CSS3**: Modern styling with responsive design and animations
-- **WebSocket API**: Native browser real-time communication
-- **Progressive Web App**: PWA-ready with service worker support
+- **Plain JavaScript** - No fancy frameworks, just reliable code that works
+- **HTML5 & CSS3** - Modern web standards for a clean, responsive design
+- **WebSocket** - The technology that makes everything feel instant
 
-### **Security & Infrastructure**
+### Safety & Speed
 
-- **UUID v4**: Cryptographically secure session token generation
-- **HTTPS/TLS**: Production-ready security with SSL/TLS encryption
-- **CORS Handling**: Comprehensive cross-origin resource sharing
-- **Input Validation**: Multi-layer data validation and sanitization
-- **SQL Injection Protection**: Parameterized queries and prepared statements
+- **UUID tokens** - Unique session IDs that keep you logged in securely
+- **Password encryption** - Your password is never stored as plain text
+- **Input checking** - Everything you enter gets validated for safety
 
-## 🏗️ Architecture Overview
+## 🏗️ How It All Works Together
 
-The application follows a **clean architecture pattern** with clear separation of concerns, ensuring maintainability, scalability, and testability:
+Imagine you're at a busy coffee shop. People are talking, sharing ideas, and having conversations. That's basically what Connecthub RT does, but online.
 
-```ascii
-┌─────────────────────┐    ┌─────────────────────┐    ┌─────────────────────┐
-│      Frontend       │    │       Backend       │    │      Database       │
-│    (JavaScript)     │◄──►│        (Go)         │◄──►│      (SQLite)       │
-│                     │    │                     │    │                     │
-│ • SPA Interface     │    │ • RESTful APIs      │    │ • User Management   │
-│ • WebSocket Client  │    │ • WebSocket Hub     │    │ • Posts & Comments  │
-│ • Real-time UI      │    │ • Authentication    │    │ • Message Storage   │
-│ • State Management  │    │ • Business Logic    │    │ • Session Data      │
-└─────────────────────┘    └─────────────────────┘    └─────────────────────┘
+```
+Your Browser (What you see) ↔ Web Server (Go) ↔ Database (SQLite)
+       ↓
+   WebSocket Connection (Real-time updates)
 ```
 
-### **Project Structure**
+The web server handles all the logic - checking logins, saving posts, managing chats. The database remembers everything. And WebSocket keeps everything synchronized so everyone sees updates instantly.
+
+### Project Layout
 
 ```
 connecthub-rt/
-├── main.go                     # 🚀 Application entry point
-├── database/                   # 🗄️  Database layer
-│   ├── database.go            # Database initialization & connection
-│   ├── queries.go             # SQL queries and prepared statements
-│   ├── chat.go                # Chat-specific database operations
-│   └── seed_data.sql          # Development test data
-├── repository/                 # 📚 Data access layer (Repository pattern)
-│   ├── interfaces.go          # Repository interface definitions
-│   ├── user_repository.go     # User data operations
-│   ├── post_repository.go     # Post and comment operations
-│   └── message_repository.go  # Message persistence
-├── server/                     # 🌐 HTTP server and request handlers
-│   ├── server.go              # Server initialization and routing
-│   ├── middleware.go          # Authentication and middleware
-│   ├── user_handlers.go       # User-related endpoints
-│   ├── post_handlers.go       # Post and comment endpoints
-│   ├── message_handlers.go    # Message-related endpoints
-│   └── services/              # 🔧 Business logic services
-├── websocket/                  # ⚡ Real-time WebSocket functionality
-│   ├── websocket.go           # WebSocket server and hub
-│   ├── client.go              # Client connection management
-│   ├── connection.go          # Connection lifecycle handling
-│   └── types.go               # WebSocket message types
-├── src/                        # 🎨 Frontend assets
-│   ├── js/                    # JavaScript modules
-│   ├── static/css/            # Stylesheets and assets
-│   └── template/              # HTML templates
-└── unit-testing/               # 🧪 Comprehensive test suite
+├── main.go                 # The starting point of everything
+├── database/              # Where all your data lives
+│   ├── database.go        # Database setup and connections
+│   ├── queries.go         # All the data operations
+│   └── seed_data.sql      # Sample data for testing
+├── repository/            # Clean data access layer
+├── server/               # Web server and API endpoints
+├── websocket/            # Real-time communication
+└── src/                  # Web pages and styling
 ```
 
-## 💻 System Requirements
+## 💻 What You Need to Run It
 
-### **Minimum Requirements**
+### Minimum Requirements
 
-- **Go**: Version 1.19 or later
-- **Operating System**: Linux, macOS, or Windows 10+
-- **Memory**: 512MB RAM available
-- **Storage**: 100MB free disk space
-- **Network**: Internet connection for dependency downloads
+- **Computer**: Windows, Mac, or Linux
+- **Go**: Version 1.19 or newer (we recommend 1.23.2)
+- **Web Browser**: Chrome, Firefox, Safari, or Edge (recent versions)
+- **Internet**: For downloading dependencies
+- **Storage**: About 100MB of free space
 
-### **Recommended Requirements**
+### Recommended Setup
 
-- **Go**: Version 1.23.2 or later (latest stable)
-- **Memory**: 1GB+ RAM for optimal performance
-- **Storage**: 500MB+ free disk space
-- **Browser**: Modern browser with WebSocket support (Chrome 80+, Firefox 75+, Safari 13+, Edge 80+)
+- **Go 1.23.2** - Latest stable version
+- **1GB RAM** - For smooth performance
+- **Modern browser** - For the best experience
 
-### **Dependencies**
+## 🚀 Getting Started (Super Easy)
 
-All dependencies are automatically managed through Go modules:
+Ready to try it out? Here's how to get Connecthub RT running on your computer.
 
-```go
-module connecthub
-
-go 1.23.2
-
-require (
-    github.com/google/uuid v1.6.0           // UUID generation for sessions
-    github.com/gorilla/mux v1.8.1           // HTTP router and URL matcher
-    github.com/gorilla/websocket v1.5.3     // WebSocket implementation
-    github.com/mattn/go-sqlite3 v1.14.24    // SQLite database driver
-    golang.org/x/crypto v0.39.0             // Cryptographic functions
-)
-```
-
-## 🚀 Quick Start
-
-Get up and running in under 2 minutes:
+### Quick Start (2 Minutes)
 
 ```bash
-# 📥 Clone the repository
+# 1. Download the project
 git clone https://github.com/sahmedhusain/connecthub-rt.git
-cd connecthub
+cd connecthub-rt
 
-# 📦 Install dependencies automatically
+# 2. Install everything automatically
 go mod download
 
-# 🚀 Launch the application
+# 3. Start the server
 ./run.sh
 ```
 
-> **That's it!** The application will be available at `http://localhost:8080`
+That's it! Open `http://localhost:8080` in your browser and you're ready to go.
 
-### **Advanced Installation Options**
+### Want to Explore More?
 
-#### **Manual Installation**
+#### Manual Setup
 
 ```bash
-# 1️⃣ Clone and navigate
+# Get the code
 git clone https://github.com/sahmedhusain/connecthub-rt.git
-cd connecthub
+cd connecthub-rt
 
-# 2️⃣ Download dependencies
+# Download dependencies
 go mod tidy
 
-# 3️⃣ Initialize with test data (optional)
+# Add some sample data (optional)
 go run main.go --reset --test-data
 
-# 4️⃣ Start the server
-go run main.go --port=8080
+# Start on a specific port
+go run main.go --port=3000
 ```
 
-#### **Docker Installation** 🐳
+#### 🐳 Docker - The Easiest Way
 
+Don't want to install Go or deal with dependencies? Docker makes it super simple!
+
+**Prerequisites for Docker:**
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (for Windows/Mac)
+- Or Docker Engine on Linux
+- About 500MB free space
+
+**Quick Docker Start:**
 ```bash
-# Quick Docker setup
-./run.sh docker
-
-# Or build manually
-docker build -t connecthub .
-docker run -p 8080:8080 connecthub
-```
-
-#### **Development Setup**
-
-```bash
-# Clone for development
+# Clone the project
 git clone https://github.com/sahmedhusain/connecthub-rt.git
-cd connecthub
+cd connecthub-rt
 
-# Install development dependencies
-go mod download
-go install github.com/air-verse/air@latest  # For hot reload
+# Run with Docker (includes everything!)
+./run.sh docker
+```
 
-# Run with hot reload
+**What happens when you run Docker:**
+1. **Downloads** the Docker image (only needed first time)
+2. **Builds** the application automatically
+3. **Starts** the server on `http://localhost:8080`
+4. **Sets up** the database with sample data
+
+**Manual Docker Commands:**
+```bash
+# Build the Docker image
+docker build -t connecthub-rt .
+
+# Run the container
+docker run -p 8080:8080 -v $(pwd)/database:/app/database connecthub-rt
+
+# Or use Docker Compose (if available)
+docker-compose up --build
+```
+
+**Docker Benefits:**
+- ✅ **No Go installation needed**
+- ✅ **All dependencies included**
+- ✅ **Same experience on any computer**
+- ✅ **Easy cleanup** - just stop the container
+- ✅ **Perfect for testing** different environments
+
+#### Development Mode
+
+```bash
+# Install hot reload for development
+go install github.com/air-verse/air@latest
 air
 ```
 
-## 📖 Usage Guide
+## 📖 How to Use It
 
-### **Getting Started**
+### First Time Here?
 
-#### **1. Launch the Application**
+1. **Sign Up** - Create your account with a username and email
+2. **Check Your Profile** - Add your name, choose an avatar
+3. **Start Exploring** - Look at existing posts and categories
+4. **Join In** - Comment on posts or start your own
 
-The enhanced `run.sh` script provides multiple options:
+### Daily Use
 
-```bash
-./run.sh
+#### Reading Posts
 
-# 🔧 Run with specific options
-./run.sh native --port 3000 --test-data --verbose
+- **Browse the feed** - See all posts, newest first
+- **Filter by category** - Click "Go", "JavaScript", etc. to focus on topics you care about
+- **Read comments** - Click on any post to see the full discussion
 
-# 🐳 Run with Docker
-./run.sh docker --no-cache
+#### Creating Content
 
-# 📊 Check application status
-./run.sh status
+1. Click **"New Post"** in the top navigation
+2. Give your post a clear title
+3. Write your content (up to 500 characters)
+4. Pick relevant categories
+5. Hit **"Post"** - it's live immediately!
 
-# 📋 View application logs
-./run.sh logs
-```
+#### Chatting
 
-#### **2. Access the Application**
+1. **Find someone** - Look at user profiles or the online list
+2. **Start chatting** - Click to begin a conversation
+3. **Type and send** - Messages appear instantly for both people
+4. **Stay connected** - See when people are online
 
-Open your browser and navigate to:
+### Pro Tips
 
-- **Local Development**: `http://localhost:8080`
-- **Custom Port**: `http://localhost:[your-port]`
-
-#### **3. User Journey**
-
-![User Comments](screenshots/Screenshot%202025-07-07%20at%2021.14.33.png)
-_Navigate through user activity and comments_
-
-**First-Time Users:**
-
-1. **Sign Up**: Create your account with the registration form
-2. **Verify**: Complete your profile information
-3. **Explore**: Browse existing posts and categories
-4. **Engage**: Start commenting and messaging other users
-
-**Returning Users:**
-
-1. **Sign In**: Login with your username/email and password
-2. **Dashboard**: Access your personalized feed
-3. **Continue**: Pick up where you left off with recent conversations
-
-### **Core Features Guide**
-
-#### **📝 Creating Posts**
-
-1. Click the **"New Post"** button in the top navigation
-2. Fill in your post title and content (up to 500 characters)
-3. Select relevant categories from the dropdown
-4. Click **"Post"** to publish immediately
-
-#### **💬 Real-Time Messaging**
-
-1. **Start a Conversation**: Click on any user's profile or "Start a conversation"
-2. **Send Messages**: Type and press Enter or click Send
-3. **Live Updates**: Messages appear instantly without refresh
-4. **Online Status**: See who's currently online in real-time
-
-#### **🏷️ Category Filtering**
-
-- Click any category button to filter posts
-- Use **"All Categories"** to view everything
-- Create posts in specific categories for better organization
-
-### **Command Line Options**
-
-```bash
-# 🚀 Basic server startup
-go run main.go
-
-# Custom port
-go run main.go --port=3000
-
-# Load test data
-go run main.go --test-data
-
-# Reset database and load test data
-go run main.go --reset --test-data
-```
-
-### Accessing the Application
-
-1. Open your web browser
-2. Navigate to `http://localhost:8080` (or your custom port)
-3. Register a new account or use test credentials
-4. Start exploring the forum features
+- **Categories help** - Use them to find posts about specific technologies
+- **Check online status** - Green dot means someone's available to chat
+- **Read before posting** - See if your question was already asked
+- **Be respectful** - This is a community, treat others well
 
 ### Test Accounts
 
-When using `--test-data` flag, the following test accounts are available (all users share the same password):
+Want to explore without signing up? Use these test accounts:
 
-**Password for all test accounts**: `Aa123456` (case-sensitive)
+**Password for all**: `Aa123456`
 
-**Sample Test Users:**
+- `alexchen` - Tech professional
+- `marcusr` - Developer
+- `priyap` - Cloud engineer
+- `jamest` - Startup founder
 
-- **Username**: `alexchen` | **Email**: `alexandra.chen@techcorp.com`
-- **Username**: `marcusr` | **Email**: `marcus.rodriguez@devstudio.io`
-- **Username**: `priyap` | **Email**: `priya.patel@cloudtech.com`
-- **Username**: `jamest` | **Email**: `james.thompson@startup.dev`
-- **Username**: `sofiaand` | **Email**: `sofia.andersson@nordtech.se`
-- **Username**: `davidkim` | **Email**: `david.kim@airesearch.kr`
-- **Username**: `isabellam` | **Email**: `isabella.martinez@webdev.es`
-- **Username**: `ahmedh` | **Email**: `ahmed.hassan@cybersec.ae`
-- **Username**: `emmaj` | **Email**: `emma.johnson@datatech.ca`
-- **Username**: `hiroshit` | **Email**: `hiroshi.tanaka@robotics.jp`
+## 🔌 For Developers (API Stuff)
 
-**Note**: The test data includes 120+ diverse users from various backgrounds (tech professionals, students, freelancers, senior engineers, etc.). You can log in using either the username or email address with the password `Aa123456`.
+### Authentication
 
-## Terminal Examples 💻
-
-### Building the Project 🏗️
-
-```bash
-$ go build -o connecthub
-$ ls -la connecthub
--rwxr-xr-x  1 user  group  12345678 Dec 25 12:00 connecthub
-```
-
-### Running the Server 🚀
-
-```bash
-$ ./connecthub
-Server running on http://localhost:8080
-WebSocket server started
-Database initialized
-To stop the server press Ctrl+C
-```
-
-### Using Docker 🐳
-
-```bash
-$ docker-compose up --build
-Building connecthub
-...
-connecthub_1  | Server running on http://localhost:8080
-connecthub_1  | WebSocket connections ready
-```
-
-### Testing the Application 🧪
-
-```bash
-$ go test ./...
-PASS
-ok      connecthub        0.123s
-```
-
-## 🔌 API Documentation
-
-### Authentication Endpoints
-
-#### Register User
-
+#### Sign Up
 ```http
 POST /api/register
-Content-Type: application/json
-
 {
-    "username": "newuser",
-    "email": "user@example.com",
-    "password": "securepassword",
+    "username": "johndoe",
+    "email": "john@example.com",
+    "password": "securepass123",
     "firstName": "John",
     "lastName": "Doe",
-    "age": 25,
     "gender": "male"
 }
 ```
 
-#### Login
-
+#### Sign In
 ```http
 POST /api/login
-Content-Type: application/json
-
 {
-    "identifier": "username_or_email",
-    "password": "password"
+    "identifier": "johndoe",
+    "password": "securepass123"
 }
 ```
 
-#### Logout
+### Working with Posts
 
-```http
-POST /api/logout
-Cookie: session_token=your_session_token
-```
-
-### Posts & Comments
-
-#### Create Post
-
+#### Create a Post
 ```http
 POST /api/posts
-Cookie: session_token=your_session_token
-Content-Type: application/json
-
+Cookie: session_token=your_token
 {
-    "title": "Post Title",
-    "content": "Post content here...",
+    "title": "My Awesome Post",
+    "content": "This is what I want to share...",
     "categories": ["general", "discussion"]
 }
 ```
 
 #### Get Posts
-
 ```http
-GET /api/posts?category=general&limit=10&offset=0
+GET /api/posts?category=general&limit=10
 ```
 
-#### Create Comment
-
+#### Add a Comment
 ```http
-POST /api/posts/{postId}/comments
-Cookie: session_token=your_session_token
-Content-Type: application/json
-
+POST /api/posts/123/comments
+Cookie: session_token=your_token
 {
-    "content": "Comment content here..."
+    "content": "Great post! I think..."
 }
 ```
 
 ### Messaging
 
-#### Get Conversations
-
-```http
-GET /api/conversations
-Cookie: session_token=your_session_token
-```
-
-#### Get Messages
-
-```http
-GET /api/conversations/{userId}/messages?limit=10&offset=0
-Cookie: session_token=your_session_token
-```
-
-#### Send Message
-
+#### Send a Message
 ```http
 POST /api/messages
-Cookie: session_token=your_session_token
-Content-Type: application/json
-
+Cookie: session_token=your_token
 {
-    "recipientId": 123,
-    "content": "Hello there!"
+    "recipientId": 456,
+    "content": "Hey, how's it going?"
 }
 ```
 
-### WebSocket Connection
+#### Get Conversations
+```http
+GET /api/conversations
+Cookie: session_token=your_token
+```
 
-#### Connect to WebSocket
+### Real-Time Connection
 
 ```javascript
+// Connect to real-time updates
 const ws = new WebSocket("ws://localhost:8080/ws");
 
-// Authentication
-ws.send(
-  JSON.stringify({
+// Authenticate
+ws.send(JSON.stringify({
     type: "auth",
-    token: "your_session_token",
-  })
-);
+    token: "your_session_token"
+}));
 
-// Send message
-ws.send(
-  JSON.stringify({
+// Send a message
+ws.send(JSON.stringify({
     type: "message",
     recipientId: 123,
-    content: "Hello!",
-  })
-);
+    content: "Hello!"
+}));
 
-// Handle incoming messages
-ws.onmessage = function (event) {
-  const data = JSON.parse(event.data);
-  console.log("Received:", data);
+// Listen for updates
+ws.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    console.log("New update:", data);
 };
 ```
 
-## 🗄️ Database Schema
+## 🗄️ The Database Behind It All
 
-### Entity Relationship Diagram (ERD)
+Connecthub RT uses SQLite - think of it as a single file that holds all your data, like a super-organized spreadsheet.
 
-````mermaid
-graph TD
-    A[user] -->|creates| B[post]
-    A -->|writes| C[comment]
-    A -->|has| D[session]
-    A -->|participates_in| E[conversation_participants]
-    A -->|sends| F[message]
-    A -->|has| G[online_status]
+### The Main Tables
 
-    B -->|categorized_by| H[post_has_categories]
+#### Users
+Stores everyone's profile information:
+- Names, usernames, emails
+- Passwords (safely encrypted)
+- Profile pictures and personal details
 
-    I[categories] -->|categorizes| H
+#### Posts
+Your main content:
+- Post titles and content
+- Who wrote it and when
+- Categories it belongs to
 
-    J[conversation] -->|has| E
-    ```mermaid
-    current_session TEXT,
-    Avatar TEXT,
-    gender TEXT,
-    date_of_birth DATE,
-    FOREIGN KEY (current_session) REFERENCES session(sessionid)
-);
-````
+#### Comments
+Discussions on posts:
+- Who commented and what they said
+- Links back to the original post
 
-#### Post Table
+#### Messages
+Private conversations:
+- Who sent what to whom
+- When it was sent
+- Read/unread status
 
-    ```mermaid
+#### Categories
+Topic organization:
+- Names like "Go", "JavaScript", "Git"
+- Helps people find relevant content
 
-```sql
-CREATE TABLE post (
-    postid INTEGER PRIMARY KEY AUTOINCREMENT,
-    content TEXT NULL,
-    title TEXT NULL,
-    post_at DATETIME NOT NULL,
+### How It All Connects
 
-    *This Mermaid ERD diagram shows the tables and their relationships. For full schema, see the SQL below.*
-    user_userid INTEGER NOT NULL,
-    FOREIGN KEY (user_userid) REFERENCES user(userid)
-);
+```
+Users create Posts and Comments
+Posts belong to Categories
+Users send Messages to each other
+Everything is tracked with timestamps
 ```
 
-#### Comment Table
+### Database Design
 
-```sql
-CREATE TABLE comment (
-    commentid INTEGER PRIMARY KEY AUTOINCREMENT,
-    content TEXT NULL,
-    comment_at DATETIME NULL,
-    post_postid INTEGER NOT NULL,
-    user_userid INTEGER NOT NULL,
-    FOREIGN KEY (post_postid) REFERENCES post(postid),
-    FOREIGN KEY (user_userid) REFERENCES user(userid)
-);
+```mermaid
+erDiagram
+    users ||--o{ posts : creates
+    users ||--o{ comments : writes
+    users ||--o{ messages : sends
+    posts ||--o{ comments : has
+    posts ||--o{ post_has_categories : categorized_as
+    categories ||--o{ post_has_categories : contains
+    conversations ||--o{ messages : contains
+    users ||--o{ conversation_participants : participates_in
+    conversations ||--o{ conversation_participants : has_members
+
+    users {
+        INTEGER userid PK
+        TEXT username UK
+        TEXT email UK
+        TEXT password
+        TEXT avatar
+        TEXT gender
+        DATE date_of_birth
+    }
+
+    posts {
+        INTEGER postid PK
+        TEXT title
+        TEXT content
+        DATETIME post_at
+        INTEGER user_userid FK
+    }
+
+    comments {
+        INTEGER commentid PK
+        TEXT content
+        DATETIME comment_at
+        INTEGER post_postid FK
+        INTEGER user_userid FK
+    }
+
+    categories {
+        INTEGER idcategories PK
+        TEXT name
+    }
+
+    messages {
+        INTEGER message_id PK
+        INTEGER conversation_id FK
+        INTEGER sender_id FK
+        TEXT content
+        DATETIME sent_at
+        BOOLEAN is_read
+    }
 ```
 
-#### Categories Table
+## ⚡ The Real-Time Magic
 
-```sql
-CREATE TABLE categories (
-    idcategories INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL
-);
-```
+### What Makes It Feel Instant?
 
-#### Post-Categories Junction Table
+WebSocket technology creates a direct connection between your browser and the server. Instead of constantly asking "any updates?", the server tells you immediately when something happens.
 
-```sql
-CREATE TABLE post_has_categories (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    post_postid INTEGER NOT NULL,
-    categories_idcategories INTEGER NOT NULL,
-    FOREIGN KEY (post_postid) REFERENCES post(postid),
-    FOREIGN KEY (categories_idcategories) REFERENCES categories(idcategories)
-);
-```
+### Real-Time Features
 
-#### Session Table
+- **Live comments** - See new replies as they're posted
+- **Instant messages** - Chat feels like texting
+- **Online indicators** - See who's active right now
+- **Typing notifications** - Know when someone is composing a message
 
-```sql
-CREATE TABLE session (
-    sessionid TEXT PRIMARY KEY,
-    userid INTEGER NOT NULL UNIQUE,
-    endtime DATETIME NOT NULL,
-    FOREIGN KEY (userid) REFERENCES user(userid)
-);
-```
-
-#### Conversation Table
-
-```sql
-CREATE TABLE conversation (
-    conversation_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-#### Conversation Participants Table
-
-```sql
-CREATE TABLE conversation_participants (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    conversation_id INTEGER NOT NULL,
-    user_id INTEGER NOT NULL,
-    FOREIGN KEY (conversation_id) REFERENCES conversation(conversation_id),
-    FOREIGN KEY (user_id) REFERENCES user(userid),
-    UNIQUE(conversation_id, user_id)
-);
-```
-
-#### Message Table
-
-```sql
-CREATE TABLE message (
-    message_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    conversation_id INTEGER NOT NULL,
-    sender_id INTEGER NOT NULL,
-    content TEXT NOT NULL,
-    sent_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    is_read BOOLEAN NOT NULL DEFAULT 0,
-    FOREIGN KEY (conversation_id) REFERENCES conversation(conversation_id),
-    FOREIGN KEY (sender_id) REFERENCES user(userid)
-);
-```
-
-#### Online Status Table
-
-```sql
-CREATE TABLE online_status (
-    user_id INTEGER PRIMARY KEY,
-    status TEXT NOT NULL DEFAULT 'offline',
-    last_seen DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES user(userid)
-);
-```
-
-### Relationships
-
-- **Users** can create multiple **Posts** and **Comments**
-- **Users** can participate in multiple **Conversations** and send **Messages**
-- **Users** have **Sessions** and **Online Status**
-- **Posts** belong to **Users** and can have multiple **Comments**
-- **Posts** are categorized through the **post_has_categories** junction table
-- **Categories** can be assigned to multiple **Posts**
-- **Conversations** have multiple **Participants** and contain **Messages**
-- **Messages** belong to **Conversations** and are sent by **Users**
-
-## ⚡ Real-Time Features
-
-### WebSocket Implementation
-
-The application uses WebSocket connections for real-time functionality:
-
-#### Message Types
+### How It Works Behind the Scenes
 
 ```javascript
-// Authentication
-{
-    "type": "auth",
-    "token": "session_token"
-}
+// Your browser connects once
+const connection = new WebSocket("ws://localhost:8080/ws");
 
-{
-    "type": "message",
-    "recipientId": 123,
-    "content": "Hello!"
-}
-
-// Typing indicator
-{
-    "type": "typing_start",
-    "recipientId": 123
-}
-
-// Online status
-{
-    "type": "status_update",
-    "status": "online"
-}
+// Server sends updates automatically
+// No need to refresh or poll for changes
 ```
 
-#### Client-Side Integration
+## 🔧 For People Who Want to Contribute
 
-````mermaid
+### Ways to Help
 
-```javascript
-class ForumWebSocket {
-  constructor(url, token) {
-    this.ws = new WebSocket(url);
-    this.token = token;
-    this.setupEventHandlers();
-  }
+- **Report bugs** - Found something not working? Let us know
+- **Suggest features** - Have ideas for improvements? Share them
+- **Write code** - Fix bugs or add new features
+- **Improve documentation** - Help make things clearer
+- **Test things** - Try different scenarios and report issues
 
-  setupEventHandlers() {
-    this.ws.onopen = () => {
-      this.authenticate();
-    };
+### Getting Started with Contributing
 
-    this.ws.onmessage = (event) => {
-      const data = JSON.parse(event.data);
-      this.handleMessage(data);
-    };
-  }
+1. **Fork the project** on GitHub
+2. **Clone your fork**: `git clone https://github.com/your-username/connecthub-rt.git`
+3. **Create a branch**: `git checkout -b my-improvement`
+4. **Make changes** and test them
+5. **Submit a pull request** with a clear description
 
-  authenticate() {
-    this.send({
-      type: "auth",
-      token: this.token,
-    });
-  }
+### What We Look For
 
-  sendMessage(recipientId, content) {
-    this.send({
-      type: "message",
-      recipientId: recipientId,
-      content: content,
-    });
-  }
+- **Clear code** - Easy to understand and maintain
+- **Good tests** - Make sure new features work and don't break existing ones
+- **Documentation** - Explain how new features work
+- **Consistent style** - Follow the existing code patterns
 
-  send(data) {
-    if (this.ws.readyState === WebSocket.OPEN) {
-      this.ws.send(JSON.stringify(data));
-    }
-  }
-}
-````
+### Reporting Issues
 
-### Performance Optimizations
+Found a bug? Please include:
+- What you were doing when it happened
+- What you expected to happen
+- What actually happened
+- Steps to reproduce the issue
+- Your browser and operating system
 
-- **Message Pagination**: Load messages in chunks of 10
-- **Debounced Typing**: Typing indicators with 2-3 second timeout
-- **Connection Pooling**: Efficient WebSocket connection management
-- **Memory Management**: Automatic cleanup of inactive connections
+## 📄 Legal Stuff
 
-## 🧪 Testing
+This project uses the MIT License. Basically, you can use, modify, and share this code freely. We just ask that you give credit where it's due.
 
-The project features a comprehensive, multi-layered testing infrastructure with advanced reporting, coverage analysis, and both terminal and web-based execution modes. Our testing follows a pyramid approach with specialized test categories for maximum coverage and reliability.
+## 🙏 Credits
 
-### 📚 **Documentation Links**
+This project was built as part of a learning journey into Go web development. It combines modern web technologies with real-time communication to create something useful and educational.
 
-- **[Comprehensive Testing Guide](documentations/testing-guide.md)** - Complete testing documentation and best practices
-- **[API Documentation](documentations/api-documentation.md)** - Complete API reference with examples
-- **[Frontend Testing Guide](unit-testing/FRONTEND_TESTING_GUIDE.md)** - Detailed frontend testing infrastructure
-- **[Quick Reference](unit-testing/TEST_QUICK_REFERENCE.md)** - Fast command reference for all test categories
-
-### 🏗️ **Testing Architecture**
-
-Our testing follows a pyramid approach with multiple specialized layers:
-
-```
-┌─────────────────────────────────────────┐
-│              E2E Tests                  │
-│     (Complete User Journeys)           │
-├─────────────────────────────────────────┤
-│           Integration Tests             │
-│      (Component Interactions)           │
-├─────────────────────────────────────────┤
-│             Unit Tests                  │
-│        (Individual Functions)           │
-└─────────────────────────────────────────┘
-```
-
-#### **Backend Testing** (Go + SQLite)
-
-- **Unit Tests**: Handlers, services, repositories, utilities
-- **Integration Tests**: API endpoints, database interactions, middleware chains
-- **E2E Scenarios**: Complete user workflows and cross-component testing
-- **Performance Tests**: Load testing, concurrency, memory usage analysis
-- **Security Tests**: Authentication, authorization, input validation
-
-#### **Frontend Testing** (JavaScript)
-
-- **Unit Tests**: Components, utilities, API interactions (Jest + jsdom)
-- **E2E Tests**: User interactions, real-time features (Playwright)
-- **Performance Tests**: Page load times, WebSocket performance, memory usage
-- **Accessibility Tests**: WCAG compliance, keyboard navigation, screen readers
-- **Cross-browser Tests**: Chrome, Firefox, Safari compatibility
-
-### 🚀 **Quick Start**
-
-#### **Run All Tests (Recommended)**
-
-```bash
-# Comprehensive test suite with web dashboard
-./run.sh --test --web
-
-# Terminal-based execution with interactive menu
-./run.sh --test
-
-# Advanced comprehensive runner
-cd unit-testing
-./comprehensive-test-runner.sh
-```
-
-#### **Run Specific Test Categories**
-
-```bash
-# Backend tests
-./run.sh --test unit           # Unit tests
-./run.sh --test integration    # Integration tests
-./run.sh --test auth          # Authentication tests
-./run.sh --test messaging     # Messaging tests
-
-# Frontend tests
-cd unit-testing
-npm run test:unit             # Frontend unit tests
-npx playwright test           # E2E tests
-
-# E2E scenarios
-./run.sh --test e2e           # Complete user journeys
-```
-
-#### **Interactive Test Runner**
-
-```bash
-./run.sh --test
-```
-
-**Menu Options:**
-
-1. Run all tests
-2. Run unit tests
-3. Run integration tests
-4. Run auth tests
-5. Run messaging tests
-6. Run frontend tests
-7. Run E2E tests
-8. Generate coverage report
-9. View test reports
-10. Launch web dashboard
-11. Run performance tests
-12. Run accessibility tests
-
-#### **Web-based Test Dashboard**
-
-```bash
-./run.sh --test --web
-```
-
-**Features:**
-
-- Real-time test execution with live updates
-- Interactive coverage reports and visualizations
-- Test result filtering and search
-- Export capabilities (PDF, JSON, CSV)
-- Performance metrics and trends
-- Accessibility compliance reports
-
-**Dashboard URL:** `http://localhost:8081/web-dashboard/`
-
-### 📊 **Test Reports and Coverage**
-
-#### **Report Formats**
-
-- **HTML Reports**: `unit-testing/html-reports/index.html`
-- **Coverage Reports**: `unit-testing/coverage/`
-- **JSON Data**: `unit-testing/test-reports/`
-- **Performance Metrics**: `unit-testing/performance-reports/`
-
-#### **Coverage Analysis**
-
-```bash
-# Generate comprehensive coverage
-./run.sh --test --coverage
-
-# View coverage in browser
-open unit-testing/html-reports/coverage.html
-
-# Coverage thresholds and quality gates
-go test -coverprofile=coverage.out ./unit-testing/...
-go tool cover -func=coverage.out
-```
-
-#### **Coverage Targets**
-
-- **Overall**: ≥75%
-- **Handlers**: ≥80%
-- **Services**: ≥85%
-- **Repositories**: ≥90%
-- **Critical Paths**: ≥95%
-
-### 🔧 **Test Configuration**
-
-#### **Backend Configuration** (`unit-testing/test-config.json`)
-
-```json
-{
-  "test_categories": {
-    "all": {
-      "pattern": "./",
-      "timeout": "15m",
-      "parallel": true
-    },
-    "auth": {
-      "pattern": "./ -run 'TestAuth|TestUser'",
-      "timeout": "3m"
-    },
-    "frontend": {
-      "name": "Frontend Unit Tests",
-      "pattern": "npm test",
-      "timeout": "5m",
-      "type": "frontend"
-    },
-    "e2e": {
-      "name": "End-to-End Tests",
-      "pattern": "npx playwright test",
-      "timeout": "15m",
-      "type": "e2e"
-    }
-  },
-  "coverage": {
-    "threshold": 80,
-    "enabled": true
-  }
-}
-```
-
-#### **Frontend Configuration** (`unit-testing/package.json`)
-
-```json
-{
-  "scripts": {
-    "test": "jest",
-    "test:dom": "jest --testPathPattern=dom",
-    "test:websocket": "jest --testPathPattern=websocket",
-    "test:auth": "jest --testPathPattern=auth",
-    "test:spa": "jest --testPathPattern=spa"
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "setupFilesAfterEnv": ["<rootDir>/frontend-tests/setup/jest.setup.js"],
-    "coverageDirectory": "unit-testing/coverage/frontend"
-  }
-}
-```
-
-### 📊 **Test Reports & Coverage**
-
-#### **Report Locations**
-
-- **Backend Reports**: `unit-testing/test-reports/`
-- **Frontend Coverage**: `unit-testing/coverage/frontend/`
-- **E2E Reports**: `unit-testing/test-reports/playwright-html/`
-- **JUnit XML**: For CI/CD integration
-
-#### **Viewing Reports**
-
-```bash
-# Backend coverage
-./test.sh all --coverage --html
-# View: unit-testing/coverage/coverage.html
-
-# Frontend coverage
-npm run test:coverage
-# View: unit-testing/coverage/frontend/index.html
-
-# E2E test reports
-npx playwright test
-# View: unit-testing/test-reports/playwright-html/index.html
-```
-
-### � **Testing Examples**
-
-#### **Development Workflow Example**
-
-```bash
-# 1. Setup testing environment
-cd unit-testing && ./setup-frontend-tests.sh
-
-# 2. Run tests during development
-./test.sh auth --verbose              # Test authentication changes
-npm run test:dom --watch             # Watch frontend DOM tests
-./test.sh websocket --coverage       # Test WebSocket with coverage
-
-# 3. Pre-commit testing
-./test.sh all --coverage             # Full test suite
-npx playwright test --project=chromium # Quick E2E check
-
-# 4. CI/CD pipeline
-./test.sh all --ci --junit           # Generate CI reports
-```
-
-#### **Debugging Test Failures**
-
-```bash
-# Backend test debugging
-./test.sh auth --verbose --race      # Verbose output with race detection
-go test -v ./... -run TestSpecificFunction
-
-# Frontend test debugging
-npm test -- --verbose --testNamePattern="should validate email"
-npx playwright test --debug auth-flow.spec.js
-
-# Coverage analysis
-./test.sh all --coverage --html      # Generate coverage reports
-npm run test:coverage               # Frontend coverage
-```
-
-#### **Cross-browser Testing Example**
-
-```bash
-# Test across all browsers
-npx playwright test --project=chromium --project=firefox --project=webkit
-
-# Mobile testing
-npx playwright test --project="Mobile Chrome" --project="Mobile Safari"
-
-# Responsive design testing
-./test.sh responsive                 # All responsive tests
-npx playwright test --grep "mobile viewport"
-```
-
-### �📖 **Additional Resources**
-
-For detailed testing information, see:
-
-- **[Complete Testing Guide](unit-testing/TESTING.md)** - Comprehensive backend testing documentation
-- **[Frontend Testing Guide](unit-testing/FRONTEND_TESTING_GUIDE.md)** - Detailed frontend and E2E testing guide
-- **[Quick Reference](unit-testing/TEST_QUICK_REFERENCE.md)** - Fast command reference for all test categories
-
-### 🎯 **Testing Best Practices**
-
-1. **Run tests frequently** during development
-2. **Write tests first** for new features (TDD approach)
-3. **Maintain high coverage** (80%+ for both backend and frontend)
-4. **Use appropriate test types** (unit for logic, E2E for workflows)
-5. **Test real-time features** with multiple browser instances
-6. **Verify responsive design** across different viewport sizes
-7. **Include accessibility testing** in E2E workflows
-
-## 🔧 Development Guide
-
-### Development Workflow
-
-1. **Setup**: Clone repository and install dependencies
-2. **Database**: Initialize with test data for development
-3. **Development Server**: Run with auto-reload capabilities
-4. **Testing**: Run tests frequently during development
-5. **Documentation**: Update documentation for new features
-
-### Code Style Guidelines
-
-- **Go**: Follow standard Go formatting (`gofmt`)
-- **JavaScript**: Use ES6+ features, avoid frameworks
-- **SQL**: Use clear, readable queries with proper indexing
-- **Comments**: Document complex logic and public APIs
-
-### Adding New Features
-
-1. **Design**: Plan the feature architecture
-2. **Backend**: Implement Go handlers and database operations
-3. **Frontend**: Add JavaScript functionality
-4. **WebSocket**: Add real-time capabilities if needed
-5. **Tests**: Write comprehensive tests
-6. **Documentation**: Update README and API docs
-
-### Debugging
-
-```bash
-# Enable verbose logging
-go run main.go --port=8080 -v
-
-# Check application logs
-./run.sh logs
-
-# Monitor WebSocket connections
-# Use browser developer tools Network tab
-```
-
-## 📊 Performance Metrics
-
-### **Benchmarks & Specifications**
-
-Our real-time forum is engineered for high performance and scalability:
-
-| Metric               | Specification                   | Achievement    |
-| -------------------- | ------------------------------- | -------------- |
-| **Concurrent Users** | 1,000+ simultaneous connections | ✅ Tested      |
-| **Message Latency**  | < 50ms WebSocket delivery       | ✅ Verified    |
-| **Database Queries** | < 10ms average response time    | ✅ Optimized   |
-| **Memory Usage**     | < 100MB for 500 active users    | ✅ Efficient   |
-| **CPU Usage**        | < 20% under normal load         | ✅ Lightweight |
-
-### **Real-Time Performance**
-
-- **WebSocket Throughput**: 10,000+ messages/second
-- **Database Connections**: Pooled connections with automatic scaling
-- **Session Management**: UUID-based with O(1) lookup performance
-- **Cache Strategy**: In-memory caching for frequently accessed data
-
-### **Scalability Features**
-
-- **Horizontal Scaling**: Stateless design ready for load balancing
-- **Database Optimization**: Indexed queries and prepared statements
-- **Connection Management**: Automatic cleanup and resource optimization
-- **Memory Efficiency**: Garbage collection optimized Go runtime
-
-### **Load Testing Results**
-
-```bash
-# Run performance tests
-./run.sh performance
-
-# Stress testing with 1000 concurrent users
-./run.sh stress --users 1000 --duration 5m
-```
-
-**Results Summary:**
-
-- ✅ **1,000 concurrent users**: Stable performance maintained
-- ✅ **10,000 messages/minute**: Real-time delivery guaranteed
-- ✅ **99.9% uptime**: During 24-hour load tests
-- ✅ **< 100MB RAM**: Memory usage under heavy load
-
-## 🤝 Contributing
-
-We welcome contributions from developers of all skill levels! Here's how you can help make this project even better:
-
-### **Getting Started**
-
-1. **Fork** the repository on GitHub
-2. **Clone** your fork locally: `git clone https://github.com/your-username/connecthub.git`
-3. **Create** a feature branch: `git checkout -b feature/amazing-feature`
-4. **Make** your changes with proper testing
-5. **Commit** with descriptive messages: `git commit -m 'Add amazing feature'`
-6. **Push** to your branch: `git push origin feature/amazing-feature`
-7. **Submit** a Pull Request with detailed description
-
-### **Code Quality Standards**
-
-- ✅ All tests must pass (`./run.sh test`)
-- ✅ Code coverage should be maintained above **80%**
-- ✅ Follow Go best practices and conventions
-- ✅ Add comprehensive documentation for new features
-- ✅ Update README if introducing new functionality
-- ✅ Use descriptive commit messages following [Conventional Commits](https://conventionalcommits.org/)
-
-### **Development Guidelines**
-
-- **Backend (Go)**: Follow effective Go patterns and error handling
-- **Frontend (JS)**: Use modern ES6+ features and maintain browser compatibility
-- **Database**: Write efficient queries and maintain referential integrity
-- **WebSocket**: Ensure message handling is robust and error-tolerant
-
-### **Reporting Issues**
-
-Please use the [GitHub Issue Tracker](https://github.com/sahmedhusain/connecthub-rt/issues) to report bugs or request features:
-
-**Bug Reports:**
-
-- 🐛 Clear, descriptive title
-- 📝 Detailed description of the issue
-- 🔄 Steps to reproduce the problem
-- ✅ Expected vs actual behavior
-- 💻 System information (OS, Go version, browser)
-- 📸 Screenshots if applicable
-
-**Feature Requests:**
-
-- 💡 Clear description of the proposed feature
-- 🎯 Use case and benefits
-- 🔧 Technical considerations (if applicable)
-
-## 👨‍💻 Authors
+## 👥 Who Built This
 
 - **Sayed Ahmed Husain** - [sayedahmed97.sad@gmail.com](mailto:sayedahmed97.sad@gmail.com)
 - **Qasim Aljaffer**
 - **Mohammed AlAlawi**
 - **Abdulla Alasmawi**
 
-## 📄 License
+## ❓ Frequently Asked Questions
 
-This project is licensed under the **MIT License** - see the [LICENSE.md](LICENSE.md) file for complete details.
+### Getting Started
+**Q: Do I need programming experience to use this?**
+A: Not at all! It's designed to be user-friendly for everyone.
 
-```text
-MIT License - Feel free to use, modify, and distribute this code.
-We appreciate attribution but it's not required.
-```
+**Q: Can I use it on my phone?**
+A: Yes! It works great on phones, tablets, and computers.
 
----
+### Technical Questions
+**Q: Is my data safe?**
+A: Yes - passwords are encrypted, and we follow web security best practices.
 
-## 🆘 Support & Community
+**Q: How many people can use it at once?**
+A: It can handle over 1,000 simultaneous users comfortably.
 
-### **Getting Help**
+**Q: Does it work offline?**
+A: The basic interface loads, but real-time features need an internet connection.
 
-- 📚 **Documentation**: Comprehensive guides in `/documentations/`
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/sahmedhusain/connecthub-rt/issues)
-- 💭 **Questions**: [GitHub Discussions](https://github.com/sahmedhusain/connecthub-rt/discussions)
-- 📧 **Direct Contact**: Create an issue for direct developer contact
+### Contributing
+**Q: I'm new to coding - can I still help?**
+A: Absolutely! You can help with documentation, testing, or suggesting improvements.
 
-### **Community Guidelines**
+**Q: How do I report a bug?**
+A: Use the GitHub Issues page with clear steps to reproduce the problem.
 
-- Be respectful and inclusive
-- Help others learn and grow
-- Share knowledge and best practices
-- Provide constructive feedback
-
----
-
-<div align="center">
-
-![Thank You](screenshots/Screenshot%202025-07-07%20at%2021.15.02.png)
-_Real-time forum in action - Connect, Share, Engage!_
-
-### **Built with ❤️ using Go, SQLite, and WebSocket technology**
-
-**⭐ Star this repository if you found it helpful!**
-
-[![GitHub stars](https://img.shields.io/github/stars/sahmedhusain/connecthub-rt?style=social)](https://github.com/sahmedhusain/connecthub-rt/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/sahmedhusain/connecthub-rt?style=social)](https://github.com/sahmedhusain/connecthub-rt/network)
-
-</div>
-
-## 🙏 Acknowledgments
-
-This project was created during a Go web development learning journey, emphasizing full-stack implementation and community building. Inspired by modern forum platforms.
-
-## 🎯 What We Aim For
-
-Our vision with ConnectHub is to create a seamless platform for real-time community interaction. The application efficiently manages user accounts, posts, comments, and live messaging.
-
-The core components include:
-
-1. **Users** 👤: Registered members with profiles and authentication.
-2. **Posts** 📄: User-generated content organized by categories.
-3. **Comments** 💬: Interactive discussions under posts.
-4. **Messages** 💌: Private real-time conversations between users.
-
-We leverage SQLite for reliable data storage and WebSocket for instant communication.
-
-### User Flow Representation
-
-Users navigate through the platform seamlessly:
-
-```
-Registration/Login → Create Post → Add Comment → Send Message
-```
-
-- **Journey**: Start with account creation, then engage with content and messaging.
-- **Interactions**: Each action builds community engagement.
-
-This flow ensures an intuitive user experience.
-
-## What I Learned
+## 📚 What I Learned
 
 This project taught me:
 
@@ -1331,16 +607,26 @@ This project taught me:
 - Frontend integration with modern HTML, CSS, and JavaScript.
 - Containerization and deployment best practices.
 
-## Limitations 🚫
+## 🚫 Limitations
 
 - No advanced search functionality.
 - Basic moderation features.
 - Limited scalability for extremely high traffic.
 
-## Future Improvements 🔮
+## 🔮 Future Improvements
 
 - Implement advanced search and filtering.
 - Add comprehensive moderation tools.
 - Enhance scalability with microservices.
 - Integrate additional authentication providers.
 - Add push notifications for mobile devices.
+
+## 🎯 What This Project Is About
+
+Connecthub RT exists to make online discussions feel more natural and immediate. Instead of waiting for page refreshes or dealing with slow forums, you get real-time updates that make conversations flow like they would in person.
+
+Whether you're here to learn, teach, or just connect with interesting people, we hope you enjoy using it as much as we enjoyed building it!
+
+---
+
+*Built with ❤️ using Go, JavaScript, and a lot of coffee. Real-time communication for the modern web.*
