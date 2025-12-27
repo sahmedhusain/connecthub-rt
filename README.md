@@ -1,6 +1,5 @@
 # Connecthub RT 🌐⚡
 
-
 [![Go](https://img.shields.io/badge/Go-1.23.2-00ADD8?style=flat&logo=go)](https://golang.org/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=flat&logo=docker)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
@@ -41,7 +40,6 @@
 
 ---
 
-
 Welcome to **Connecthub RT**, a real-time forum and messaging app built in **Go**. It combines a classic discussion feed (posts, comments, categories) with live features like instant updates and private chat.
 
 The goal of the project is simple: build a clean, reliable community platform where conversations don’t feel delayed — while practicing real-world backend patterns like sessions, database design, and WebSocket-driven updates.
@@ -65,6 +63,7 @@ Then open: http://localhost:8080
 _Main forum interface — clean layout, easy navigation_
 
 ---
+
 ## 📋 Table of Contents
 
 - [✨ What Makes This Special](#-what-makes-this-special)
@@ -80,7 +79,6 @@ _Main forum interface — clean layout, easy navigation_
 - [📄 Legal Stuff](#-legal-stuff)
 - [🙏 Credits](#-credits)
 - [👥 Who Built This](#-who-built-this)
-
 
 ## ⭐ Key Highlights
 
@@ -101,6 +99,7 @@ Real-time Hub (connections + broadcast)
 ```
 
 ---
+
 ## ✨ What Makes This Special
 
 ### 🔐 Easy Sign Up and Login
@@ -154,19 +153,20 @@ _Comments — updates appear in real time_
 
 ### Why People Love It
 
-| What People Usually Deal With | What Connecthub RT Does | Why It's Better |
-| ----------------------------- | ----------------------- | --------------- |
-| **"I have to refresh to see new posts"** | Updates appear automatically | ⚡ **No more manual refreshing** |
-| **"I don't know who's online"** | See who's active in real-time | 👥 **Feel connected** |
-| **"Discussions feel slow"** | Instant messaging and comments | 💬 **Conversations flow naturally** |
-| **"Setup is complicated"** | One command to start | 🛠️ **Ready in minutes** |
-| **"Can't use on mobile"** | Works great on phones and tablets | 📱 **Truly responsive** |
+| What People Usually Deal With            | What Connecthub RT Does           | Why It's Better                     |
+| ---------------------------------------- | --------------------------------- | ----------------------------------- |
+| **"I have to refresh to see new posts"** | Updates appear automatically      | ⚡ **No more manual refreshing**    |
+| **"I don't know who's online"**          | See who's active in real-time     | 👥 **Feel connected**               |
+| **"Discussions feel slow"**              | Instant messaging and comments    | 💬 **Conversations flow naturally** |
+| **"Setup is complicated"**               | One command to start              | 🛠️ **Ready in minutes**             |
+| **"Can't use on mobile"**                | Works great on phones and tablets | 📱 **Truly responsive**             |
 
 ### The Big Picture
 
 This isn't just another forum. It's built for people who want real conversations. Whether you're learning to code, sharing project ideas, or just want to connect with like-minded people, Connecthub RT makes it feel natural and immediate.
 
 ---
+
 ## 🛠️ What We Built It With
 
 ### The Brain (Backend)
@@ -190,6 +190,7 @@ This isn't just another forum. It's built for people who want real conversations
 - **Input checking** - Everything you enter gets validated for safety
 
 ---
+
 ## 🏗️ How It All Works Together
 
 Imagine you're at a busy coffee shop. People are talking, sharing ideas, and having conversations. That's basically what Connecthub RT does, but online.
@@ -218,6 +219,7 @@ connecthub-rt/
 ```
 
 ---
+
 ## 💻 What You Need to Run It
 
 ### Minimum Requirements
@@ -235,6 +237,7 @@ connecthub-rt/
 - **Modern browser** - For the best experience
 
 ---
+
 ## 🚀 Getting Started (Super Easy)
 
 Ready to try it out? Here's how to get Connecthub RT running on your computer.
@@ -281,11 +284,13 @@ go run main.go --port=3000
 Don't want to install Go or deal with dependencies? Docker makes it super simple!
 
 **Prerequisites for Docker:**
+
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) (for Windows/Mac)
 - Or Docker Engine on Linux
 - About 500MB free space
 
 **Quick Docker Start:**
+
 ```bash
 # Clone the project
 git clone https://github.com/sahmedhusain/connecthub-rt.git
@@ -296,12 +301,14 @@ cd connecthub-rt
 ```
 
 **What happens when you run Docker:**
+
 1. **Downloads** the Docker image (only needed first time)
 2. **Builds** the application automatically
 3. **Starts** the server on `http://localhost:8080`
 4. **Sets up** the database with sample data
 
 **Manual Docker Commands:**
+
 ```bash
 # Build the Docker image
 docker build -t connecthub-rt .
@@ -314,6 +321,7 @@ docker-compose up --build
 ```
 
 **Docker Benefits:**
+
 - ✅ **No Go installation needed**
 - ✅ **All dependencies included**
 - ✅ **Same experience on any computer**
@@ -329,6 +337,7 @@ air
 ```
 
 ---
+
 ## 📖 How to Use It
 
 ### First Time Here?
@@ -387,6 +396,7 @@ Want to explore without signing up? Use these test accounts:
 ### Authentication
 
 #### Sign Up
+
 ```http
 POST /api/register
 {
@@ -400,6 +410,7 @@ POST /api/register
 ```
 
 #### Sign In
+
 ```http
 POST /api/login
 {
@@ -411,6 +422,7 @@ POST /api/login
 ### Working with Posts
 
 #### Create a Post
+
 ```http
 POST /api/posts
 Cookie: session_token=your_token
@@ -422,11 +434,13 @@ Cookie: session_token=your_token
 ```
 
 #### Get Posts
+
 ```http
 GET /api/posts?category=general&limit=10
 ```
 
 #### Add a Comment
+
 ```http
 POST /api/posts/123/comments
 Cookie: session_token=your_token
@@ -438,6 +452,7 @@ Cookie: session_token=your_token
 ### Messaging
 
 #### Send a Message
+
 ```http
 POST /api/messages
 Cookie: session_token=your_token
@@ -448,6 +463,7 @@ Cookie: session_token=your_token
 ```
 
 #### Get Conversations
+
 ```http
 GET /api/conversations
 Cookie: session_token=your_token
@@ -460,28 +476,33 @@ Cookie: session_token=your_token
 const ws = new WebSocket("ws://localhost:8080/ws");
 
 // Authenticate
-ws.send(JSON.stringify({
+ws.send(
+  JSON.stringify({
     type: "auth",
-    token: "your_session_token"
-}));
+    token: "your_session_token",
+  })
+);
 
 // Send a message
-ws.send(JSON.stringify({
+ws.send(
+  JSON.stringify({
     type: "message",
     recipientId: 123,
-    content: "Hello!"
-}));
+    content: "Hello!",
+  })
+);
 
 // Listen for updates
 ws.onmessage = (event) => {
-    const data = JSON.parse(event.data);
-    console.log("New update:", data);
+  const data = JSON.parse(event.data);
+  console.log("New update:", data);
 };
 ```
 
-</details>
----
+## </details>
+
 ## 🗄️ The Database Behind It All
+
 <details>
 <summary><strong>🗄️ Database (schema + Mermaid ERD)</strong></summary>
 
@@ -490,30 +511,40 @@ Connecthub RT uses SQLite - think of it as a single file that holds all your dat
 ### The Main Tables
 
 #### Users
+
 Stores everyone's profile information:
+
 - Names, usernames, emails
 - Passwords (safely encrypted)
 - Profile pictures and personal details
 
 #### Posts
+
 Your main content:
+
 - Post titles and content
 - Who wrote it and when
 - Categories it belongs to
 
 #### Comments
+
 Discussions on posts:
+
 - Who commented and what they said
 - Links back to the original post
 
 #### Messages
+
 Private conversations:
+
 - Who sent what to whom
 - When it was sent
 - Read/unread status
 
 #### Categories
+
 Topic organization:
+
 - Names like "Go", "JavaScript", "Git"
 - Helps people find relevant content
 
@@ -581,8 +612,8 @@ erDiagram
     }
 ```
 
-</details>
----
+## </details>
+
 ## ⚡ The Real-Time Magic
 
 ### What Makes It Feel Instant?
@@ -607,6 +638,7 @@ const connection = new WebSocket("ws://localhost:8080/ws");
 ```
 
 ---
+
 ## 🔧 For People Who Want to Contribute
 
 ### Ways to Help
@@ -635,6 +667,7 @@ const connection = new WebSocket("ws://localhost:8080/ws");
 ### Reporting Issues
 
 Found a bug? Please include:
+
 - What you were doing when it happened
 - What you expected to happen
 - What actually happened
@@ -642,16 +675,19 @@ Found a bug? Please include:
 - Your browser and operating system
 
 ---
+
 ## 📄 Legal Stuff
 
 This project uses the MIT License. Basically, you can use, modify, and share this code freely. We just ask that you give credit where it's due.
 
 ---
+
 ## 🙏 Credits
 
 This project was built as part of a learning journey into Go web development. It combines modern web technologies with real-time communication to create something useful and educational.
 
 ---
+
 ## 👥 Who Built This
 
 - **Sayed Ahmed Husain** - [sayedahmed97.sad@gmail.com](mailto:sayedahmed97.sad@gmail.com)
@@ -660,9 +696,11 @@ This project was built as part of a learning journey into Go web development. It
 - **Abdulla Alasmawi**
 
 ---
+
 ## ❓ Frequently Asked Questions
 
 ### Getting Started
+
 **Q: Do I need programming experience to use this?**
 A: Not at all! It's designed to be user-friendly for everyone.
 
@@ -670,6 +708,7 @@ A: Not at all! It's designed to be user-friendly for everyone.
 A: Yes! It works great on phones, tablets, and computers.
 
 ### Technical Questions
+
 **Q: Is my data safe?**
 A: Yes - passwords are encrypted, and we follow web security best practices.
 
@@ -680,6 +719,7 @@ A: It’s built with concurrency in mind (Go + WebSocket). Practical limits depe
 A: The basic interface loads, but real-time features need an internet connection.
 
 ### Contributing
+
 **Q: I'm new to coding - can I still help?**
 A: Absolutely! You can help with documentation, testing, or suggesting improvements.
 
@@ -687,6 +727,7 @@ A: Absolutely! You can help with documentation, testing, or suggesting improveme
 A: Use the GitHub Issues page with clear steps to reproduce the problem.
 
 ---
+
 ## 📚 What I Learned
 
 This project taught me:
@@ -698,6 +739,7 @@ This project taught me:
 - Containerization and deployment best practices.
 
 ---
+
 ## 🚫 Limitations
 
 - No advanced search functionality.
@@ -705,6 +747,7 @@ This project taught me:
 - Limited scalability for extremely high traffic.
 
 ---
+
 ## 🔮 Future Improvements
 
 - Implement advanced search and filtering.
@@ -714,6 +757,7 @@ This project taught me:
 - Add push notifications for mobile devices.
 
 ---
+
 ## 🎯 What This Project Is About
 
 Connecthub RT exists to make online discussions feel more natural and immediate. Instead of waiting for page refreshes or dealing with slow forums, you get real-time updates that make conversations flow like they would in person.
@@ -722,4 +766,4 @@ Whether you're here to learn, teach, or just connect with interesting people, we
 
 ---
 
-*Built with Go and WebSocket, with a focus on real-time interaction and clean fundamentals.*
+_Built with Go and WebSocket, with a focus on real-time interaction and clean fundamentals._
